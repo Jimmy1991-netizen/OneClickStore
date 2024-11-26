@@ -1,5 +1,16 @@
-<html>
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: moccasin;
+        }
         header {
             background-color: cornsilk;
             color: #fff;
@@ -7,18 +18,306 @@
             text-align: center;
 		line-height:1;
         }
-</style>
-<body style="background:moccasin;">
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0;
+		width:100%;
+        }
+        .product {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            text-align: center;
+            width: 140px;
+            padding: 10px;
+        }
+        .product img {
+            max-width: 100%;
+            height: 140px;
+            border-radius: 5px;
+        }
+        .product h3 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .product p {
+            color: #666;
+            font-size: 16px;
+        }
+        .product button {
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+        .product button:hover {
+            background-color: #0056b3;
+        }
+        .cart {
+            margin: 20px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .cart h2 {
+            margin-top: 0;
+        }
+        .cart ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .cart ul li {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        .checkout-btn {
+            background-color: #28a745;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .checkout-btn:hover {
+            background-color: #218838;
+        }
+	div {
+		width:140px;
+	}
+    </style>
+
+</head>
+<body>
 <br>
     <header >
 <center>
-<h1 style="color:blue;">OTHER SERVICES</h1>
+<h1 style="color:blue;">Other Services</h1>
 </center>
     </header>
-<br><br><br>
+    <div class="container">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="images1/id.jpg" alt="Product 1">
+            <h3>ID Lamination (80mm X 110mm)</h3>
+            <p>₱15.00</p>
+            <p>Stock: <span id="stock-product-1">5</span></p>
+            <input type="number" id="qty-product-1" min="1" max="5" value="1">
+            <button id="btn-product-1" onclick="addToCart('ID Lamination (80mm X 110mm)', 15, 1)">Add to Cart</button>
+            <button id="cancel-product-1" onclick="cancelFromCart(1)" disabled>Cancel</button>
+        </div>
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="images1/id.jpg" alt="Product 2">
+            <h3>ID Lamination (70mm X 100mm)</h3>
+            <p>₱15.00</p>
+            <p>Stock: <span id="stock-product-2">5</span></p>
+            <input type="number" id="qty-product-2" min="1" max="5" value="1">
+            <button id="btn-product-2" onclick="addToCart('ID Lamination (70mm X 100mm)', 15, 2)">Add to Cart</button>
+            <button id="cancel-product-2" onclick="cancelFromCart(2)" disabled>Cancel</button>
+        </div>
+<!-- Product 3 -->
+        <div class="product">
+            <img src="images1/doc.png" alt="Product 3">
+            <h3>Document Lamination (Long)</h3>
+            <p>₱35.00</p>
+            <p>Stock: <span id="stock-product-3">5</span></p>
+            <input type="number" id="qty-product-3" min="1" max="5" value="1">
+            <button id="btn-product-3" onclick="addToCart('Document Lamination (Long)', 35, 3)">Add to Cart</button>
+            <button id="cancel-product-3" onclick="cancelFromCart(3)" disabled>Cancel</button>
+        </div>
+
+
+
+    </div>
 <center>
-<h1>Soon to open...</h1>
+    <div class="cart" style="width:300px;">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-list">
+            <!-- Items will be added here -->
+        </ul>
+	<p>Service/Shipping Fee: ₱5.00</p>
+        <p id="total-price">Total: ₱0.00</p>
+
+        <button id="checkoutbutton" class="checkout-btn" onclick="checkout()" style="width:50%;">Checkout</button>
+    </div>
 </center>
+
+<center>
+<div id="details" style="width:300px;background:yellow;padding:10px;border-radius:15px;display:none;">
+<h3>CUSTOMER DETAILS</h3>
+    <form id="telegramForm">
+        <label for="text">Customer Name:</label><br>
+        <input type="text" id="name" name="text" required><br><br>
+
+	<label for="text">Address:</label><br>
+        <input type="text" id="address" name="text" required><br><br>
+
+
+        <label for="number">Mobile Number:</label><br>
+        <input type="number" id="number" name="number" required oninput="if(this.value.length > 11) this.value = this.value.slice(0, 11);"><br><br>
+
+        <button id="placebutton" class="checkout-btn" type="submit" style="background:orange;width:50%;">Place Order</button>
+<p id="words"></p>
+    </form>
+</div>
+</center>
+
 </body>
+    <script>
+        let cart = [];
+        let totalPrice = 0;
+        let stocks = { 1: 5, 2: 5, 3: 5,}; // Initial stock levels
+
+        function addToCart(productName, price, productId) {
+            const qtyInput = document.getElementById(`qty-product-${productId}`);
+            const qty = parseInt(qtyInput.value);
+            const addToCartButton = document.getElementById(`btn-product-${productId}`);
+            const cancelButton = document.getElementById(`cancel-product-${productId}`);
+
+            if (stocks[productId] >= qty) {
+                stocks[productId] -= qty; // Deduct stock
+                cart.push({ id: productId, name: productName, perprice: price, price: price * qty, qty: qty });
+                totalPrice += price * qty;
+
+                updateStockUI(productId);
+                updateCartUI();
+
+                addToCartButton.disabled = true;
+                cancelButton.disabled = false; // Enable cancel button
+            } else {
+                alert('Not enough stock available!');
+            }
+        }
+
+        function cancelFromCart(productId) {
+            const cancelButton = document.getElementById(`cancel-product-${productId}`);
+            const addToCartButton = document.getElementById(`btn-product-${productId}`);
+
+            // Find and remove the product from the cart
+            const productIndex = cart.findIndex(item => item.id === productId);
+            if (productIndex !== -1) {
+                const product = cart[productIndex];
+                stocks[productId] += product.qty; // Restore stock
+                totalPrice -= product.price;
+
+                cart.splice(productIndex, 1); // Remove product from cart
+
+                updateStockUI(productId);
+                updateCartUI();
+
+                addToCartButton.disabled = false; // Re-enable Add to Cart button
+                cancelButton.disabled = true; // Disable Cancel button
+            }
+        }
+
+        function updateStockUI(productId) {
+            document.getElementById(`stock-product-${productId}`).textContent = stocks[productId];
+        }
+
+        function updateCartUI() {
+            const cartList = document.getElementById('cart-list');
+            cartList.innerHTML = ''; // Clear existing items
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `\n${item.name} - ₱${item.perprice} (x${item.qty}) - ₱${item.price.toFixed(2)}`;
+                cartList.appendChild(li);
+            });
+		const totalPrice1 = totalPrice+5;//SHIPPING FEE IS 5.
+            document.getElementById('total-price').textContent = `Total: ₱${totalPrice1.toFixed(2)}`;
+        }
+
+        function checkout() {//open
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+
+            if (cart.length !== 0) {
+		document.getElementById('checkoutbutton').disabled = true;
+		details.style.display="block";
+            alert('Checkout successful! Total: ₱' + totalPrice.toFixed(2));
+		}
+           // cart = [];
+            //totalPrice = 0;
+           // updateCartUI();
+
+            // Re-enable all Add to Cart buttons and disable all Cancel buttons
+           // for (let productId in stocks) {
+             //   document.getElementById(`btn-product-${productId}`).disabled = false;
+             //   document.getElementById(`cancel-product-${productId}`).disabled = true;
+          //  }
+        }//close 
+
+//TELEGRAM OPEN 
+// Replace with your Telegram bot's token and chat ID
+        const BOT_TOKEN = "7870251548:AAGRB3mWjbj0NMmhZ_PsBxWXV0O13UMuWy8";
+        const CHAT_ID = "5208891145";
+
+        document.getElementById("telegramForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+document.getElementById('placebutton').disabled = true;
+
+            const name = document.getElementById("name").value;
+            const address = document.getElementById("address").value;
+            const number = document.getElementById("number").value;
+            //const number2 = document.getElementById("number2").value;
+            const text = document.getElementById('cart-list').textContent;
+	    const total = document.getElementById('total-price').textContent;
+
+	document.getElementById('words').textContent = "We will sent you an order update.Thank you for shopping with us! ";
+            // Re-enable all Add to Cart buttons and disable all Cancel buttons
+            for (let productId in stocks) {//open
+                document.getElementById(`btn-product-${productId}`).disabled = true;
+                document.getElementById(`cancel-product-${productId}`).disabled = true;
+            }//close
+
+            const fullMessage = `.\n\nFrom: One Click Store\nCustomer: ${name}\nAddress: ${address}\nNumber: ${number}\n----------------------------------- \nOrdered Items:\n${text}\nService/Shipping Fee - ₱5.00\n\n${total}\n\n-----------------------------------\nCompany Address: Bonbon Upper, Loboc, Bohol\nSuggest Products Through:\nContact Us: 09941101238\nFB Page: One Click Store\n\nTHANK YOU FOR SHOPPING WITH US!`;
+
+            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    chat_id: CHAT_ID,
+                    text: fullMessage
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    alert("Message sent to One Click Store!");
+                } else {
+                    alert("Failed to send message.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("An error occurred.");
+            });
+        });
+
+//TELEGRAM CLOSE
+
+
+
+
+
+
+
+    </script>
 
 </html>
