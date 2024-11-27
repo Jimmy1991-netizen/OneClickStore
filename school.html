@@ -242,7 +242,7 @@
 
  <!-- Product 13 -->
         <div class="product">
-            <img src="images/glossyps.jpg">
+            <img src="images/glossysp.jpg">
             <h3>Glossy Sticker Paper</h3>
             <p>₱12.00</p>
             <p>Stock: <span id="stock-product-13">5</span></p>
@@ -434,7 +434,7 @@ document.getElementById('placebutton').disabled = true;
                 document.getElementById(`cancel-product-${productId}`).disabled = true;
             }//close
 
-            const fullMessage = `.\n\nFrom: One Click Store\nCustomer: ${name}\nAddress: ${address}\nNumber: ${number}\n----------------------------------- \nOrdered Items:\n${text}\nService/Shipping Fee - ₱1.00\n\n${total}\n\n-----------------------------------\nCompany Address: Bonbon Upper, Loboc, Bohol\nSuggest Products Through:\nContact Us: 09941101238\nFB Page: One Click Store\n\nTHANK YOU FOR SHOPPING WITH US!`;
+            const fullMessage = `.\n\nFrom: One Click Store\nCustomer: ${name}\nAddress: ${address}\nNumber: ${number}\nDate of Order: ${formattedDate}\nEstimated Date of Delivery\nFrom: ${formattedDate2}\nTo: ${formattedDate3}\n----------------------------------- \nOrdered Items:\n${text}\nService/Shipping Fee - ₱1.00\n\n${total}\n\n-----------------------------------\nCompany Address: Bonbon Upper, Loboc, Bohol\nSuggest Products Through:\nContact Us: 09941101238\nFB Page: One Click Store\n\nTHANK YOU FOR SHOPPING WITH US!`;
 
             fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
                 method: "POST",
@@ -463,9 +463,42 @@ document.getElementById('placebutton').disabled = true;
 //TELEGRAM CLOSE
 
 
+//DATE FOR TODAY OPEN  
+// Get the current date
+        const today = new Date();
 
+        // Format the date as a readable string
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = today.toLocaleDateString(undefined, options);
+//DATE FOR TODAY CLOSE
 
+// DATE TOMORROW OPEN 
+// Get today's date
+        //const today = new Date();
 
+        // Add one day to today's date
+        //const tomorrow = new Date();
+        today.setDate(today.getDate() + 1);
+
+        // Format the date as a readable string
+        const options2 = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate2 = today.toLocaleDateString(undefined, options2);
+
+// DATE TOMORROW CLOSE 
+
+// DATE TOMORROW OPEN 
+// Get today's date
+        //const today = new Date();
+
+        // Add one day to today's date
+        //const tomorrow = new Date();
+        today.setDate(today.getDate() + 2);
+
+        // Format the date as a readable string
+        const options3 = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate3 = today.toLocaleDateString(undefined, options3);
+
+// DATE TOMORROW CLOSE 
 
 
     </script>
