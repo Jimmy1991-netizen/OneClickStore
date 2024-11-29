@@ -115,15 +115,6 @@
 </div>
 </center>
 
-<center>
-<div id="announce" style="width:100%;display:none;">
-<h1>ORDER DONE!</h1>
-<p>THANK YOU FOR CHOOSING <b><span style="color:red;">ONE</span> <span style="color:green;">CLICK</span> <span style="color:blue;">STORE</span></b>.</p>
-<p>CLAIM YOUR PRODUCTS AT LOBOC NHS LIBRARY WITH MR. EGCALINOS.</p>
-<p><i>We will send you an order update message to your mobile phone.</i></p>
-</div>
-</center>
-
 <div id="instruction" style="padding:50px;left:100px;width:100%;">
 <p><b>UNSAON PAG-ORDER?</b></p>
 <p><b>1.</b> Pangitaa ang gusto nimong orderon sa ubos.</p>
@@ -434,11 +425,18 @@
 
 
 
-
-
-
     </div>
 
+	
+<center>
+<div id="announce" style="width:100%;display:none;">
+<h1>ORDER DONE!</h1>
+<p>THANK YOU FOR CHOOSING <b><span style="color:red;">ONE</span> <span style="color:green;">CLICK</span> <span style="color:blue;">STORE</span></b>.</p>
+<p>CLAIM YOUR PRODUCTS AT LOBOC NHS LIBRARY WITH MR. EGCALINOS.</p>
+<p><i>We will send you an order update message to your mobile phone.</i></p>
+</div>
+</center>
+	
 <center>
 <div id="details" style="width:300px;background:yellow;padding:10px;border-radius:15px;display:none;">
 <h3>CUSTOMER DETAILS</h3>
@@ -572,7 +570,9 @@
 document.getElementById('placebutton').disabled = true;
 
             const name = document.getElementById("name").value;
+		const name1 = name.toUpperCase();
             const address = document.getElementById("address").value;
+		const address1 = address.toUpperCase();
             const number = document.getElementById("number").value;
             //const number2 = document.getElementById("number2").value;
             const text = document.getElementById('cart-list').textContent;
@@ -585,9 +585,9 @@ document.getElementById('placebutton').disabled = true;
                 document.getElementById(`cancel-product-${productId}`).disabled = true;
             }//close
 
-            const fullMessage = `.\n\nFrom: One Click Store\nCustomer: ${name}\nAddress: ${address}\nNumber: ${number}\nDate of Order: ${formattedDate}\nEstimated Date of Delivery\nFrom: ${formattedDate2}\nTo: ${formattedDate3}\n----------------------------------- \nOrdered Items:\n${text}\nService/Shipping Fee - ₱1.00\n\n${total}\n\n-----------------------------------\nCompany Address: Bonbon Upper, Loboc, Bohol\nSuggest Products Through:\nContact Us: 09941101238\nFB Page: One Click Store\n\nTHANK YOU FOR SHOPPING WITH US!`;
+            const fullMessage = `.\n\nFrom: One Click Store\nCustomer: ${name1}\nAddress: ${address1}\nNumber: ${number}\nDate of Order: ${formattedDate}\nEstimated Date of Delivery\nFrom: ${formattedDate2}\nTo: ${formattedDate3}\n----------------------------------- \nOrdered Items:\n${text}\nService/Shipping Fee - ₱1.00\n\n${total}\n\n-----------------------------------\nCompany Address: Bonbon Upper, Loboc, Bohol\nSuggest Products Through:\nContact Us: 09941101238\nFB Page: One Click Store\n\nTHANK YOU FOR SHOPPING WITH US!`;
 				update.style.display="none"; // FOR FREE PRODUCTS
-				whole.style.display="none";// FOR FREE PRODUCTS
+				//whole.style.display="none";// FOR FREE PRODUCTS
 				shopcart.style.display="none";// FOR FREE PRODUCTS
 				details.style.display="none";// FOR FREE PRODUCTS 
 				announce.style.display="block";// FOR FREE PRODUCTS 
