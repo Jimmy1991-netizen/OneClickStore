@@ -14,13 +14,103 @@ button {
 	border-radius:20px;
 	box-shadow:0 5px 5px rgba(0,0,0,0.2);
 }
+body {
+      margin: 20;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: pink;
+      overflow: hidden;
+    }
+
+
+    /* Container for images */
+    .carousel {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    /* Images are aligned side by side */
+    .carousel img {
+      position: absolute;
+	left:25%;
+	top:50px;
+      width: 50%;
+      height: 90%;
+      object-fit: cover;
+      opacity: 0;
+      animation: slide 40s infinite;
+    }
+
+    /* Animations for each image */
+    .carousel img:nth-child(1) {
+      animation-delay: 0s;
+    }
+    .carousel img:nth-child(2) {
+      animation-delay: 5s;
+    }
+    .carousel img:nth-child(3) {
+      animation-delay: 10s;
+    }
+    .carousel img:nth-child(4) {
+      animation-delay: 15s;
+    }
+    .carousel img:nth-child(5) {
+      animation-delay: 20s;
+    }
+    .carousel img:nth-child(6) {
+      animation-delay: 25s;
+    }
+    .carousel img:nth-child(7) {
+      animation-delay: 30s;
+    }
+    .carousel img:nth-child(8) {
+      animation-delay: 35s;
+    }
+
+    /* Keyframes to handle the sliding and opacity */
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      10%, 30% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      30% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      100% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+    }
+
 </style>
 <body style="background:cornsilk">
-<br><br><br><br>
+<div class="carousel" style="width:100%;">
+    <img src="slides/Slide1.jpg" alt="Image 1">
+    <img src="slides/Slide2.jpg" alt="Image 2">
+    <img src="slides/Slide3.jpg" alt="Image 3">
+    <img src="slides/Slide4.jpg" alt="Image 4">
+    <img src="slides/Slide5.jpg" alt="Image 5">
+    <img src="slides/Slide6.jpg" alt="Image 6">
+    <img src="slides/Slide7.jpg" alt="Image 7">
+    <img src="slides/Slide8.jpg" alt="Image 8">
+  </div>
+
+<div style="width:100%;">
+<br><br><br>
 <center>
-<a href="home2.html" target="_parent"><button>GET 1 FREE PRODUCT</button></a>
+<a href="schoolfree.html" target="_parent"><button>GET 1 FREE PRODUCT</button></a>
 <br><br><br><br>
 <a href="school.html" target="iframe_ex"><button  style="background:blue;color:white;">BUY PRODUCT</button>
 </center>
+</div>
 </body>
 </html>
