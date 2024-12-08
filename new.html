@@ -1,116 +1,734 @@
-<html>
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: cornsilk;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+		line-height:1;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0;
+		width:100%;
+        }
+        .product {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            text-align: center;
+            width: 140px;
+            padding: 10px;
+        }
+        .product img {
+            max-width: 100%;
+            height: 140px;
+            border-radius: 5px;
+        }
+        .product h3 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .product p {
+            color: #666;
+            font-size: 16px;
+        }
+        .product button {
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+        .product button:hover {
+            background-color: #0056b3;
+        }
+        .cart {
+            margin: 20px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .cart h2 {
+            margin-top: 0;
+        }
+        .cart ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .cart ul li {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        .checkout-btn {
+            background-color: #28a745;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .checkout-btn:hover {
+            background-color: #218838;
+        }
+	div {
+		width:140px;
+	}
+    </style>
 
-button {
-	width:30%;
-	margin-top:50px;
-	padding:20px 0;
-	background:orange;/*#6fd649;*/
-	color:#fff;
-	border:0;
-	outline:none;
-	font-size:18px;
-	cursor:pointer;
-	border-radius:20px;
-	box-shadow:0 5px 5px rgba(0,0,0,0.2);
-}
-body {
-      margin: 20;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: pink;
-      overflow: hidden;
-    }
-
-
-    /* Container for images */
-    .carousel {
-      position: relative;
-      width: 400px;
-      height: 400px;
-      overflow: hidden;
-    }
-
-    /* Images are aligned side by side */
-    .carousel img {
-      position: absolute;
-	left:25%;
-	top:50px;
-      width: 50%;
-      height: 90%;
-      object-fit: cover;
-      opacity: 0;
-      animation: slide 40s infinite;
-    }
-
-    /* Animations for each image */
-    .carousel img:nth-child(1) {
-      animation-delay: 0s;
-    }
-    .carousel img:nth-child(2) {
-      animation-delay: 5s;
-    }
-    .carousel img:nth-child(3) {
-      animation-delay: 10s;
-    }
-    .carousel img:nth-child(4) {
-      animation-delay: 15s;
-    }
-    .carousel img:nth-child(5) {
-      animation-delay: 20s;
-    }
-    .carousel img:nth-child(6) {
-      animation-delay: 25s;
-    }
-    .carousel img:nth-child(7) {
-      animation-delay: 30s;
-    }
-    .carousel img:nth-child(8) {
-      animation-delay: 35s;
-    }
-
-    /* Keyframes to handle the sliding and opacity */
-    @keyframes slide {
-      0% {
-        opacity: 0;
-        transform: translateX(100%);
-      }
-      10%, 30% {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      30% {
-        opacity: 0;
-        transform: translateX(-100%);
-      }
-      100% {
-        opacity: 0;
-        transform: translateX(-100%);
-      }
-    }
-
-</style>
-<body style="background:cornsilk">
-<div class="carousel" style="width:100%;">
-    <img src="slides/Slide1.JPG" alt="Image 1">
-    <img src="slides/Slide2.JPG" alt="Image 2">
-    <img src="slides/Slide3.JPG" alt="Image 3">
-    <img src="slides/Slide4.JPG" alt="Image 4">
-    <img src="slides/Slide5.JPG" alt="Image 5">
-    <img src="slides/Slide6.JPG" alt="Image 6">
-    <img src="slides/Slide7.JPG" alt="Image 7">
-    <img src="slides/Slide8.JPG" alt="Image 8">
-  </div>
-
-<div style="width:100%;">
-<br><br><br>
+</head>
+<body>
+<br>
+    <header >
 <center>
-<a href="home2.html" target="_parent" style="color:black;"><button>GET 1 FREE PRODUCT</button></a>
-
-<a href="school.html" target="iframe_ex"><button  style="background:blue;color:white;">BUY PRODUCT</button>
+<h1 style="color:blue;">School Supplies</h1>
 </center>
+    </header>
+<center>
+<div id="update" style="width:100%;color:red;">
+<h1>(NEW ANNOUNCEMENT)</h1>
+<h1>Ten costumers  per day will receive 1 FREE product.</h1>
+<h1>Starting from December 16-20, 2024</h1>
 </div>
+</center>
+
+<div id="instruction" style="padding:50px;left:100px;width:100%;">
+<p><b>UNSAON PAG-ORDER?</b></p>
+<p><b>1.</b> Pangitaa ang gusto nimong orderon sa ubos.</p>
+<p><b>2.</b> Pinduta ang "Add to Cart" kung aduna na kay napili.</p>
+<p><b>3.</b> Tan.awa sa kina-ubsan ang Shopping Cart kung naa naba sa lista ang imong order.</p>
+<p><b>4.</b> Kung naa pakay idugang nga order buhata balik ang pag add to cart.</p>
+<p><b>5.</b> Kung wala nakay orderon, pwedi na pinduton ang checkout sa kina-ubsan.</p>
+<p><b>6.</b> Sa yellow form, ibutang ang imong mga detalye. I-check pagbalik ang imong mobile number. </p>
+<p><b>7.</b> Pinduta ang "Place Order".</p>
+<p><b>8.</b> Humana. Paabuta ang ilang text sa imong cellphone para sa order update.</p>
+</div>
+
+    <div id="whole" class="container">
+
+<!-- Product 27 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/per1.jpg" alt="Product 1">
+            <h3>Peach Tea </h3>
+		<p style="color:black;font-size:80%;">(Victoria's Fleur 10ml)</p>
+            <p><del>₱35.00</del></p>
+            <p>Now ₱19.00</p>
+            <p>Stock: <span id="stock-product-27">10</span></p>
+            <input type="number" id="qty-product-27" min="1" max="10" value="1">
+            <button id="btn-product-27" onclick="addToCart('Peach Tea (10ml)', 19, 27)">Add to Cart</button>
+            <button id="cancel-product-27" onclick="cancelFromCart(27)" disabled>Cancel</button>
+        </div>
+        <!-- Product 28 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/per2.jpg" alt="Product 2">
+            <h3>Sorbet</h3>
+		<p style="color:black;font-size:80%;">(Victoria's Fleur 10ml)</p>
+            <p><del>₱35.00</del></p>
+            <p>Now ₱19.00</p>
+            <p>Stock: <span id="stock-product-28">10</span></p>
+            <input type="number" id="qty-product-28" min="1" max="10" value="1">
+            <button id="btn-product-28" onclick="addToCart('Sorbet (10ml)', 19, 28)">Add to Cart</button>
+            <button id="cancel-product-28" onclick="cancelFromCart(28)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 29 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/per3.jpg" alt="Product 3">
+            <h3>Coast</h3>
+		<p style="color:black;font-size:80%;">(Brume Parfumee 10ml)</p>
+            <p><del>₱35.00</del></p>
+            <p>Now ₱19.00</p>
+            <p>Stock: <span id="stock-product-29">10</span></p>
+            <input type="number" id="qty-product-29" min="1" max="10" value="1">
+            <button id="btn-product-29" onclick="addToCart('Coast (10ml)', 19, 29)">Add to Cart</button>
+            <button id="cancel-product-29" onclick="cancelFromCart(29)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 30 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/per4.jpg">
+            <h3>Suede</h3>
+		<p style="color:black;font-size:80%;">(Brume Parfumee 10ml)</p>
+            <p><del>₱35.00</del></p>
+            <p>Now ₱19.00</p>
+            <p>Stock: <span id="stock-product-30">10</span></p>
+            <input type="number" id="qty-product-30" min="1" max="10" value="1">
+            <button id="btn-product-30" onclick="addToCart('Suede (10ml)', 19, 30)">Add to Cart</button>
+            <button id="cancel-product-30" onclick="cancelFromCart(30)" disabled>Cancel</button>
+        </div>
+
+
+<!-- Product 31 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/per5.jpg">
+            <h3>HC & Cream</h3>
+		<p style="color:black;font-size:80%;">(Brume Parfumee 10ml)</p>
+            <p><del>₱35.00</del></p>
+            <p>₱19.00</p>
+            <p>Stock: <span id="stock-product-31">10</span></p>
+            <input type="number" id="qty-product-31" min="1" max="10" value="1">
+            <button id="btn-product-31" onclick="addToCart('HC & Cream(10ml)', 19, 31)">Add to Cart</button>
+            <button id="cancel-product-31" onclick="cancelFromCart(31)" disabled>Cancel</button>
+        </div> 
+
+
+        <!-- Product 17 -->
+        <div class="product">
+            <img src="images/penblack.jpg">
+            <h3>MUJI Pen Black</h3>
+            <p>₱5.00</p>
+            <p>Stock: <span id="stock-product-17">50</span></p>
+            <input type="number" id="qty-product-17" min="1" max="50" value="1">
+            <button id="btn-product-17" onclick="addToCart('MUJI Pen Black', 5, 17)">Add to Cart</button>
+            <button id="cancel-product-17" onclick="cancelFromCart(17)" disabled>Cancel</button>
+        </div>
+
+        <!-- Product 18 -->
+        <div class="product">
+            <img src="images/penblue.jpg">
+            <h3>MUJI Pen Blue</h3>
+            <p>₱5.00</p>
+            <p>Stock: <span id="stock-product-18">50</span></p>
+            <input type="number" id="qty-product-18" min="1" max="50" value="1">
+            <button id="btn-product-18" onclick="addToCart('MUJI Pen Blue', 5, 18)">Add to Cart</button>
+            <button id="cancel-product-18" onclick="cancelFromCart(18)" disabled>Cancel</button>
+        </div>
+	<!-- Product 19 -->
+        <div class="product">
+            <img src="images/penred.jpg" >
+            <h3>MUJI Pen Red</h3>
+            <p>₱5.00</p>
+            <p>Stock: <span id="stock-product-19">25</span></p>
+            <input type="number" id="qty-product-19" min="1" max="25" value="1">
+            <button id="btn-product-19" onclick="addToCart('MUJI Pen Red', 5, 19)">Add to Cart</button>
+            <button id="cancel-product-19" onclick="cancelFromCart(19)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 3 -->
+        <div class="product">
+            <img src="images/ballpen.jpg" alt="Product 3">
+            <h3>Ballpen Black</h3>
+            <p>₱5.00</p>
+            <p>Stock: <span id="stock-product-3">5</span></p>
+            <input type="number" id="qty-product-3" min="1" max="5" value="1">
+            <button id="btn-product-3" onclick="addToCart('Ballpen(Bk)', 5, 3)">Add to Cart</button>
+            <button id="cancel-product-3" onclick="cancelFromCart(3)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 4 -->
+        <div class="product">
+            <img src="images/ballpen.jpg">
+            <h3>Ballpen Blue</h3>
+            <p>₱5.00</p>
+            <p>Stock: <span id="stock-product-4">4</span></p>
+            <input type="number" id="qty-product-4" min="1" max="4" value="1">
+            <button id="btn-product-4" onclick="addToCart('Ballpen(Bl)', 5, 4)">Add to Cart</button>
+            <button id="cancel-product-4" onclick="cancelFromCart(4)" disabled>Cancel</button>
+        </div>
+
+
+<!-- Product 5 -->
+        <div class="product">
+            <img src="images/ballpen.jpg">
+            <h3>Ballpen Red</h3>
+            <p>₱5.00</p>
+            <p>Stock: <span id="stock-product-5">2</span></p>
+            <input type="number" id="qty-product-5" min="1" max="2" value="1">
+            <button id="btn-product-5" onclick="addToCart('Ballpen(Rd)', 5, 5)">Add to Cart</button>
+            <button id="cancel-product-5" onclick="cancelFromCart(5)" disabled>Cancel</button>
+        </div>
+
+
+ <!-- Product 6 -->
+        <div class="product">
+            <img src="images/pencil.jpg">
+            <h3>Target Pencil</h3>
+            <p>₱6.00</p>
+            <p>Stock: <span id="stock-product-6">10</span></p>
+            <input type="number" id="qty-product-6" min="1" max="10" value="1">
+            <button id="btn-product-6" onclick="addToCart('Pencil', 6, 6)">Add to Cart</button>
+            <button id="cancel-product-6" onclick="cancelFromCart(6)" disabled>Cancel</button>
+        </div>
+
+ <!-------------------------------------------------------------------------------------------------- NEON PRODUCTS OPEN -->
+ <!-- Product 20 -->
+        <div class="product">
+            <img src="images/neonpink.png">
+            <h3>Neon Pink (Short)</h3>
+            <p>₱0.00</p>
+            <p>Stock: <span id="stock-product-20">0</span></p>
+            <input type="number" id="qty-product-20" min="1" max="0" value="1">
+            <button id="btn-product-20" onclick="addToCart('Neon Pink (Short)', 10, 20)">Add to Cart</button>
+            <button id="cancel-product-20" onclick="cancelFromCart(20)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 21 -->
+        <div class="product">
+            <img src="images/neonred.png">
+            <h3>Neon Red (Short)</h3>
+            <p>₱0.00</p>
+            <p>Stock: <span id="stock-product-21">0</span></p>
+            <input type="number" id="qty-product-21" min="1" max="0" value="1">
+            <button id="btn-product-21" onclick="addToCart('Neon Red (Short)', 10, 21)">Add to Cart</button>
+            <button id="cancel-product-21" onclick="cancelFromCart(21)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 22 -->
+        <div class="product">
+            <img src="images/neongreen.png">
+            <h3>Neon Green (Short)</h3>
+            <p>₱0.00</p>
+            <p>Stock: <span id="stock-product-22">0</span></p>
+            <input type="number" id="qty-product-22" min="1" max="0" value="1">
+            <button id="btn-product-22" onclick="addToCart('Neon Green (Short)', 10, 22)">Add to Cart</button>
+            <button id="cancel-product-22" onclick="cancelFromCart(22)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 23 -->
+        <div class="product">
+            <img src="images/neonorange.png">
+            <h3>Neon Orange (Short)</h3>
+            <p>₱0.00</p>
+            <p>Stock: <span id="stock-product-23">0</span></p>
+            <input type="number" id="qty-product-23" min="1" max="0" value="1">
+            <button id="btn-product-23" onclick="addToCart('Neon Orange (Short)', 10, 23)">Add to Cart</button>
+            <button id="cancel-product-23" onclick="cancelFromCart(23)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 24 -->
+        <div class="product">
+            <img src="images/neonyellow.png">
+            <h3>Neon Yellow (Short)</h3>
+            <p>₱0.00</p>
+            <p>Stock: <span id="stock-product-24">0</span></p>
+            <input type="number" id="qty-product-24" min="1" max="0" value="1">
+            <button id="btn-product-24" onclick="addToCart('Neon Yellow (Short)', 10, 24)">Add to Cart</button>
+            <button id="cancel-product-24" onclick="cancelFromCart(24)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 25 -->
+        <div class="product">
+            <img src="images/neonviolet.jpg">
+            <h3>Neon Violet (Short)</h3>
+            <p>₱0.00</p>
+            <p>Stock: <span id="stock-product-25">0</span></p>
+            <input type="number" id="qty-product-25" min="1" max="0" value="1">
+            <button id="btn-product-25" onclick="addToCart('Neon Violet (Short)', 10, 25)">Add to Cart</button>
+            <button id="cancel-product-25" onclick="cancelFromCart(25)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 26 -->
+        <div class="product">
+            <img src="images/neonblue.jpg">
+            <h3>Neon Blue (Short)</h3>
+            <p>₱0.00</p>
+            <p>Stock: <span id="stock-product-26">0</span></p>
+            <input type="number" id="qty-product-26" min="1" max="0" value="1">
+            <button id="btn-product-26" onclick="addToCart('Neon Blue (Short)', 10, 26)">Add to Cart</button>
+            <button id="cancel-product-26" onclick="cancelFromCart(26)" disabled>Cancel</button>
+        </div>
+
+
+ <!-------------------------------------------------------------------------------------------------- NEON PRODUCTS CLOSE -->
+
+ <!-- Product 13 -->
+        <div class="product">
+            <img src="images/glossyps.jpg">
+            <h3>Glossy Sticker Paper</h3>
+            <p>₱12.00</p>
+            <p>Stock: <span id="stock-product-13">5</span></p>
+            <input type="number" id="qty-product-13" min="1" max="5" value="1">
+            <button id="btn-product-13" onclick="addToCart('Glossy Sticker', 12, 13)">Add to Cart</button>
+            <button id="cancel-product-13" onclick="cancelFromCart(13)" disabled>Cancel</button>
+        </div>
+
+
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="images/glossypp.jpg" alt="Product 1">
+            <h3>Glossy Photo Paper (Long)</h3>
+            <p>₱10.00</p>
+            <p>Stock: <span id="stock-product-1">10</span></p>
+            <input type="number" id="qty-product-1" min="1" max="10" value="1">
+            <button id="btn-product-1" onclick="addToCart('Glossy Photo(L)', 10, 1)">Add to Cart</button>
+            <button id="cancel-product-1" onclick="cancelFromCart(1)" disabled>Cancel</button>
+        </div>
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="images/vellum.jpg" alt="Product 2">
+            <h3>Vellum Board (Short)</h3>
+            <p>₱7.00</p>
+            <p>Stock: <span id="stock-product-2">10</span></p>
+            <input type="number" id="qty-product-2" min="1" max="10" value="1">
+            <button id="btn-product-2" onclick="addToCart('Vellum Brd(S)', 7, 2)">Add to Cart</button>
+            <button id="cancel-product-2" onclick="cancelFromCart(2)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 7 -->
+        <div class="product">
+            <img src="images/stickerpaper.jpg">
+            <h3>Sticker Paper</h3>
+            <p>₱10.00</p>
+            <p>Stock: <span id="stock-product-7">10</span></p>
+            <input type="number" id="qty-product-7" min="1" max="10" value="1">
+            <button id="btn-product-7" onclick="addToCart('Sticker Ppr', 10, 7)">Add to Cart</button>
+            <button id="cancel-product-7" onclick="cancelFromCart(7)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 8 -->
+        <div class="product">
+            <img src="images/blackclip.jpg">
+            <h3>Black Clip (Small)</h3>
+            <p>₱5.00</p>
+            <p>Stock: <span id="stock-product-8">3</span></p>
+            <input type="number" id="qty-product-8" min="1" max="3" value="1">
+            <button id="btn-product-8" onclick="addToCart('Clip (S)', 5, 8)">Add to Cart</button>
+            <button id="cancel-product-8" onclick="cancelFromCart(8)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 9 -->
+        <div class="product">
+            <img src="images/blackclip.jpg">
+            <h3>Black Clip (Medium)</h3>
+            <p>₱7.00</p>
+            <p>Stock: <span id="stock-product-9">3</span></p>
+            <input type="number" id="qty-product-9" min="1" max="3" value="1">
+            <button id="btn-product-9" onclick="addToCart('Clip (M)', 7, 9)">Add to Cart</button>
+            <button id="cancel-product-9" onclick="cancelFromCart(9)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 10 -->
+        <div class="product">
+            <img src="images/blackclip.jpg">
+            <h3>Black Clip (Large)</h3>
+            <p>₱10.00</p>
+            <p>Stock: <span id="stock-product-10">3</span></p>
+            <input type="number" id="qty-product-10" min="1" max="3" value="1">
+            <button id="btn-product-10" onclick="addToCart('Clip (L)', 10, 10)">Add to Cart</button>
+            <button id="cancel-product-10" onclick="cancelFromCart(10)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 11 -->
+        <div class="product">
+            <img src="images/scotch.jpg">
+            <h3>Scotch Tape (Medium)</h3>
+            <p>₱15.00</p>
+            <p>Stock: <span id="stock-product-11">5</span></p>
+            <input type="number" id="qty-product-11" min="1" max="5" value="1">
+            <button id="btn-product-11" onclick="addToCart('Scotch(M)', 15, 11)">Add to Cart</button>
+            <button id="cancel-product-11" onclick="cancelFromCart(11)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 12 -->
+        <div class="product">
+            <img src="images/sharpener.jpg">
+            <h3>Sharpener</h3>
+            <p>₱5.00</p>
+            <p>Stock: <span id="stock-product-12">5</span></p>
+            <input type="number" id="qty-product-12" min="1" max="5" value="1">
+            <button id="btn-product-12" onclick="addToCart('Sharpener', 5, 12)">Add to Cart</button>
+            <button id="cancel-product-12" onclick="cancelFromCart(12)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 14 -->
+        <div class="product">
+            <img src="images/laminatelong.jpg">
+            <h3>Laminating Film (Long)</h3>
+            <p>₱35.00</p>
+            <p>Stock: <span id="stock-product-14">5</span></p>
+            <input type="number" id="qty-product-14" min="1" max="5" value="1">
+            <button id="btn-product-14" onclick="addToCart('Laminating F(L)', 35, 14)">Add to Cart</button>
+            <button id="cancel-product-14" onclick="cancelFromCart(14)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 15 -->
+        <div class="product">
+            <img src="images/laminateid.jpg">
+            <h3>Laminating Film (ID-S)</h3>
+            <p>₱5.00</p>
+            <p>Stock: <span id="stock-product-15">5</span></p>
+            <input type="number" id="qty-product-15" min="1" max="5" value="1">
+            <button id="btn-product-15" onclick="addToCart('Laminating ID(S)', 5, 15)">Add to Cart</button>
+            <button id="cancel-product-15" onclick="cancelFromCart(15)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 16 -->
+        <div class="product">
+            <img src="images/laminateid.jpg">
+            <h3>Laminating Film (ID-M)</h3>
+            <p>₱8.00</p>
+            <p>Stock: <span id="stock-product-16">5</span></p>
+            <input type="number" id="qty-product-16" min="1" max="5" value="1">
+            <button id="btn-product-16" onclick="addToCart('Laminating ID(M)', 8, 16)">Add to Cart</button>
+            <button id="cancel-product-16" onclick="cancelFromCart(16)" disabled>Cancel</button>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+<center>
+<div id="announce" style="width:100%;display:none;">
+<h1>ORDER DONE!</h1>
+<p>THANK YOU FOR CHOOSING <b><span style="color:red;">ONE</span> <span style="color:green;">CLICK</span> <span style="color:blue;">STORE</span></b>.</p>
+<p>CLAIM YOUR PRODUCTS AT LOBOC NHS LIBRARY WITH MR. EGCALINOS.</p>
+<p><i>We will send you an order update message to your mobile phone.</i></p>
+</div>
+</center>
+
+
+
+<center>
+<div id="details" style="width:300px;background:yellow;padding:10px;border-radius:15px;display:none;">
+<h3>CUSTOMER DETAILS</h3>
+    <form id="telegramForm">
+        <label for="text">Customer Name:</label><br>
+        <input type="text" id="name" name="text" required><br><br>
+
+	<label for="text">Address:</label><br>
+        <input type="text" id="address" name="text" required><br><br>
+
+
+        <label for="number">Mobile Number:</label><br>
+        <input type="number" id="number" name="number" required oninput="if(this.value.length > 11) this.value = this.value.slice(0, 11);"><br><br>
+
+        <button id="placebutton" class="checkout-btn" type="submit" style="background:orange;width:50%;">Place Order</button>
+<p id="words"></p>
+    </form>
+</div>
+</center>
+
+
+<center>
+    <div id="shopcart" class="cart" style="width:300px;">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-list">
+            <!-- Items will be added here -->
+        </ul>
+	<p>Service/Shipping Fee: ₱1.00</p>
+        <p id="total-price">Total: ₱0.00</p>
+
+        <button id="checkoutbutton" class="checkout-btn" onclick="checkout()" style="width:50%;">Checkout</button>
+    </div>
+</center>
+
+
 </body>
+    <script>
+        let cart = [];
+        let totalPrice = 0;
+        let stocks = { 1: 10, 2: 10, 3: 5, 4:4, 5:2, 6:10, 7:10, 8:3, 9:3, 10:3,
+			 11:5, 12:5, 13:5, 14:5, 15:5, 16:5, 17:50, 18:50, 19:25, 20:0,
+			20:0, 21:0, 22:0, 23:0, 24:0, 25:0, 26:0,27:10, 28:10, 29:10, 30:10, 31:10, }; // Initial stock levels
+
+        function addToCart(productName, price, productId) {
+            const qtyInput = document.getElementById(`qty-product-${productId}`);
+            const qty = parseInt(qtyInput.value);
+            const addToCartButton = document.getElementById(`btn-product-${productId}`);
+            const cancelButton = document.getElementById(`cancel-product-${productId}`);
+
+            if (stocks[productId] >= qty) {
+                stocks[productId] -= qty; // Deduct stock
+                cart.push({ id: productId, name: productName, perprice: price, price: price * qty, qty: qty });
+                totalPrice += price * qty;
+
+                updateStockUI(productId);
+                updateCartUI();
+
+                addToCartButton.disabled = true;
+                cancelButton.disabled = false; // Enable cancel button
+            } else {
+                alert('Not enough stock available!');
+            }
+        }
+
+        function cancelFromCart(productId) {
+            const cancelButton = document.getElementById(`cancel-product-${productId}`);
+            const addToCartButton = document.getElementById(`btn-product-${productId}`);
+
+            // Find and remove the product from the cart
+            const productIndex = cart.findIndex(item => item.id === productId);
+            if (productIndex !== -1) {
+                const product = cart[productIndex];
+                stocks[productId] += product.qty; // Restore stock
+                totalPrice -= product.price;
+
+                cart.splice(productIndex, 1); // Remove product from cart
+
+                updateStockUI(productId);
+                updateCartUI();
+
+                addToCartButton.disabled = false; // Re-enable Add to Cart button
+                cancelButton.disabled = true; // Disable Cancel button
+            }
+        }
+
+        function updateStockUI(productId) {
+            document.getElementById(`stock-product-${productId}`).textContent = stocks[productId];
+        }
+
+        function updateCartUI() {
+            const cartList = document.getElementById('cart-list');
+            cartList.innerHTML = ''; // Clear existing items
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `\n${item.name} - ₱${item.perprice} (x${item.qty}) - ₱${item.price.toFixed(2)}`;
+                cartList.appendChild(li);
+            });
+		const totalPrice1 = totalPrice+1;//SHIPPING FEE IS 1.
+            document.getElementById('total-price').textContent = `Total: ₱${totalPrice1.toFixed(2)}`;
+        }
+
+        function checkout() {//open
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+
+            if (cart.length !== 0) {
+		document.getElementById('checkoutbutton').disabled = true;
+		details.style.display="block";
+            //alert('Checkout successful! Total: ₱' + totalPrice.toFixed(2));
+		}
+           // cart = [];
+            //totalPrice = 0;
+           // updateCartUI();
+
+            // Re-enable all Add to Cart buttons and disable all Cancel buttons
+           // for (let productId in stocks) {
+             //   document.getElementById(`btn-product-${productId}`).disabled = false;
+             //   document.getElementById(`cancel-product-${productId}`).disabled = true;
+          //  }
+        }//close 
+
+//TELEGRAM OPEN 
+// Replace with your Telegram bot's token and chat ID
+        const BOT_TOKEN = "7870251548:AAGRB3mWjbj0NMmhZ_PsBxWXV0O13UMuWy8";
+        const CHAT_ID = "5208891145";
+
+        document.getElementById("telegramForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+document.getElementById('placebutton').disabled = true;
+
+            const name = document.getElementById("name").value;
+		const name1 = name.toUpperCase();
+            const address = document.getElementById("address").value;
+		const address1 = address.toUpperCase();
+            const number = document.getElementById("number").value;
+            //const number2 = document.getElementById("number2").value;
+            const text = document.getElementById('cart-list').textContent;
+	    const total = document.getElementById('total-price').textContent;
+
+	document.getElementById('words').textContent = "We will sent you an order update.Thank you for shopping with us! ";
+            // Re-enable all Add to Cart buttons and disable all Cancel buttons
+            for (let productId in stocks) {//open
+                document.getElementById(`btn-product-${productId}`).disabled = true;
+                document.getElementById(`cancel-product-${productId}`).disabled = true;
+            }//close
+
+            const fullMessage = `.\n\nFrom: One Click Store\nCustomer: ${name1}\nAddress: ${address1}\nNumber: ${number}\nDate of Order: ${formattedDate}\nEstimated Date of Delivery\nFrom: ${formattedDate2}\nTo: ${formattedDate3}\n----------------------------------- \nOrdered Items:\n${text}\nService/Shipping Fee - ₱1.00\n\n${total}\n\n-----------------------------------\nCompany Address: Bonbon Upper, Loboc, Bohol\nSuggest Products Through:\nContact Us: 09941101238\nFB Page: One Click Store\n\nTHANK YOU FOR SHOPPING WITH US!`;
+				update.style.display="none"; // FOR FREE PRODUCTS
+				//whole.style.display="none";// FOR FREE PRODUCTS
+				shopcart.style.display="none";// FOR FREE PRODUCTS
+				details.style.display="none";// FOR FREE PRODUCTS 
+				announce.style.display="block";// FOR FREE PRODUCTS 
+				instruction.style.display="none";// FOR FREE PRODUCTS 
+
+            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    chat_id: CHAT_ID,
+                    text: fullMessage
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    alert("Message sent to One Click Store!");
+                } else {
+                    alert("Failed to send message.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("An error occurred.");
+            });
+        });
+
+//TELEGRAM CLOSE
+
+
+//DATE FOR TODAY OPEN  
+// Get the current date
+        const today = new Date();
+
+        // Format the date as a readable string
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = today.toLocaleDateString(undefined, options);
+//DATE FOR TODAY CLOSE
+
+// DATE TOMORROW OPEN 
+// Get today's date
+        //const today = new Date();
+
+        // Add one day to today's date
+        //const tomorrow = new Date();
+        today.setDate(today.getDate() + 1);
+
+        // Format the date as a readable string
+        const options2 = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate2 = today.toLocaleDateString(undefined, options2);
+
+// DATE TOMORROW CLOSE 
+
+// DATE TOMORROW OPEN 
+// Get today's date
+        //const today = new Date();
+
+        // Add one day to today's date
+        //const tomorrow = new Date();
+        today.setDate(today.getDate() + 2);
+
+        // Format the date as a readable string
+        const options3 = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate3 = today.toLocaleDateString(undefined, options3);
+
+// DATE TOMORROW CLOSE 
+
+
+    </script>
+
 </html>
