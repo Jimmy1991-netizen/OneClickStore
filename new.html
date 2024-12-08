@@ -194,6 +194,37 @@
             <button id="cancel-product-31" onclick="cancelFromCart(31)" disabled>Cancel</button>
         </div> 
 
+<!-- Product 32 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images/quaffpsp.jpg">
+            <h3>Quaff Photo</h3>
+            <h3>Sticker Paper</h3>
+		<p style="color:black;font-size:80%;">(A4 - Size)</p>
+            <p>₱15.00</p>
+            <p>Stock: <span id="stock-product-32">10</span></p>
+            <input type="number" id="qty-product-32" min="1" max="10" value="1">
+            <button id="btn-product-32" onclick="addToCart('Quaff Photo Sticker Paper', 15, 32)">Add to Cart</button>
+            <button id="cancel-product-32" onclick="cancelFromCart(32)" disabled>Cancel</button>
+        </div> 
+
+<!-- Product 33 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images/quaffpp.jpg">
+            <h3>Quaff Photo</h3>
+            <h3>Paper</h3>
+		<p style="color:black;font-size:80%;">(A4 - Size)</p>
+            <p>₱12.00</p>
+            <p>Stock: <span id="stock-product-33">10</span></p>
+            <input type="number" id="qty-product-33" min="1" max="10" value="1">
+            <button id="btn-product-33" onclick="addToCart('Quaff Photo Paper', 12, 33)">Add to Cart</button>
+            <button id="cancel-product-33" onclick="cancelFromCart(33)" disabled>Cancel</button>
+        </div> 
+
+
+
+
+
+
 
         <!-- Product 17 -->
         <div class="product">
@@ -549,7 +580,7 @@
         let totalPrice = 0;
         let stocks = { 1: 10, 2: 10, 3: 5, 4:4, 5:2, 6:10, 7:10, 8:3, 9:3, 10:3,
 			 11:5, 12:5, 13:5, 14:5, 15:5, 16:5, 17:50, 18:50, 19:25, 20:0,
-			20:0, 21:0, 22:0, 23:0, 24:0, 25:0, 26:0,27:10, 28:10, 29:10, 30:10, 31:10, }; // Initial stock levels
+			20:0, 21:0, 22:0, 23:0, 24:0, 25:0, 26:0,27:10, 28:10, 29:10, 30:10, 31:10,32:10, 33:10, }; // Initial stock levels
 
         function addToCart(productName, price, productId) {
             const qtyInput = document.getElementById(`qty-product-${productId}`);
