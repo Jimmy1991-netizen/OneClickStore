@@ -171,7 +171,89 @@
         </div>
 
 
+    <!-- Product 4 -->
+        <div class="product">
+            <img src="images1/stnana.jpg" alt="Product 1">
+            <h3>Nana (Sticker)</h3>
+            <p>₱4.00</p>
+            <p>Stock: <span id="stock-product-4">5</span></p>
+            <input type="number" id="qty-product-4" min="1" max="5" value="1">
+            <button id="btn-product-4" onclick="addToCart('Nana (Sticker)', 4, 4)">Add to Cart</button>
+            <button id="cancel-product-4" onclick="cancelFromCart(4)" disabled>Cancel</button>
+        </div>
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="images1/stgat.jpg" alt="Product 2">
+            <h3>Gatotkaca (Sticker)</h3>
+            <p>₱4.00</p>
+            <p>Stock: <span id="stock-product-5">5</span></p>
+            <input type="number" id="qty-product-5" min="1" max="5" value="1">
+            <button id="btn-product-5" onclick="addToCart('Gatotkaca (Sticker)', 4, 5)">Add to Cart</button>
+            <button id="cancel-product-5" onclick="cancelFromCart(5)" disabled>Cancel</button>
+        </div>
+<!-- Product 6 -->
+        <div class="product">
+            <img src="images1/stgus.jpg" alt="Product 3">
+            <h3>Gusion (Sticker)</h3>
+            <p>₱4.00</p>
+            <p>Stock: <span id="stock-product-6">5</span></p>
+            <input type="number" id="qty-product-6" min="1" max="5" value="1">
+            <button id="btn-product-6" onclick="addToCart('Gusion (Sticker)', 4, 6)">Add to Cart</button>
+            <button id="cancel-product-6" onclick="cancelFromCart(6)" disabled>Cancel</button>
+        </div>
 
+   <!-- Product 7 -->
+        <div class="product">
+            <img src="images1/stmiya.jpg" alt="Product 1">
+            <h3>Miya (Sticker)</h3>
+            <p>₱4.00</p>
+            <p>Stock: <span id="stock-product-7">5</span></p>
+            <input type="number" id="qty-product-7" min="1" max="5" value="1">
+            <button id="btn-product-7" onclick="addToCart('Miya (Sticker)', 4, 7)">Add to Cart</button>
+            <button id="cancel-product-7" onclick="cancelFromCart(7)" disabled>Cancel</button>
+        </div>
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="images1/staraw.jpg" alt="Product 2">
+            <h3>Sticker 1</h3>
+            <p>₱4.00</p>
+            <p>Stock: <span id="stock-product-8">5</span></p>
+            <input type="number" id="qty-product-8" min="1" max="5" value="1">
+            <button id="btn-product-8" onclick="addToCart('Sticker 1', 4, 8)">Add to Cart</button>
+            <button id="cancel-product-8" onclick="cancelFromCart(8)" disabled>Cancel</button>
+        </div>
+<!-- Product 9 -->
+        <div class="product">
+            <img src="images1/stboy.png" alt="Product 3">
+            <h3>Sticker 2</h3>
+            <p>₱4.00</p>
+            <p>Stock: <span id="stock-product-9">5</span></p>
+            <input type="number" id="qty-product-9" min="1" max="5" value="1">
+            <button id="btn-product-9" onclick="addToCart('Sticker 2', 4, 9)">Add to Cart</button>
+            <button id="cancel-product-9" onclick="cancelFromCart(9)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 10 -->
+        <div class="product">
+            <img src="images1/steng2.jpg" alt="Product 3">
+            <h3>Sticker 3</h3>
+            <p>₱4.00</p>
+            <p>Stock: <span id="stock-product-10">5</span></p>
+            <input type="number" id="qty-product-10" min="1" max="5" value="1">
+            <button id="btn-product-10" onclick="addToCart('Sticker 3', 4, 10)">Add to Cart</button>
+            <button id="cancel-product-10" onclick="cancelFromCart(10)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 11 -->
+        <div class="product">
+            <img src="images1/stlnhs.png" alt="Product 3">
+            <h3>Sticker 4</h3>
+            <p>₱4.00</p>
+            <p>Stock: <span id="stock-product-11">5</span></p>
+            <input type="number" id="qty-product-11" min="1" max="5" value="1">
+            <button id="btn-product-11" onclick="addToCart('Sticker 4', 4, 11)">Add to Cart</button>
+            <button id="cancel-product-11" onclick="cancelFromCart(11)" disabled>Cancel</button>
+        </div>
 
 
 
@@ -218,7 +300,7 @@
     <script>
         let cart = [];
         let totalPrice = 0;
-        let stocks = { 1: 5, 2: 5, 3: 5, }; // Initial stock levels
+        let stocks = { 1: 5, 2: 5, 3: 5,4:5, 5:5, 6:5, 7:5, 8:5, 9:5, 10:5,11:5,}; // Initial stock levels
 
         function addToCart(productName, price, productId) {
             const qtyInput = document.getElementById(`qty-product-${productId}`);
