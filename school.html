@@ -129,6 +129,34 @@
 
     <div id="whole" class="container">
 
+<!-- Product 71 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images/sheet.jpg">
+            <h3>LNHS Answer</h3>
+            <h3>Sheet 1</h3>
+		<p style="color:black;font-size:80%;">Front Page Template </p>
+		<p style="color:black;font-size:80%;">(8 Pieces-Long)</p>
+            <p>₱5.00</p>
+            <p>Stock: <span id="stock-product-71">50</span></p>
+            <input type="number" id="qty-product-71" min="1" max="50" value="1">
+            <button id="btn-product-71" onclick="addToCart('LNHS Answer Sheet 1', 5, 71)">Add to Cart</button>
+            <button id="cancel-product-71" onclick="cancelFromCart(71)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 72 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images/sheet.jpg">
+            <h3>LNHS Answer</h3>
+            <h3>Sheet 2</h3>
+		<p style="color:black;font-size:80%;">Back to Back Template </p>
+		<p style="color:black;font-size:80%;">(8 Pieces-Long)</p>
+            <p>₱7.00</p>
+            <p>Stock: <span id="stock-product-72">50</span></p>
+            <input type="number" id="qty-product-72" min="1" max="50" value="1">
+            <button id="btn-product-72" onclick="addToCart('LNHS Answer Sheet 2', 7, 72)">Add to Cart</button>
+            <button id="cancel-product-72" onclick="cancelFromCart(72)" disabled>Cancel</button>
+        </div>
+
         <!-- Product 17 -->
         <div class="product">
             <img src="images/penblack.jpg">
@@ -425,9 +453,12 @@
 
 
 
+
+
+
     </div>
 
-	
+
 <center>
 <div id="announce" style="width:100%;display:none;">
 <h1>ORDER DONE!</h1>
@@ -436,7 +467,9 @@
 <p><i>We will send you an order update message to your mobile phone.</i></p>
 </div>
 </center>
-	
+
+
+
 <center>
 <div id="details" style="width:300px;background:yellow;padding:10px;border-radius:15px;display:none;">
 <h3>CUSTOMER DETAILS</h3>
@@ -478,7 +511,8 @@
         let totalPrice = 0;
         let stocks = { 1: 10, 2: 10, 3: 5, 4:4, 5:2, 6:10, 7:10, 8:3, 9:3, 10:3,
 			 11:5, 12:5, 13:5, 14:5, 15:5, 16:5, 17:50, 18:50, 19:25, 20:0,
-			20:0, 21:0, 22:0, 23:0, 24:0, 25:0, 26:0, }; // Initial stock levels
+			20:0, 21:0, 22:0, 23:0, 24:0, 25:0, 26:0,
+			71:50, 72:50, }; // Initial stock levels
 
         function addToCart(productName, price, productId) {
             const qtyInput = document.getElementById(`qty-product-${productId}`);
