@@ -258,6 +258,62 @@
 
 
 
+
+ <!-- Product 10 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/COCONUT.jpg">
+            <h3>Coconut Ice</h3>
+		<p style="color:black;font-size:80%;">(Victoria's Fleur 10ml)</p>
+            <p><del>₱35.00</del></p>
+            <p>₱19.00</p>
+            <p>Stock: <span id="stock-product-10">10</span></p>
+            <input type="number" id="qty-product-10" min="1" max="10" value="1">
+            <button id="btn-product-10" onclick="addToCart('Coconut Ice', 19, 10)">Add to Cart</button>
+            <button id="cancel-product-10" onclick="cancelFromCart(10)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 11 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/NORELI.jpg">
+            <h3>Floating Noreli</h3>
+		<p style="color:black;font-size:80%;">(Victoria's Fleur 10ml)</p>
+            <p><del>₱35.00</del></p>
+            <p>₱19.00</p>
+            <p>Stock: <span id="stock-product-11">10</span></p>
+            <input type="number" id="qty-product-11" min="1" max="10" value="1">
+            <button id="btn-product-11" onclick="addToCart('Floating Noreli', 19, 11)">Add to Cart</button>
+            <button id="cancel-product-11" onclick="cancelFromCart(11)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 9 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/AMBER.jpg">
+            <h3>Dark Amber</h3>
+		<p style="color:black;font-size:80%;">(Brume Parfumee 10ml)</p>
+            <p><del>₱35.00</del></p>
+            <p>₱19.00</p>
+            <p>Stock: <span id="stock-product-9">10</span></p>
+            <input type="number" id="qty-product-9" min="1" max="10" value="1">
+            <button id="btn-product-9" onclick="addToCart('Dark Amber', 19, 9)">Add to Cart</button>
+            <button id="cancel-product-9" onclick="cancelFromCart(9)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 12 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/ATLANTIC.jpg">
+            <h3>Atlantic</h3>
+		<p style="color:black;font-size:80%;">(Brume Parfumee 10ml)</p>
+            <p><del>₱35.00</del></p>
+            <p>₱5.00</p>
+            <p>Stock: <span id="stock-product-12">10</span></p>
+            <input type="number" id="qty-product-12" min="1" max="10" value="1">
+            <button id="btn-product-12" onclick="addToCart('Atlantic', 19, 12)">Add to Cart</button>
+            <button id="cancel-product-12" onclick="cancelFromCart(12)" disabled>Cancel</button>
+        </div>
+
+
+
+
         <!-- Product 1 -->
         <div class="product" style="line-height:0.5;">
             <img src="images4/per1.jpg" alt="Product 1">
@@ -364,49 +420,6 @@
             <button id="cancel-product-8" onclick="cancelFromCart(8)" disabled>Cancel</button>
         </div>
 
- <!-- Product 9 -->
-        <div class="product" style="display:none;">
-            <img src="images/blackclip.jpg">
-            <h3>Black Clip (Medium)</h3>
-            <p>₱7.00</p>
-            <p>Stock: <span id="stock-product-9">3</span></p>
-            <input type="number" id="qty-product-9" min="1" max="3" value="1">
-            <button id="btn-product-9" onclick="addToCart('Clip (M)', 7, 9)">Add to Cart</button>
-            <button id="cancel-product-9" onclick="cancelFromCart(9)" disabled>Cancel</button>
-        </div>
-
- <!-- Product 10 -->
-        <div class="product" style="display:none;">
-            <img src="images/blackclip.jpg">
-            <h3>Black Clip (Large)</h3>
-            <p>₱10.00</p>
-            <p>Stock: <span id="stock-product-10">3</span></p>
-            <input type="number" id="qty-product-10" min="1" max="3" value="1">
-            <button id="btn-product-10" onclick="addToCart('Clip (L)', 10, 10)">Add to Cart</button>
-            <button id="cancel-product-10" onclick="cancelFromCart(10)" disabled>Cancel</button>
-        </div>
-
- <!-- Product 11 -->
-        <div class="product" style="display:none;">
-            <img src="images/scotch.jpg">
-            <h3>Scotch Tape (Medium)</h3>
-            <p>₱15.00</p>
-            <p>Stock: <span id="stock-product-11">5</span></p>
-            <input type="number" id="qty-product-11" min="1" max="5" value="1">
-            <button id="btn-product-11" onclick="addToCart('Scotch(M)', 15, 11)">Add to Cart</button>
-            <button id="cancel-product-11" onclick="cancelFromCart(11)" disabled>Cancel</button>
-        </div>
-
- <!-- Product 12 -->
-        <div class="product" style="display:none;">
-            <img src="images/sharpener.jpg">
-            <h3>Sharpener</h3>
-            <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-12">5</span></p>
-            <input type="number" id="qty-product-12" min="1" max="5" value="1">
-            <button id="btn-product-12" onclick="addToCart('Sharpener', 5, 12)">Add to Cart</button>
-            <button id="cancel-product-12" onclick="cancelFromCart(12)" disabled>Cancel</button>
-        </div>
 
  <!-- Product 14 -->
         <div class="product" style="display:none;">
@@ -501,8 +514,8 @@
     <script>
         let cart = [];
         let totalPrice = 0;
-        let stocks = { 1: 10, 2: 10, 3: 10, 4:10, 5:10, 6:5, 7:5, 8:5, 9:3, 10:3,
-			 11:5, 12:5, 13:5, 14:5, 15:5, 16:5, 17:50, 18:50, 19:25, 20:0,
+        let stocks = { 1: 10, 2: 10, 3: 10, 4:10, 5:10, 6:5, 7:5, 8:5, 9:10, 10:10,
+			 11:10, 12:10, 13:5, 14:5, 15:5, 16:5, 17:50, 18:50, 19:25, 20:0,
 			20:0, 21:0, 22:0, 23:0, 24:0, 25:0, 26:0, }; // Initial stock levels
 
         function addToCart(productName, price, productId) {
