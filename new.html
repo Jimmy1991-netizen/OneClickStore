@@ -129,6 +129,61 @@
 
     <div id="whole" class="container">
 
+
+ <!-- Product 73 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/COCONUT.jpg">
+            <h3>Coconut Ice</h3>
+		<p style="color:black;font-size:80%;">(Victoria's Fleur 10ml)</p>
+            <p><del>₱35.00</del></p>
+            <p>₱19.00</p>
+            <p>Stock: <span id="stock-product-73">10</span></p>
+            <input type="number" id="qty-product-73" min="1" max="10" value="1">
+            <button id="btn-product-73" onclick="addToCart('Coconut Ice', 19, 73)">Add to Cart</button>
+            <button id="cancel-product-73" onclick="cancelFromCart(73)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 74 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/NORELI.jpg">
+            <h3>Floating Noreli</h3>
+		<p style="color:black;font-size:80%;">(Victoria's Fleur 10ml)</p>
+            <p><del>₱35.00</del></p>
+            <p>₱19.00</p>
+            <p>Stock: <span id="stock-product-74">10</span></p>
+            <input type="number" id="qty-product-74" min="1" max="10" value="1">
+            <button id="btn-product-74" onclick="addToCart('Floating Noreli', 19, 74)">Add to Cart</button>
+            <button id="cancel-product-74" onclick="cancelFromCart(74)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 75 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/AMBER.jpg">
+            <h3>Dark Amber</h3>
+		<p style="color:black;font-size:80%;">(Brume Parfumee 10ml)</p>
+            <p><del>₱35.00</del></p>
+            <p>₱19.00</p>
+            <p>Stock: <span id="stock-product-75">10</span></p>
+            <input type="number" id="qty-product-75" min="1" max="10" value="1">
+            <button id="btn-product-75" onclick="addToCart('Dark Amber', 19, 75)">Add to Cart</button>
+            <button id="cancel-product-75" onclick="cancelFromCart(75)" disabled>Cancel</button>
+        </div>
+
+ <!-- Product 76 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/ATLANTIC.jpg">
+            <h3>Atlantic</h3>
+		<p style="color:black;font-size:80%;">(Brume Parfumee 10ml)</p>
+            <p><del>₱35.00</del></p>
+            <p>₱5.00</p>
+            <p>Stock: <span id="stock-product-76">10</span></p>
+            <input type="number" id="qty-product-76" min="1" max="10" value="1">
+            <button id="btn-product-76" onclick="addToCart('Atlantic', 19, 76)">Add to Cart</button>
+            <button id="cancel-product-76" onclick="cancelFromCart(76)" disabled>Cancel</button>
+        </div>
+
+
+
 <!-- Product 71 -->
         <div class="product" style="line-height:0.5;">
             <img src="images/sheet.jpg">
@@ -912,7 +967,7 @@
 			20:0, 21:0, 22:0, 23:0, 24:0, 25:0, 26:0,27:10, 28:10, 29:10, 30:10, 31:10,32:10, 33:10,
 			44:5, 45:5, 46:5, 47:5, 48:5, 49:5, 50:5, 51:5,52:5, 52:10, 53:10, 54:10, 55:10, 56:10, 57:10, 58:10, 59:10, 60:10,
 			61:10, 62:10,63:10, 64:10,65:10, 66:10,67:10, 68:10,69:10, 70:10,
-			71:50, 72:50, }; // Initial stock levels
+			71:50, 72:50, 73:10, 74:10, 75:10, 76:10, }; // Initial stock levels
 
         function addToCart(productName, price, productId) {
             const qtyInput = document.getElementById(`qty-product-${productId}`);
