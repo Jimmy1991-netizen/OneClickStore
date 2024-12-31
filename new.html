@@ -143,6 +143,70 @@
 
     <div id="whole" class="container">
 
+<!-- Product 100 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images/gunting.jpg">
+            <h3>Paper Scissors</h3>
+		<p style="color:black;font-size:80%;">(Blue Handle)</p>
+            <p>₱25.00</p>
+            <p>Stock: <span id="stock-product-100">10</span></p>
+            <input type="number" id="qty-product-100" min="1" max="10" value="1">
+            <button id="btn-product-100" onclick="addToCart('Paper Scissors(B)', 25, 100)">Add to Cart</button>
+            <button id="cancel-product-100" onclick="cancelFromCart(100)" disabled>Cancel</button>
+        </div>
+
+
+<!-- Product 99 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images/gunting.jpg">
+            <h3>Paper Scissors</h3>
+		<p style="color:black;font-size:80%;">(Red Handle)</p>
+            <p>₱25.00</p>
+            <p>Stock: <span id="stock-product-99">10</span></p>
+            <input type="number" id="qty-product-99" min="1" max="10" value="1">
+            <button id="btn-product-99" onclick="addToCart('Paper Scissors(R)', 25, 99)">Add to Cart</button>
+            <button id="cancel-product-99" onclick="cancelFromCart(99)" disabled>Cancel</button>
+        </div>
+
+
+<!-- Product 96 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images/high.png">
+            <h3>Flex Liner</h3>
+		<p style="color:black;font-size:80%;">(Yellow Highlighter)</p>
+            <p><del>₱30.00</del></p>
+            <p>₱25.00</p>
+            <p>Stock: <span id="stock-product-96">10</span></p>
+            <input type="number" id="qty-product-96" min="1" max="10" value="1">
+            <button id="btn-product-96" onclick="addToCart('Flex Liner(Y)', 25, 96)">Add to Cart</button>
+            <button id="cancel-product-96" onclick="cancelFromCart(96)" disabled>Cancel</button>
+        </div>
+<!-- Product 97 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images/high.png">
+            <h3>Flex Liner</h3>
+		<p style="color:black;font-size:80%;">(Yellow Green)</p>
+            <p><del>₱30.00</del></p>
+            <p>₱25.00</p>
+            <p>Stock: <span id="stock-product-97">10</span></p>
+            <input type="number" id="qty-product-97" min="1" max="10" value="1">
+            <button id="btn-product-97" onclick="addToCart('Flex Liner(YG)', 25, 97)">Add to Cart</button>
+            <button id="cancel-product-97" onclick="cancelFromCart(97)" disabled>Cancel</button>
+        </div>
+<!-- Product 98 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images/high.png">
+            <h3>Flex Liner</h3>
+		<p style="color:black;font-size:80%;">(Orange Highlighter)</p>
+            <p><del>₱30.00</del></p>
+            <p>₱25.00</p>
+            <p>Stock: <span id="stock-product-98">10</span></p>
+            <input type="number" id="qty-product-98" min="1" max="10" value="1">
+            <button id="btn-product-98" onclick="addToCart('Flex Liner(O)', 25, 98)">Add to Cart</button>
+            <button id="cancel-product-98" onclick="cancelFromCart(98)" disabled>Cancel</button>
+        </div>
+
+
 <!-- Product 77 -->
         <div class="product" style="line-height:0.5;">
             <img src="images4/dreamer.png">
@@ -1241,7 +1305,7 @@
 			61:10, 62:10,63:10, 64:10,65:10, 66:10,67:10, 68:10,69:10, 70:10,
 			71:50, 72:50, 73:10, 74:10, 75:10, 76:10,77:10, 78:10, 79:10, 80:10, 
 			81:10, 82:10,83:10, 84:10,85:10, 86:10,87:10, 88:10,89:10, 90:10,
-			91:10, 92:10, 93:10, 94:10, 95:10,}; // Initial stock levels
+			91:10, 92:10, 93:10, 94:10, 95:10,96:10,97:10,98:10,99:10,100:10,}; // Initial stock levels
 
         function addToCart(productName, price, productId) {
             const qtyInput = document.getElementById(`qty-product-${productId}`);
