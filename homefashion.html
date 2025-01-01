@@ -121,20 +121,22 @@
 </div>
 
 <center>
-<h1>Soon to open...</h1>
+<h1>WE ARE NOW OPEN...</h1>
 </center>
 
+
     <div class="container">
-    <!-- Product 1 -->
+    <!-- Product 101 -->
         <div class="product">
-            <img src="images2/footsock2.jpg" alt="Product 1">
+            <img src="images2/footsock2.jpg" >
             <h3>Foot Socks</h3>
-            <p>₱0.00</p>
-            <p>Stock: <span id="stock-product-1">0</span></p>
-            <input type="number" id="qty-product-1" min="1" max="5" value="1">
-            <button id="btn-product-1" onclick="addToCart('Foot Socks', 15, 1)" style="display:none">Add to Cart</button>
-            <button id="cancel-product-1" onclick="cancelFromCart(1)" style="display:none" disabled>Cancel</button>
+            <p>₱35.00</p>
+            <p>Stock: <span id="stock-product-101">10</span></p>
+            <input type="number" id="qty-product-101" min="1" max="10" value="1">
+            <button id="btn-product-101" onclick="addToCart('Foot Socks', 35, 101)">Add to Cart</button>
+            <button id="cancel-product-101" onclick="cancelFromCart(101)" disabled>Cancel</button>
         </div>
+
         <!-- Product 2 -->
         <div class="product">
             <img src="images2/sock2.jpg" alt="Product 2">
@@ -204,7 +206,7 @@
     <script>
         let cart = [];
         let totalPrice = 0;
-        let stocks = { 1: 5, 2: 5, 3: 5, }; // Initial stock levels
+        let stocks = { 1: 5, 2: 5, 3: 5, 101:10, }; // Initial stock levels
 
         function addToCart(productName, price, productId) {
             const qtyInput = document.getElementById(`qty-product-${productId}`);
