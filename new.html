@@ -143,6 +143,34 @@
 
     <div id="whole" class="container">
 
+    <!-- Product 133 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images3/watch.png" >
+            <h3>POSHI</h3>
+            <h4>Quartz Watch</h4>
+		<p style="color:black;font-size:80%;">(Gold For Women)</p>
+            <p>₱300.00</p>
+            <p>Stock: <span id="stock-product-133">2</span></p>
+            <input type="number" id="qty-product-133" min="1" max="2" value="1">
+            <button id="btn-product-133" onclick="addToCart('Quartz Watch (G)', 300, 133)">Add to Cart</button>
+            <button id="cancel-product-133" onclick="cancelFromCart(133)" disabled>Cancel</button>
+        </div>
+
+
+    <!-- Product 132 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images3/shaver.jpg" >
+            <h3>WJM Portable</h3>
+            <h4>Electric Shaver</h4>
+		<p style="color:black;font-size:80%;">(Color Blue)</p>
+            <p>₱99.00</p>
+            <p>Stock: <span id="stock-product-132">2</span></p>
+            <input type="number" id="qty-product-132" min="1" max="2" value="1">
+            <button id="btn-product-132" onclick="addToCart('Electric Shaver(Bl)', 99, 132)">Add to Cart</button>
+            <button id="cancel-product-132" onclick="cancelFromCart(132)" disabled>Cancel</button>
+        </div>
+
+
     <!-- Product 131 -->
         <div class="product" style="line-height:0.5;">
             <img src="images/pinkid.jpg" >
@@ -1729,7 +1757,7 @@
 			101:10,102:10,103:10,104:10,105:2,106:2,107:2,108:2,109:2,110:2,
 			111:2,112:2,113:2,114:2,115:2,116:2,117:2,118:2,119:2,120:2,
 			121:2,122:2,123:2,124:2,125:2,126:2,127:2,128:2,129:2,130:2,
-			131:2,}; // Initial stock levels
+			131:2,132:2,133:2,}; // Initial stock levels
 
         function addToCart(productName, price, productId) {
             const qtyInput = document.getElementById(`qty-product-${productId}`);
