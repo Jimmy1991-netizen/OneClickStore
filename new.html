@@ -143,6 +143,20 @@
 
     <div id="whole" class="container">
 
+    <!-- Product 134 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images2/dish.jpg" >
+            <h3>Scent Clean</h3>
+            <h5>Dishwashing Gel</h5>
+		<p style="color:black;font-size:80%;">(Calamansi 250ml)</p>
+            <p>₱29.00</p>
+            <p>Stock: <span id="stock-product-134">30</span></p>
+            <input type="number" id="qty-product-134" min="1" max="30" value="1">
+            <button id="btn-product-134" onclick="addToCart('Scent Clean (C)', 29, 134)">Add to Cart</button>
+            <button id="cancel-product-134" onclick="cancelFromCart(134)" disabled>Cancel</button>
+        </div>
+
+
     <!-- Product 133 -->
         <div class="product" style="line-height:0.5;">
             <img src="images3/watch.png" >
@@ -1757,7 +1771,7 @@
 			101:10,102:10,103:10,104:10,105:2,106:2,107:2,108:2,109:2,110:2,
 			111:2,112:2,113:2,114:2,115:2,116:2,117:2,118:2,119:2,120:2,
 			121:2,122:2,123:2,124:2,125:2,126:2,127:2,128:2,129:2,130:2,
-			131:2,132:2,133:2,}; // Initial stock levels
+			131:2,132:2,133:2,134:30,}; // Initial stock levels
 
         function addToCart(productName, price, productId) {
             const qtyInput = document.getElementById(`qty-product-${productId}`);
