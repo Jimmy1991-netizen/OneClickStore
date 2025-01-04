@@ -143,6 +143,79 @@
 
     <div id="whole" class="container">
 
+<!-- Product 139 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/almond2.jpg">
+            <h3>Almond</h3>
+            <h3>& Vanilla</h3>
+		<p style="color:black;font-size:80%;">(Perfume 236ml)</p>
+            <p><del>₱200.00</del></p>
+            <p>₱150.00</p>
+            <p>Stock: <span id="stock-product-139">2</span></p>
+            <input type="number" id="qty-product-139" min="1" max="1" value="1">
+            <button id="btn-product-139" onclick="addToCart('Warm Vanilla', 150, 139)">Add to Cart</button>
+            <button id="cancel-product-139" onclick="cancelFromCart(139)" disabled>Cancel</button>
+        </div>
+
+
+<!-- Product 138 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/cherry.jpg">
+            <h3>Cherry</h3>
+            <h3>Blossoms</h3>
+		<p style="color:black;font-size:80%;">(Perfume 236ml)</p>
+            <p>₱200.00</p>
+            <p>Stock: <span id="stock-product-138">2</span></p>
+            <input type="number" id="qty-product-138" min="1" max="1" value="1">
+            <button id="btn-product-138" onclick="addToCart('Warm Vanilla', 200, 138)">Add to Cart</button>
+            <button id="cancel-product-138" onclick="cancelFromCart(138)" disabled>Cancel</button>
+        </div>
+
+
+<!-- Product 137 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/bloom.jpg">
+            <h3>Autumn</h3>
+            <h3>Blooms</h3>
+		<p style="color:black;font-size:80%;">(Perfume 236ml)</p>
+            <p><del>₱200.00</del></p>
+            <p>₱150.00</p>
+            <p>Stock: <span id="stock-product-137">2</span></p>
+            <input type="number" id="qty-product-137" min="1" max="1" value="1">
+            <button id="btn-product-137" onclick="addToCart('Autumn Blooms', 150, 137)">Add to Cart</button>
+            <button id="cancel-product-137" onclick="cancelFromCart(137)" disabled>Cancel</button>
+        </div>
+
+
+<!-- Product 136 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/cocomelon2.jpg">
+            <h3>Cucumber</h3>
+            <h3>Melon</h3>
+		<p style="color:black;font-size:80%;">(Perfume 236ml)</p>
+            <p>₱200.00</p>
+            <p>Stock: <span id="stock-product-136">2</span></p>
+            <input type="number" id="qty-product-136" min="1" max="1" value="1">
+            <button id="btn-product-136" onclick="addToCart('Cucumber Melon', 200, 136)">Add to Cart</button>
+            <button id="cancel-product-136" onclick="cancelFromCart(136)" disabled>Cancel</button>
+        </div>
+
+
+<!-- Product 135 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/warm2.jpg">
+            <h3>Warm</h3>
+            <h3>Vanilla</h3>
+		<p style="color:black;font-size:80%;">(Perfume 236ml)</p>
+            <p><del>₱200.00</del></p>
+            <p>₱150.00</p>
+            <p>Stock: <span id="stock-product-135">2</span></p>
+            <input type="number" id="qty-product-135" min="1" max="1" value="1">
+            <button id="btn-product-135" onclick="addToCart('Warm Vanilla', 150, 135)">Add to Cart</button>
+            <button id="cancel-product-135" onclick="cancelFromCart(135)" disabled>Cancel</button>
+        </div>
+
+
     <!-- Product 134 -->
         <div class="product" style="line-height:0.5;">
             <img src="images2/dish.jpg" >
@@ -1771,7 +1844,7 @@
 			101:10,102:10,103:10,104:10,105:2,106:2,107:2,108:2,109:2,110:2,
 			111:2,112:2,113:2,114:2,115:2,116:2,117:2,118:2,119:2,120:2,
 			121:2,122:2,123:2,124:2,125:2,126:2,127:2,128:2,129:2,130:2,
-			131:2,132:2,133:2,134:30,}; // Initial stock levels
+			131:2,132:2,133:2,134:30,135:1,136:1,137:1,138:1,139:1,}; // Initial stock levels
 
         function addToCart(productName, price, productId) {
             const qtyInput = document.getElementById(`qty-product-${productId}`);
