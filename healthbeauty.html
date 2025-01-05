@@ -131,6 +131,93 @@
 
  <!-------------------------------------------------------------------------------------------------- NEON PRODUCTS CLOSE -->
 
+<!-- Product 145 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/bourbon2.jpg">
+            <h3>Bourbon</h3>
+            <h3>For Men</h3>
+		<p style="color:black;font-size:80%;">(Perfume 236ml)</p>
+            <p>₱200.00</p>
+            <p>Stock: <span id="stock-product-145">2</span></p>
+            <input type="number" id="qty-product-145" min="1" max="1" value="1">
+            <button id="btn-product-145" onclick="addToCart('Bourbon (236ml)', 200, 145)">Add to Cart</button>
+            <button id="cancel-product-145" onclick="cancelFromCart(145)" disabled>Cancel</button>
+        </div>
+
+
+<!-- Product 144 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/paris2.jpg">
+            <h3>Paris</h3>
+            <h3>For Men</h3>
+		<p style="color:black;font-size:80%;">(Perfume 236ml)</p>
+            <p><del>₱200.00</del></p>
+            <p>₱150.00</p>
+            <p>Stock: <span id="stock-product-144">2</span></p>
+            <input type="number" id="qty-product-144" min="1" max="1" value="1">
+            <button id="btn-product-144" onclick="addToCart('Paris (236ml)', 150, 144)">Add to Cart</button>
+            <button id="cancel-product-144" onclick="cancelFromCart(144)" disabled>Cancel</button>
+        </div>
+
+
+<!-- Product 143 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/ocean2.jpg">
+            <h3>Ocean</h3>
+            <h3>For Men</h3>
+		<p style="color:black;font-size:80%;">(Perfume 236ml)</p>
+            <p>₱200.00</p>
+            <p>Stock: <span id="stock-product-143">2</span></p>
+            <input type="number" id="qty-product-143" min="1" max="1" value="1">
+            <button id="btn-product-143" onclick="addToCart('Ocean (236ml)', 200, 143)">Add to Cart</button>
+            <button id="cancel-product-143" onclick="cancelFromCart(143)" disabled>Cancel</button>
+        </div>
+
+
+<!-- Product 142 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/atlantic2.jpg">
+            <h3>Atlantic</h3>
+            <h3>For Men</h3>
+		<p style="color:black;font-size:80%;">(Perfume 236ml)</p>
+            <p><del>₱200.00</del></p>
+            <p>₱150.00</p>
+            <p>Stock: <span id="stock-product-142">2</span></p>
+            <input type="number" id="qty-product-142" min="1" max="1" value="1">
+            <button id="btn-product-142" onclick="addToCart('Atlantic (236ml)', 150, 142)">Add to Cart</button>
+            <button id="cancel-product-142" onclick="cancelFromCart(142)" disabled>Cancel</button>
+        </div>
+
+
+<!-- Product 141 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/coconut2.jpg">
+            <h3>Coconut</h3>
+            <h3>B & B Week</h3>
+		<p style="color:black;font-size:80%;">(Perfume 236ml)</p>
+            <p>₱200.00</p>
+            <p>Stock: <span id="stock-product-141">2</span></p>
+            <input type="number" id="qty-product-141" min="1" max="1" value="1">
+            <button id="btn-product-141" onclick="addToCart('Coconut (236ml)', 200, 141)">Add to Cart</button>
+            <button id="cancel-product-141" onclick="cancelFromCart(141)" disabled>Cancel</button>
+        </div>
+
+
+<!-- Product 140 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/steel2.jpg">
+            <h3>Steel</h3>
+            <h3>For Men</h3>
+		<p style="color:black;font-size:80%;">(Perfume 236ml)</p>
+            <p><del>₱200.00</del></p>
+            <p>₱150.00</p>
+            <p>Stock: <span id="stock-product-140">2</span></p>
+            <input type="number" id="qty-product-140" min="1" max="1" value="1">
+            <button id="btn-product-140" onclick="addToCart('Steel For Men', 150, 140)">Add to Cart</button>
+            <button id="cancel-product-140" onclick="cancelFromCart(140)" disabled>Cancel</button>
+        </div>
+
+
 
 <!-- Product 139 -->
         <div class="product" style="line-height:0.5;">
@@ -153,6 +240,7 @@
             <h3>Cherry</h3>
             <h3>Blossoms</h3>
 		<p style="color:black;font-size:80%;">(Perfume 236ml)</p>
+            <h3 style="color:red;">SOLD OUT</h3>
             <p>₱200.00</p>
             <p>Stock: <span id="stock-product-138">2</span></p>
             <input type="number" id="qty-product-138" min="1" max="1" value="1">
@@ -167,6 +255,7 @@
             <h3>Autumn</h3>
             <h3>Blooms</h3>
 		<p style="color:black;font-size:80%;">(Perfume 236ml)</p>
+            <h3 style="color:red;">SOLD OUT</h3>
             <p><del>₱200.00</del></p>
             <p>₱150.00</p>
             <p>Stock: <span id="stock-product-137">2</span></p>
@@ -512,7 +601,8 @@
         let stocks = { 1: 10, 2: 10, 3: 10, 4:10, 5:10, 6:5, 7:5, 8:5, 9:10, 10:10,
 			 11:10, 12:10, 13:5, 14:5, 15:5, 16:5, 17:50, 18:50, 19:25, 20:0,
 			20:0, 21:0, 22:0, 23:0, 24:0, 25:0, 26:0, 77:10, 78:10, 79:10, 80:10,
-			135:1,136:1,137:1,138:1,139:1, }; // Initial stock levels
+			135:1,136:1,137:0,138:0,139:1,140:1,
+			141:1,142:1,143:1,144:1,145:1, }; // Initial stock levels
 
         function addToCart(productName, price, productId) {
             const qtyInput = document.getElementById(`qty-product-${productId}`);
