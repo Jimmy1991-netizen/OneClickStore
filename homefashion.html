@@ -127,6 +127,35 @@
 
     <div class="container">
 
+<!-- Product 147 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images2/bag1.jpg">
+            <h4>Sports Casual</h4>
+            <h4>Sling Bag</h4>
+		<p style="color:black;font-size:80%;">(Black/Brown)</p>
+            <p>₱399.00</p>
+            <p>Stock: <span id="stock-product-147">1</span></p>
+            <input type="number" id="qty-product-147" min="1" max="1" value="1">
+            <button id="btn-product-147" onclick="addToCart('Sports Bag (Black)', 399, 147)">Add to Cart</button>
+            <button id="cancel-product-147" onclick="cancelFromCart(147)" disabled>Cancel</button>
+        </div>
+
+
+
+<!-- Product 146 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images2/bag2.jpg">
+            <h4>Sports Casual</h4>
+            <h4>Sling Bag</h4>
+		<p style="color:black;font-size:80%;">(Blue/Brown)</p>
+            <p>₱399.00</p>
+            <p>Stock: <span id="stock-product-146">1</span></p>
+            <input type="number" id="qty-product-146" min="1" max="1" value="1">
+            <button id="btn-product-146" onclick="addToCart('Sports Bag (Blue)', 399, 146)">Add to Cart</button>
+            <button id="cancel-product-146" onclick="cancelFromCart(146)" disabled>Cancel</button>
+        </div>
+
+
     <!-- Product 134 -->
         <div class="product" style="line-height:0.5;">
             <img src="images2/dish.jpg" >
@@ -220,7 +249,7 @@
     <script>
         let cart = [];
         let totalPrice = 0;
-        let stocks = { 1: 5, 2: 5, 3: 5, 101:10, 134:30, }; // Initial stock levels
+        let stocks = { 1: 5, 2: 5, 3: 5, 101:10, 134:30, 146:1, 147:1, }; // Initial stock levels
 
         function addToCart(productName, price, productId) {
             const qtyInput = document.getElementById(`qty-product-${productId}`);
