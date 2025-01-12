@@ -127,6 +127,34 @@
 
     <div id="whole" class="container">
 
+<!-- Product 155 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/niacare1.jpg">
+            <h3>NIAcare Set</h3>
+		<p style="color:black;font-size:80%;">(Soap & Cream)</p>
+		<p style="color:black;font-size:80%;">(Serum & Toner)</p>
+            <p>₱50.00</p>
+            <p>Stock: <span id="stock-product-155">5</span></p>
+            <input type="number" id="qty-product-155" min="1" max="5" value="1">
+            <button id="btn-product-155" onclick="addToCart('NIAcare Set', 50, 155)">Add to Cart</button>
+            <button id="cancel-product-155" onclick="cancelFromCart(155)" disabled>Cancel</button>
+        </div>
+
+
+<!-- Product 154 -->
+        <div class="product" style="line-height:0.5;">
+            <img src="images4/soap1.jpg">
+            <h3>NIAcare</h3>
+		<b style="color:black;font-size:80%;">Gluta-Niacinamide</b>
+		<p style="color:black;font-size:80%;">(Whitening Soap)</p>
+            <p>₱20.00</p>
+            <p>Stock: <span id="stock-product-154">10</span></p>
+            <input type="number" id="qty-product-154" min="1" max="10" value="1">
+            <button id="btn-product-154" onclick="addToCart('Gluta-Niacinamide (Soap)', 20, 154)">Add to Cart</button>
+            <button id="cancel-product-154" onclick="cancelFromCart(154)" disabled>Cancel</button>
+        </div>
+
+
 
 
  <!-------------------------------------------------------------------------------------------------- NEON PRODUCTS CLOSE -->
@@ -602,7 +630,7 @@
 			 11:10, 12:10, 13:5, 14:5, 15:5, 16:5, 17:50, 18:50, 19:25, 20:0,
 			20:0, 21:0, 22:0, 23:0, 24:0, 25:0, 26:0, 77:10, 78:10, 79:10, 80:10,
 			135:1,136:1,137:0,138:0,139:1,140:1,
-			141:1,142:1,143:1,144:1,145:1, }; // Initial stock levels
+			141:1,142:1,143:1,144:1,145:1,154:10, 155:5, }; // Initial stock levels
 
         function addToCart(productName, price, productId) {
             const qtyInput = document.getElementById(`qty-product-${productId}`);
