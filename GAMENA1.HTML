@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pop the Ball Game</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color:pink; /*#f0f8ff;*/
+      overflow: hidden;
+    }
+
+    .login-container, .game-container {
+	background-image: url('image2.jpg');
+      display: none;
+      position: relative;
+      width: 80%;
+      height: 80%;
+      border: 2px solid #00796b;
+      background-color:orange; /*#ffffff;*/
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .login-container.active, .game-container.active {
+      display: block;
+    }
+
+    .form-group {
+      margin: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+
+    .form-group input {
+      width: calc(100% - 20px);
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group button {
+      padding: 10px 20px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form-group button:hover {
+      background-color: #004d40;
+    }
+
+    .score {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .ball {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-image: url('image3.png'); /* Path to your ball image */
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .restart-button {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px 20px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .restart-button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container active" id="loginContainer">
+    <h2 style="text-align: center;">Enter the Game</h2>
+    <div id="message" style="color: red; text-align: center; margin-bottom: 10px;"></div>
+    <div class="form-group">
+      <label for="password">Enter Password:oneclickstore</label>
+      <input type="password" id="password" required>
+      <button id="enterGameButton">Enter Game</button>
+    </div>
+  </div>
+
+  <div class="game-container" id="gameContainer">
+    <div class="score" id="score">Score: 0</div>
+    <audio id="popSound" src="quest.mp3"></audio> <!-- Add audio element -->
+    <audio id="pop2Sound" src="cong.mp3"></audio> <!-- Add audio element -->
+<br><br>
+<center><p>Click the pen and reach 100 points to get 1 free product!</p></center>
+    <a href="free1.html"><button class="restart-button" id="restartButton">Get your free product!</button></a>
+  </div>
+
+  <script>
+    const validPasswords = ["12345", "67890", "abcde", "fghij", "oneclickstore"]; // List of valid passwords
+    const loginContainer = document.getElementById('loginContainer');
+    const gameContainer = document.getElementById('gameContainer');
+    const enterGameButton = document.getElementById('enterGameButton');
+    const passwordInput = document.getElementById('password');
+    const message = document.getElementById('message');
+    const scoreDisplay = document.getElementById('score');
+    const restartButton = document.getElementById('restartButton');
+	const popSound = document.getElementById('popSound'); // Reference the audio element
+	const pop2Sound = document.getElementById('pop2Sound'); // Reference the audio element
+
+
+    let currentPassword = null;
+    let score = 0;
+    let interval;
+
+    // Function to get saved score from localStorage
+    function getSavedScore(password) {
+      const scores = JSON.parse(localStorage.getItem('scores')) || {};
+      return scores[password] || 0;
+    }
+
+    // Function to save score to localStorage
+    function saveScore(password, score) {
+      const scores = JSON.parse(localStorage.getItem('scores')) || {};
+      scores[password] = score;
+      localStorage.setItem('scores', JSON.stringify(scores));
+    }
+
+    // Password validation
+    enterGameButton.addEventListener('click', () => {
+      const password = passwordInput.value.trim();
+      if (validPasswords.includes(password)) {
+        currentPassword = password;
+        score = getSavedScore(password);
+        scoreDisplay.textContent = `Score: ${score}`;
+        loginContainer.classList.remove('active');
+        gameContainer.classList.add('active');
+        startGame();
+      } else {
+        message.textContent = 'Invalid password. Please try again.';
+      }
+    });
+
+    // Function to generate random positions
+    function getRandomPosition() {
+      const x = Math.random() * (gameContainer.offsetWidth - 50);
+      const y = Math.random() * (gameContainer.offsetHeight - 50);
+      return { x, y };
+    }
+
+    // Function to create a ball
+    function createBall() {
+      const ball = document.createElement('div');
+      ball.className = 'ball';
+
+      const { x, y } = getRandomPosition();
+      ball.style.left = `${x}px`;
+      ball.style.top = `${y}px`;
+
+      ball.addEventListener('click', () => {
+        ball.remove();
+        score++;
+        scoreDisplay.textContent = `Score: ${score}`;
+        saveScore(currentPassword, score); // Save updated score
+ 	popSound.currentTime = 0; // Reset audio to the start
+        popSound.play(); // Play pop sound
+
+
+
+
+        if (score >= 100) {
+		 	pop2Sound.currentTime = 0; // Reset audio to the start
+        		pop2Sound.play(); // Play pop sound
+          clearInterval(interval);
+          restartButton.style.display = 'block';
+        }
+      });
+
+      gameContainer.appendChild(ball);
+
+      setTimeout(() => {
+        if (ball.parentElement) ball.remove();
+      }, 2000);
+    }
+
+    // Function to start the game
+    function startGame() {
+      score = getSavedScore(currentPassword); // Load saved score
+      scoreDisplay.textContent = `Score: ${score}`;
+      restartButton.style.display = 'none';
+      interval = setInterval(createBall, 2000);
+    }
+
+    // Restart button functionality
+    restartButton.addEventListener('click', () => {
+      //score = 0;
+      saveScore(currentPassword, score); // Reset score
+      startGame();
+    });
+  </script>
+</body>
+</html>
