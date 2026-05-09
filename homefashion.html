@@ -372,7 +372,7 @@ document.getElementById('placebutton').disabled = true;
                 document.getElementById(`cancel-product-${productId}`).disabled = true;
             }//close
 
-            const fullMessage = `.\n\nFrom: One Click Store\nCustomer: ${name1}\nAddress: ${address1}\nNumber: ${number}\nDate of Order: ${formattedDate}\nEstimated Date of Delivery\nFrom: ${formattedDate2}\nTo: ${formattedDate3}\n----------------------------------- \nOrdered Items:\n${text}\nService/Shipping Fee - ₱1.00\n\n${total}\n\n-----------------------------------\nCompany Address: Bonbon Upper, Loboc, Bohol\nSuggest Products Through:\nContact Us: 09941101238\nFB Page: One Click Store\n\nTHANK YOU FOR SHOPPING WITH US!`;
+            const fullMessage = `.\n\nFrom: One Click Store\nCustomer: ${name1}\nAddress: ${address1}\nNumber: ${number}\nDate of Order: ${formattedDate}\nEstimated Date of Delivery\nFrom: ${formattedDate2}\nTo: ${formattedDate3}\n----------------------------------- \nOrdered Items:\n${text}\nService/Shipping Fee - ₱1.00\n\n${total}\n\n-----------------------------------\nCompany Address: Cambuac Sur, Sikatuna, Bohol\nSuggest Products Through:\nContact Us: 09978157579\nFB Page: One Click Store\n\nTHANK YOU FOR SHOPPING WITH US!`;
 				update.style.display="none"; // FOR FREE PRODUCTS
 				//whole.style.display="none";// FOR FREE PRODUCTS
 				shopcart.style.display="none";// FOR FREE PRODUCTS
@@ -393,7 +393,7 @@ document.getElementById('placebutton').disabled = true;
             .then(response => response.json())
             .then(data => {
                 if (data.ok) {
-                    alert("Message sent to One Click Store!");
+                    alert("Order list sent to One Click Store!");
                 } else {
                     alert("Failed to send message.");
                 }
