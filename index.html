@@ -1,37 +1,99 @@
-
 <html>
 
 <head>
     <title>Advanced Navigation Page</title>
+
 <style>
        /*menu,mo color black box kung naay pointer*/
-            nav ul li:hover > a {
+        nav ul li:hover > a {
             background-color: black;
         } 
+
+        /* active category text color */
+        nav ul li a.active {
+            color: yellow !important;
+        }
 </style>
+
 </head>
 
 <body>
 
 <header style="background:green;color:white;padding: 15px 20px">
-    <nav >
+    <nav>
 <center>
-        <div class="logo" style="background:cornsilk;padding:10px;font-size: 50px;font-weight: bold;"><span style="color:red;">One</span> <span style="color:green;">Click</span> <span style="color:blue;">Store</span> <br> <span style="color:black;font-size:50%;">Cambuac Sur, Sikatuna, Bohol</span></div>
+        <div class="logo" style="background:cornsilk;padding:10px;font-size: 50px;font-weight: bold;">
+            <span style="color:red;">One</span> 
+            <span style="color:green;">Click</span> 
+            <span style="color:blue;">Store</span> 
+            <br> 
+            <span style="color:black;font-size:50%;">Cambuac Sur, Sikatuna, Bohol</span>
+        </div>
+
 <br>
 
-	<div class="logo" style="font-size: 20px;font-weight: bold;">Choose your shop category!</div>
+	    <div class="logo" style="font-size: 20px;font-weight: bold;">
+            Choose your shop category!
+        </div>
 </center>
+
         <ul style="list-style: none;display: flex;">
-            <li><a href="school.html" target="iframe_ex" style="text-decoration: none;color: white;padding:10px 20px;">School Supplies</a></li>
-            <li><a href="homefashion.html" target="iframe_ex" style="text-decoration: none;color: white;padding:10px 20px;">Home & Fashion</a></li>
-            <li><a href="accessories.html" target="iframe_ex" style="text-decoration: none;color: white;padding:10px 20px;">Accessories</a></li>
-            <li><a href="healthbeauty.html" target="iframe_ex" style="text-decoration: none;color: white;padding:10px 20px;">Health & Beauty</a></li>
-            <li><a href="services.html" target="iframe_ex" style="text-decoration: none;color: white;padding:10px 20px;">Food & Beverage</a></li>
+            <li>
+                <a href="school.html" target="iframe_ex" class="active"
+                style="text-decoration: none;color: white;padding:10px 20px;">
+                School Supplies
+                </a>
+            </li>
+
+            <li>
+                <a href="homefashion.html" target="iframe_ex"
+                style="text-decoration: none;color: white;padding:10px 20px;">
+                Home & Fashion
+                </a>
+            </li>
+
+            <li>
+                <a href="accessories.html" target="iframe_ex"
+                style="text-decoration: none;color: white;padding:10px 20px;">
+                Accessories
+                </a>
+            </li>
+
+            <li>
+                <a href="healthbeauty.html" target="iframe_ex"
+                style="text-decoration: none;color: white;padding:10px 20px;">
+                Health & Beauty
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html" target="iframe_ex"
+                style="text-decoration: none;color: white;padding:10px 20px;">
+                Food & Beverage
+                </a>
+            </li>
         </ul>
+
     </nav>
 </header>
+
 <iframe width="100%" height="100%" src="school.html" name="iframe_ex">
 </iframe>
+
+<script>
+    const links = document.querySelectorAll("nav ul li a");
+
+    links.forEach(link => {
+        link.addEventListener("click", function() {
+
+            links.forEach(item => {
+                item.classList.remove("active");
+            });
+
+            this.classList.add("active");
+        });
+    });
+</script>
 
 </body>
 </html>
