@@ -109,7 +109,7 @@
     </header>
 <center>
 <div id="update" style="width:100%;color:red;">
-<h1> New Perfume Products Available! </h1>
+<h1>(NO NEW ANNOUNCEMENT)</h1>
 </div>
 </center>
 
@@ -127,7 +127,7 @@
 
     <div id="whole" class="container">
 
-<!-- Product 155 -->
+        <!-- Product 155 -->
         <div class="product" style="line-height:0.5;">
             <img src="images4/niacare1.jpg">
             <h3>NIAcare Set</h3>
@@ -573,15 +573,17 @@
 
 
 
+
+
     </div>
 
 
 <center>
 <div id="announce" style="width:100%;display:none;">
-<h1>ORDER DONE!</h1>
+<h1>ORDER SUBMITTED!</h1>
 <p>THANK YOU FOR CHOOSING <b><span style="color:red;">ONE</span> <span style="color:green;">CLICK</span> <span style="color:blue;">STORE</span></b>.</p>
-<p>CLAIM YOUR PRODUCTS AT LOBOC NHS LIBRARY WITH MR. EGCALINOS.</p>
-<p><i>We will send you an order update message to your mobile phone.</i></p>
+<p>Please prepare an exact amount for your order.</p>
+<p><i>We will send a message or call you for an order update to your mobile phone.</i></p>
 </div>
 </center>
 
@@ -594,7 +596,7 @@
         <label for="text">Customer Name:</label><br>
         <input type="text" id="name" name="text" required><br><br>
 
-	<label for="text">Address:</label><br>
+	<label for="text">Delivery Location:</label><br>
         <input type="text" id="address" name="text" required><br><br>
 
 
@@ -627,8 +629,7 @@
         let cart = [];
         let totalPrice = 0;
         let stocks = { 1: 10, 2: 10, 3: 10, 4:10, 5:10, 6:5, 7:5, 8:5, 9:10, 10:10,
-			 11:10, 12:10, 13:5, 14:5, 15:5, 16:5, 17:50, 18:50, 19:25, 20:0,
-			20:0, 21:0, 22:0, 23:0, 24:0, 25:0, 26:0, 77:10, 78:10, 79:10, 80:10,
+			 11:10, 12:10,14:5, 15:5, 16:5,77:10, 78:10, 79:10, 80:10,
 			135:1,136:1,137:0,138:0,139:1,140:1,
 			141:1,142:1,143:1,144:1,145:1,154:10, 155:5, }; // Initial stock levels
 
@@ -737,7 +738,7 @@ document.getElementById('placebutton').disabled = true;
                 document.getElementById(`cancel-product-${productId}`).disabled = true;
             }//close
 
-            const fullMessage = `.\n\nFrom: One Click Store\nCustomer: ${name1}\nAddress: ${address1}\nNumber: ${number}\nDate of Order: ${formattedDate}\nEstimated Date of Delivery\nFrom: ${formattedDate2}\nTo: ${formattedDate3}\n----------------------------------- \nOrdered Items:\n${text}\nService/Shipping Fee - ₱1.00\n\n${total}\n\n-----------------------------------\nCompany Address: Bonbon Upper, Loboc, Bohol\nSuggest Products Through:\nContact Us: 09941101238\nFB Page: One Click Store\n\nTHANK YOU FOR SHOPPING WITH US!`;
+            const fullMessage = `.\n\nFrom: One Click Store\nCustomer: ${name1}\nLocation: ${address1}\nCel#: ${number}\nDate of Order: ${formattedDate}\nEstimated Date of Delivery\nFrom: ${formattedDate2}\nTo: ${formattedDate3}\n----------------------------------- \nOrdered Items:\n${text}\nService/Shipping Fee - ₱1.00\n\n${total}\n\n-----------------------------------\nCompany Address: Cambuac Sur, Sikatuna, Bohol\nSuggest Products Through:\nContact Us: 09978157579\nFB Page: One Click Store\n\nTHANK YOU FOR SHOPPING WITH US!`;
 				update.style.display="none"; // FOR FREE PRODUCTS
 				//whole.style.display="none";// FOR FREE PRODUCTS
 				shopcart.style.display="none";// FOR FREE PRODUCTS
@@ -758,7 +759,7 @@ document.getElementById('placebutton').disabled = true;
             .then(response => response.json())
             .then(data => {
                 if (data.ok) {
-                    alert("Message sent to One Click Store!");
+                    alert("Order list sent to One Click Store!");
                 } else {
                     alert("Failed to send message.");
                 }
