@@ -104,27 +104,14 @@
 <br>
     <header >
 <center>
-<h1 style="color:blue;">Other Services</h1>
+<h1 style="color:blue;">Food & Beverage</h1>
 </center>
     </header>
-
 <center>
 <div id="update" style="width:100%;color:red;">
-<h1>ID Lamination Guide</h1>
-<h1>Please submit your ID or documents to Mr. Egcalinos after you have ordered.</h1>
-<h1>We cannot process the lamination without these documents.Thank you.</h1>
+<h1>(NO NEW ANNOUNCEMENT)</h1>
 </div>
 </center>
-
-<center>
-<div id="announce" style="width:100%;display:none;">
-<h1>ORDER DONE!</h1>
-<p>THANK YOU FOR CHOOSING <b><span style="color:red;">ONE</span> <span style="color:green;">CLICK</span> <span style="color:blue;">STORE</span></b>.</p>
-<p>CLAIM YOUR PRODUCTS AT LOBOC NHS LIBRARY WITH MR. EGCALINOS.</p>
-<p><i>We will sent you an order update message to your mobile phone.</i></p>
-</div>
-</center>
-
 
 <div id="instruction" style="padding:50px;left:100px;width:100%;">
 <p><b>UNSAON PAG-ORDER?</b></p>
@@ -140,7 +127,7 @@
 
     <div id="whole" class="container">
 
-    <!-- Product 1 -->
+        <!-- Product 1 -->
         <div class="product">
             <img src="images1/id.jpg" alt="Product 1">
             <h3>ID Lamination (80mm X 110mm)</h3>
@@ -693,7 +680,21 @@
 
 
 
+
+
     </div>
+
+
+<center>
+<div id="announce" style="width:100%;display:none;">
+<h1>ORDER SUBMITTED!</h1>
+<p>THANK YOU FOR CHOOSING <b><span style="color:red;">ONE</span> <span style="color:green;">CLICK</span> <span style="color:blue;">STORE</span></b>.</p>
+<p>Please prepare an exact amount for your order.</p>
+<p><i>We will send a message or call you for an order update to your mobile phone.</i></p>
+</div>
+</center>
+
+
 
 <center>
 <div id="details" style="width:300px;background:yellow;padding:10px;border-radius:15px;display:none;">
@@ -702,7 +703,7 @@
         <label for="text">Customer Name:</label><br>
         <input type="text" id="name" name="text" required><br><br>
 
-	<label for="text">Address:</label><br>
+	<label for="text">Delivery Location:</label><br>
         <input type="text" id="address" name="text" required><br><br>
 
 
@@ -734,12 +735,12 @@
     <script>
         let cart = [];
         let totalPrice = 0;
-        let stocks = { 1: 5, 2: 5, 3: 5,4:5, 5:5, 6:5, 7:5, 8:5, 9:5, 10:5,11:5,33:5,
+        let stocks = { 1: 5, 2: 5, 3: 5,4:5, 5:5, 6:5, 7:5, 8:5, 9:5, 10:5,11:5,
 			52:10, 53:10, 54:10, 55:10, 56:10, 57:10, 58:10, 59:10, 60:10,
 			61:10, 62:10,63:10, 64:10,65:10, 66:10,67:10, 68:10,69:10, 70:10,
 			77:10, 78:10, 79:10, 80:10, 
 			81:10, 82:10,83:10, 84:10,85:10, 86:10,87:10, 88:10,89:10, 90:10,
-			91:10, 92:10, 93:10, 94:10, 95:10,}; // Initial stock levels
+			91:10, 92:10, 93:10, 94:10, 95:10, }; // Initial stock levels
 
         function addToCart(productName, price, productId) {
             const qtyInput = document.getElementById(`qty-product-${productId}`);
@@ -831,7 +832,9 @@
 document.getElementById('placebutton').disabled = true;
 
             const name = document.getElementById("name").value;
+		const name1 = name.toUpperCase();
             const address = document.getElementById("address").value;
+		const address1 = address.toUpperCase();
             const number = document.getElementById("number").value;
             //const number2 = document.getElementById("number2").value;
             const text = document.getElementById('cart-list').textContent;
@@ -844,15 +847,13 @@ document.getElementById('placebutton').disabled = true;
                 document.getElementById(`cancel-product-${productId}`).disabled = true;
             }//close
 
-            const fullMessage = `.\n\nFrom: One Click Store\nCustomer: ${name}\nAddress: ${address}\nNumber: ${number}\nDate of Order: ${formattedDate}\nEstimated Date of Delivery\nFrom: ${formattedDate2}\nTo: ${formattedDate3}\n----------------------------------- \nOrdered Items:\n${text}\nService/Shipping Fee - ₱1.00\n\n${total}\n\n-----------------------------------\nCompany Address: Bonbon Upper, Loboc, Bohol\nSuggest Products Through:\nContact Us: 09941101238\nFB Page: One Click Store\n\nTHANK YOU FOR SHOPPING WITH US!`; 
-
+            const fullMessage = `.\n\nFrom: One Click Store\nCustomer: ${name1}\nLocation: ${address1}\nCel#: ${number}\nDate of Order: ${formattedDate}\nEstimated Date of Delivery\nFrom: ${formattedDate2}\nTo: ${formattedDate3}\n----------------------------------- \nOrdered Items:\n${text}\nService/Shipping Fee - ₱1.00\n\n${total}\n\n-----------------------------------\nCompany Address: Cambuac Sur, Sikatuna, Bohol\nSuggest Products Through:\nContact Us: 09978157579\nFB Page: One Click Store\n\nTHANK YOU FOR SHOPPING WITH US!`;
 				update.style.display="none"; // FOR FREE PRODUCTS
-				whole.style.display="none";// FOR FREE PRODUCTS
+				//whole.style.display="none";// FOR FREE PRODUCTS
 				shopcart.style.display="none";// FOR FREE PRODUCTS
 				details.style.display="none";// FOR FREE PRODUCTS 
 				announce.style.display="block";// FOR FREE PRODUCTS 
 				instruction.style.display="none";// FOR FREE PRODUCTS 
-
 
             fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
                 method: "POST",
@@ -867,7 +868,7 @@ document.getElementById('placebutton').disabled = true;
             .then(response => response.json())
             .then(data => {
                 if (data.ok) {
-                    alert("Message sent to One Click Store!");
+                    alert("Order list sent to One Click Store!");
                 } else {
                     alert("Failed to send message.");
                 }
