@@ -1,11 +1,15 @@
-<html>
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: moccasin;
-		background:violet;
+            background-color: yellow;
         }
         header {
             background-color: cornsilk;
@@ -93,34 +97,37 @@
 	div {
 		width:140px;
 	}
-</style>
-<body style="background:yellow;">
+    </style>
+
+</head>
+<body>
 <br>
     <header >
 <center>
 <h1 style="color:blue;">Accessories</h1>
 </center>
     </header>
-<div style="padding:50px;left:100px;width:100%;">
+<center>
+<div id="update" style="width:100%;color:red;">
+<h1>(NO NEW ANNOUNCEMENT)</h1>
+</div>
+</center>
+
+<div id="instruction" style="padding:50px;left:100px;width:100%;">
 <p><b>UNSAON PAG-ORDER?</b></p>
 <p><b>1.</b> Pangitaa ang gusto nimong orderon sa ubos.</p>
 <p><b>2.</b> Pinduta ang "Add to Cart" kung aduna na kay napili.</p>
 <p><b>3.</b> Tan.awa sa kina-ubsan ang Shopping Cart kung naa naba sa lista ang imong order.</p>
 <p><b>4.</b> Kung naa pakay idugang nga order buhata balik ang pag add to cart.</p>
 <p><b>5.</b> Kung wala nakay orderon, pwedi na pinduton ang checkout sa kina-ubsan.</p>
-<p><b>6.</b> Sa orange form, ibutang ang imong mga detalye. I-check pagbalik ang imong mobile number. </p>
+<p><b>6.</b> Sa yellow form, ibutang ang imong mga detalye. I-check pagbalik ang imong mobile number. </p>
 <p><b>7.</b> Pinduta ang "Place Order".</p>
 <p><b>8.</b> Humana. Paabuta ang ilang text sa imong cellphone para sa order update.</p>
 </div>
 
-<center>
-<h1>WE ARE NOW OPEN...</h1>
-</center>
+    <div id="whole" class="container">
 
-
-    <div class="container">
-
-<!-- Product 147 -->
+       <!-- Product 147 -->
         <div class="product" style="line-height:0.5;">
             <img src="images2/bag1.jpg">
             <h4>Sports Casual</h4>
@@ -178,28 +185,35 @@
 
 
 
-
-
-
-
-
     </div>
 
+
 <center>
-<div id="details" style="width:300px;background:orange;padding:10px;border-radius:15px;display:none;">
+<div id="announce" style="width:100%;display:none;">
+<h1>ORDER SUBMITTED!</h1>
+<p>THANK YOU FOR CHOOSING <b><span style="color:red;">ONE</span> <span style="color:green;">CLICK</span> <span style="color:blue;">STORE</span></b>.</p>
+<p>Please prepare an exact amount for your order.</p>
+<p><i>We will send a message or call you for an order update to your mobile phone.</i></p>
+</div>
+</center>
+
+
+
+<center>
+<div id="details" style="width:300px;background:yellow;padding:10px;border-radius:15px;display:none;">
 <h3>CUSTOMER DETAILS</h3>
     <form id="telegramForm">
         <label for="text">Customer Name:</label><br>
         <input type="text" id="name" name="text" required><br><br>
 
-	<label for="text">Address:</label><br>
+	<label for="text">Delivery Location:</label><br>
         <input type="text" id="address" name="text" required><br><br>
 
 
         <label for="number">Mobile Number:</label><br>
         <input type="number" id="number" name="number" required oninput="if(this.value.length > 11) this.value = this.value.slice(0, 11);"><br><br>
 
-        <button id="placebutton" class="checkout-btn" type="submit" style="background:red;width:50%;">Place Order</button>
+        <button id="placebutton" class="checkout-btn" type="submit" style="background:orange;width:50%;">Place Order</button>
 <p id="words"></p>
     </form>
 </div>
@@ -207,7 +221,7 @@
 
 
 <center>
-    <div class="cart" style="width:300px;">
+    <div id="shopcart" class="cart" style="width:300px;">
         <h2>Shopping Cart</h2>
         <ul id="cart-list">
             <!-- Items will be added here -->
@@ -316,7 +330,9 @@
 document.getElementById('placebutton').disabled = true;
 
             const name = document.getElementById("name").value;
+		const name1 = name.toUpperCase();
             const address = document.getElementById("address").value;
+		const address1 = address.toUpperCase();
             const number = document.getElementById("number").value;
             //const number2 = document.getElementById("number2").value;
             const text = document.getElementById('cart-list').textContent;
@@ -329,7 +345,13 @@ document.getElementById('placebutton').disabled = true;
                 document.getElementById(`cancel-product-${productId}`).disabled = true;
             }//close
 
-            const fullMessage = `.\n\nFrom: One Click Store\nCustomer: ${name}\nAddress: ${address}\nNumber: ${number}\nDate of Order: ${formattedDate}\nEstimated Date of Delivery\nFrom: ${formattedDate2}\nTo: ${formattedDate3}\n----------------------------------- \nOrdered Items:\n${text}\nService/Shipping Fee - ₱1.00\n\n${total}\n\n-----------------------------------\nCompany Address: Bonbon Upper, Loboc, Bohol\nSuggest Products Through:\nContact Us: 09941101238\nFB Page: One Click Store\n\nTHANK YOU FOR SHOPPING WITH US!`;
+            const fullMessage = `.\n\nFrom: One Click Store\nCustomer: ${name1}\nLocation: ${address1}\nCel#: ${number}\nDate of Order: ${formattedDate}\nEstimated Date of Delivery\nFrom: ${formattedDate2}\nTo: ${formattedDate3}\n----------------------------------- \nOrdered Items:\n${text}\nService/Shipping Fee - ₱1.00\n\n${total}\n\n-----------------------------------\nCompany Address: Cambuac Sur, Sikatuna, Bohol\nSuggest Products Through:\nContact Us: 09978157579\nFB Page: One Click Store\n\nTHANK YOU FOR SHOPPING WITH US!`;
+				update.style.display="none"; // FOR FREE PRODUCTS
+				//whole.style.display="none";// FOR FREE PRODUCTS
+				shopcart.style.display="none";// FOR FREE PRODUCTS
+				details.style.display="none";// FOR FREE PRODUCTS 
+				announce.style.display="block";// FOR FREE PRODUCTS 
+				instruction.style.display="none";// FOR FREE PRODUCTS 
 
             fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
                 method: "POST",
@@ -344,7 +366,7 @@ document.getElementById('placebutton').disabled = true;
             .then(response => response.json())
             .then(data => {
                 if (data.ok) {
-                    alert("Message sent to One Click Store!");
+                    alert("Order list sent to One Click Store!");
                 } else {
                     alert("Failed to send message.");
                 }
@@ -397,6 +419,5 @@ document.getElementById('placebutton').disabled = true;
 
 
     </script>
-
 
 </html>
