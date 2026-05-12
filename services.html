@@ -97,6 +97,36 @@
 	div {
 		width:140px;
 	}
+
+    /* Popup Division */
+    #shopcart{
+        display: none;
+        width: 300px;
+        padding: 20px;
+        background: white;
+        border: 2px solid black;
+        box-shadow: 0 0 10px gray;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Popup Division */
+    #details{
+        display: none;
+        width: 300px;
+        padding: 20px;
+        background: white;
+        border: 2px solid black;
+        box-shadow: 0 0 10px gray;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
     </style>
 
 </head>
@@ -138,7 +168,8 @@
             <p>₱50.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-50001">50</span></p>
             <input type="number" id="qty-product-50001" min="1" max="50" value="1">
-            <button id="btn-product-50001" onclick="addToCart('Salabat Candy 1 pk', 50, 50001)">Add to Cart</button>
+            <button id="btn-product-50001" onclick="addToCart('Salabat Candy 1 pk', 50, 50001);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-50001" onclick="cancelFromCart(50001)" disabled>Cancel</button>
         </div>
 
@@ -152,7 +183,8 @@
             <p>₱98.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-50002">50</span></p>
             <input type="number" id="qty-product-50002" min="1" max="50" value="1">
-            <button id="btn-product-50002" onclick="addToCart('Salabat Candy 2 pks', 98, 50002)">Add to Cart</button>
+            <button id="btn-product-50002" onclick="addToCart('Salabat Candy 2 pks', 98, 50002);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-50002" onclick="cancelFromCart(50002)" disabled>Cancel</button>
         </div>
 
@@ -166,7 +198,8 @@
             <p>₱145.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-50003">50</span></p>
             <input type="number" id="qty-product-50003" min="1" max="50" value="1">
-            <button id="btn-product-50003" onclick="addToCart('Salabat Candy 3 pks', 145, 50003)">Add to Cart</button>
+            <button id="btn-product-50003" onclick="addToCart('Salabat Candy 3 pks', 145, 50003);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-50003" onclick="cancelFromCart(50003)" disabled>Cancel</button>
         </div>
 
@@ -180,7 +213,8 @@
             <p>₱85.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-50004">50</span></p>
             <input type="number" id="qty-product-50004" min="1" max="50" value="1">
-            <button id="btn-product-50004" onclick="addToCart('Salabat Powder (10/15g)', 85, 50004)">Add to Cart</button>
+            <button id="btn-product-50004" onclick="addToCart('Salabat Powder (10/15g)', 85, 50004);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-50004" onclick="cancelFromCart(50004)" disabled>Cancel</button>
         </div>
 
@@ -193,7 +227,8 @@
             <p>₱140.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-50005">50</span></p>
             <input type="number" id="qty-product-50005" min="1" max="50" value="1">
-            <button id="btn-product-50005" onclick="addToCart('Salabat 3in1 (250g)', 140, 50005)">Add to Cart</button>
+            <button id="btn-product-50005" onclick="addToCart('Salabat 3in1 (250g)', 140, 50005);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-50005" onclick="cancelFromCart(50005)" disabled>Cancel</button>
         </div>
 
@@ -206,7 +241,8 @@
             <p>₱105.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-50006">50</span></p>
             <input type="number" id="qty-product-50006" min="1" max="50" value="1">
-            <button id="btn-product-50006" onclick="addToCart('Turmeric Powder (250g)', 105, 50006)">Add to Cart</button>
+            <button id="btn-product-50006" onclick="addToCart('Turmeric Powder (250g)', 105, 50006);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-50006" onclick="cancelFromCart(50006)" disabled>Cancel</button>
         </div>
 
@@ -220,8 +256,10 @@
             <p>₱85.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-50007">50</span></p>
             <input type="number" id="qty-product-50007" min="1" max="50" value="1">
-            <button id="btn-product-50007" onclick="addToCart('Turmeric Powder (10/15g)', 85, 50007)">Add to Cart</button>
+            <button id="btn-product-50007" onclick="addToCart('Turmeric Powder (10/15g)', 85, 50007);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-50007" onclick="cancelFromCart(50007)" disabled>Cancel</button>
+
         </div>
 
 
@@ -271,7 +309,11 @@
 	<p>Service/Shipping Fee: ₱1.00</p>
         <p id="total-price">Total: ₱0.00</p>
 
-        <button id="checkoutbutton" class="checkout-btn" onclick="checkout()" style="width:50%;">Checkout</button>
+    <button class="checkout-btn" style="width:50%;" onclick="hidePopup101()">Buy more</button>
+
+        <button id="checkoutbutton" class="checkout-btn" style="background:orangered;width:50%;" onclick="showPopup102();hidePopup101();" style="width:50%;">Checkout</button>
+
+
     </div>
 </center>
 
@@ -466,6 +508,30 @@ document.getElementById('placebutton').disabled = true;
         const formattedDate3 = today.toLocaleDateString(undefined, options3);
 
 // DATE TOMORROW CLOSE 
+
+
+/// SHOWHIDE CART OPEN
+    function showPopup101(){
+        document.getElementById("shopcart").style.display = "block";
+    } 
+
+    function hidePopup101(){
+        document.getElementById("shopcart").style.display = "none";
+    }
+/// SHOWHIDE CART CLOSE
+
+
+
+
+/// SHOWHIDE DETAILS OPEN
+    function showPopup102(){
+        document.getElementById("details").style.display = "block";
+    } 
+
+    function hidePopup102(){
+        document.getElementById("details").style.display = "none";
+    }
+/// SHOWHIDE DETAILS CLOSE
 
 
     </script>
