@@ -97,6 +97,36 @@
 	div {
 		width:140px;
 	}
+
+    /* Popup Division */
+    #shopcart{
+        display: none;
+        width: 300px;
+        padding: 20px;
+        background: white;
+        border: 2px solid black;
+        box-shadow: 0 0 10px gray;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Popup Division */
+    #details{
+        display: none;
+        width: 300px;
+        padding: 20px;
+        background: white;
+        border: 2px solid black;
+        box-shadow: 0 0 10px gray;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
     </style>
 
 </head>
@@ -140,7 +170,8 @@
             <p>₱250.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-40001">10</span></p>
             <input type="number" id="qty-product-40001" min="1" max="10" value="1">
-            <button id="btn-product-40001" onclick="addToCart('Citronella', 250, 40001)">Add to Cart</button>
+            <button id="btn-product-40001" onclick="addToCart('Citronella', 250, 40001);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-40001" onclick="cancelFromCart(40001)" disabled>Cancel</button>
         </div>
 
@@ -154,7 +185,8 @@
             <p>₱235.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-40002">10</span></p>
             <input type="number" id="qty-product-40002" min="1" max="10" value="1">
-            <button id="btn-product-40002" onclick="addToCart('Glutalight Glow', 235, 40002)">Add to Cart</button>
+            <button id="btn-product-40002" onclick="addToCart('Glutalight Glow', 235, 40002);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-40002" onclick="cancelFromCart(40002)" disabled>Cancel</button>
         </div>
 
@@ -169,7 +201,8 @@
             <p>₱53.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-40003">10</span></p>
             <input type="number" id="qty-product-40003" min="1" max="10" value="1">
-            <button id="btn-product-40003" onclick="addToCart('Check Soap', 53, 40003)">Add to Cart</button>
+            <button id="btn-product-40003" onclick="addToCart('Check Soap', 53, 40003);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-40003" onclick="cancelFromCart(40003)" disabled>Cancel</button>
         </div>
 
@@ -183,7 +216,8 @@
             <p>₱137.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-40004">10</span></p>
             <input type="number" id="qty-product-40004" min="1" max="10" value="1">
-            <button id="btn-product-40004" onclick="addToCart('Herbs & Beauty (FP)', 137, 40004)">Add to Cart</button>
+            <button id="btn-product-40004" onclick="addToCart('Herbs & Beauty (FP)', 137, 40004);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-40004" onclick="cancelFromCart(40004)" disabled>Cancel</button>
         </div>
 
@@ -197,7 +231,8 @@
             <p>₱137.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-40005">10</span></p>
             <input type="number" id="qty-product-40005" min="1" max="10" value="1">
-            <button id="btn-product-40005" onclick="addToCart('Herbs & Beauty (SF)', 137, 40005)">Add to Cart</button>
+            <button id="btn-product-40005" onclick="addToCart('Herbs & Beauty (SF)', 137, 40005);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-40005" onclick="cancelFromCart(40005)" disabled>Cancel</button>
         </div>
 
@@ -211,7 +246,8 @@
             <p>₱137.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-40006">10</span></p>
             <input type="number" id="qty-product-40006" min="1" max="10" value="1">
-            <button id="btn-product-40006" onclick="addToCart('Herbs & Beauty (BB)', 137, 40006)">Add to Cart</button>
+            <button id="btn-product-40006" onclick="addToCart('Herbs & Beauty (BB)', 137, 40006);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-40006" onclick="cancelFromCart(40006)" disabled>Cancel</button>
         </div>
 
@@ -227,7 +263,8 @@
             <p>₱120.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-40007">10</span></p>
             <input type="number" id="qty-product-40007" min="1" max="10" value="1">
-            <button id="btn-product-40007" onclick="addToCart('Essential Oil (Lav)', 120, 40007)">Add to Cart</button>
+            <button id="btn-product-40007" onclick="addToCart('Essential Oil (Lav)', 120, 40007);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-40007" onclick="cancelFromCart(40007)" disabled>Cancel</button>
         </div>
 
@@ -242,7 +279,8 @@
             <p>₱120.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-40008">10</span></p>
             <input type="number" id="qty-product-40008" min="1" max="10" value="1">
-            <button id="btn-product-40008" onclick="addToCart('Essential Oil (Mnt)', 120, 40008)">Add to Cart</button>
+            <button id="btn-product-40008" onclick="addToCart('Essential Oil (Mnt)', 120, 40008);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-40008" onclick="cancelFromCart(40008)" disabled>Cancel</button>
         </div>
 
@@ -256,7 +294,8 @@
             <p>₱175.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-40009">10</span></p>
             <input type="number" id="qty-product-40009" min="1" max="10" value="1">
-            <button id="btn-product-40009" onclick="addToCart('Alert MtWash (TM)', 175, 40009)">Add to Cart</button>
+            <button id="btn-product-40009" onclick="addToCart('Alert MtWash (TM)', 175, 40009);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-40009" onclick="cancelFromCart(40009)" disabled>Cancel</button>
         </div>
 
@@ -270,7 +309,8 @@
             <p>₱175.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-40010">10</span></p>
             <input type="number" id="qty-product-40010" min="1" max="10" value="1">
-            <button id="btn-product-40010" onclick="addToCart('Alert MtWash (WB)', 175, 40010)">Add to Cart</button>
+            <button id="btn-product-40010" onclick="addToCart('Alert MtWash (WB)', 175, 40010);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-40010" onclick="cancelFromCart(40010)" disabled>Cancel</button>
         </div>
 
@@ -284,7 +324,8 @@
             <p>₱75.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-40011">0</span></p>
             <input type="number" id="qty-product-40011" min="1" max="10" value="1">
-            <button id="btn-product-40011" onclick="addToCart('Alert Kids Tpaste-St', 75, 40011)">Add to Cart</button>
+            <button id="btn-product-40011" onclick="addToCart('Alert Kids Tpaste-St', 75, 40011);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-40011" onclick="cancelFromCart(40011)" disabled>Cancel</button>
         </div>
 
@@ -298,7 +339,8 @@
             <p>₱499.00</p>
             <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-40012">10</span></p>
             <input type="number" id="qty-product-40012" min="1" max="10" value="1">
-            <button id="btn-product-40012" onclick="addToCart('HBS Immuno-C (500mg)', 499, 40012)">Add to Cart</button>
+            <button id="btn-product-40012" onclick="addToCart('HBS Immuno-C (500mg)', 499, 40012);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
             <button id="cancel-product-40012" onclick="cancelFromCart(40012)" disabled>Cancel</button>
         </div>
 
@@ -354,7 +396,9 @@
 	<p>Service/Shipping Fee: ₱1.00</p>
         <p id="total-price">Total: ₱0.00</p>
 
-        <button id="checkoutbutton" class="checkout-btn" onclick="checkout()" style="width:50%;">Checkout</button>
+    <button class="checkout-btn" style="width:50%;" onclick="hidePopup101()">Buy more</button>
+
+        <button id="checkoutbutton" class="checkout-btn" style="background:orangered;width:50%;" onclick="showPopup102();hidePopup101();" style="width:50%;">Checkout</button>
     </div>
 </center>
 
@@ -554,6 +598,31 @@ document.getElementById('placebutton').disabled = true;
         const formattedDate3 = today.toLocaleDateString(undefined, options3);
 
 // DATE TOMORROW CLOSE 
+
+
+
+/// SHOWHIDE CART OPEN
+    function showPopup101(){
+        document.getElementById("shopcart").style.display = "block";
+    } 
+
+    function hidePopup101(){
+        document.getElementById("shopcart").style.display = "none";
+    }
+/// SHOWHIDE CART CLOSE
+
+
+
+
+/// SHOWHIDE DETAILS OPEN
+    function showPopup102(){
+        document.getElementById("details").style.display = "block";
+    } 
+
+    function hidePopup102(){
+        document.getElementById("details").style.display = "none";
+    }
+/// SHOWHIDE DETAILS CLOSE
 
 
     </script>
