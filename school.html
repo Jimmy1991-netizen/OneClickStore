@@ -97,6 +97,36 @@
 	div {
 		width:140px;
 	}
+
+    /* Popup Division */
+    #shopcart{
+        display: none;
+        width: 300px;
+        padding: 20px;
+        background: white;
+        border: 2px solid black;
+        box-shadow: 0 0 10px gray;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Popup Division */
+    #details{
+        display: none;
+        width: 300px;
+        padding: 20px;
+        background: white;
+        border: 2px solid black;
+        box-shadow: 0 0 10px gray;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
     </style>
 
 </head>
@@ -127,922 +157,288 @@
 
     <div id="whole" class="container">
 
-<!-- Product 157 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/glue.jpg">
-            <h3>White Glue</h3>
-            <b>Multi-Purpose</b>
-		<p style="color:black;font-size:80%;">(40 grams)</p>
-            <p>₱15.00</p>
-            <p>Stock: <span id="stock-product-157">10</span></p>
-            <input type="number" id="qty-product-157" min="1" max="10" value="1">
-            <button id="btn-product-157" onclick="addToCart('White Glue (1pc)', 15, 157)">Add to Cart</button>
-            <button id="cancel-product-157" onclick="cancelFromCart(157)" disabled>Cancel</button>
-        </div>
-
-
-<!-- Product 156 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/glue.jpg">
-            <h3>White Glue</h3>
-            <b>Multi-Purpose</b>
-		<p style="color:black;font-size:80%;">(2 pieces)</p>
-            <p>₱25.00</p>
-            <p>Stock: <span id="stock-product-156">10</span></p>
-            <input type="number" id="qty-product-156" min="1" max="10" value="1">
-            <button id="btn-product-156" onclick="addToCart('White Glue (2pcs)', 25, 156)">Add to Cart</button>
-            <button id="cancel-product-156" onclick="cancelFromCart(156)" disabled>Cancel</button>
-        </div>
-
-
-<!-- Product 153 -->
-        <div class="product" style="line-height:0.5;">
+<!-- Product 10001 -->
+        <div class="product" style="line-height:0;">
             <img src="images/pen6.jpg">
-            <h3>Sport Liner</h3>
-            <h3>Highlighter</h3>
-		<p style="color:black;font-size:80%;">(Color Violet)</p>
+            <b><p style="color:black;font-size:100%;">Sport Liner</p></b>
+            <p style="color:black;font-size:100%;">Highlighter</p>
+		<p style="color:darkviolet;font-size:80%;">(Color Violet)</p>
             <p>₱20.00</p>
-            <p>Stock: <span id="stock-product-153">4</span></p>
-            <input type="number" id="qty-product-153" min="1" max="4" value="1">
-            <button id="btn-product-153" onclick="addToCart('Sport Liner (Violet)', 20, 153)">Add to Cart</button>
-            <button id="cancel-product-153" onclick="cancelFromCart(153)" disabled>Cancel</button>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10001">4</span></p>
+            <input type="number" id="qty-product-10001" min="1" max="4" value="1">
+            <button id="btn-product-10001" onclick="addToCart('Sport Liner (Violet)', 20, 10001);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10001" onclick="cancelFromCart(10001)" disabled>Cancel</button>
         </div>
 
 
-<!-- Product 152 -->
-        <div class="product" style="line-height:0.5;">
+<!-- Product 10002 -->
+        <div class="product" style="line-height:0;">
             <img src="images/pen6.jpg">
-            <h3>Sport Liner</h3>
-            <h3>Highlighter</h3>
-		<p style="color:black;font-size:80%;">(Color Blue)</p>
+            <b><p style="color:black;font-size:100%;">Sport Liner</p></b>
+            <p style="color:black;font-size:100%;">Highlighter</p>
+		<p style="color:blue;font-size:80%;">(Color Blue)</p>
             <p>₱20.00</p>
-            <p>Stock: <span id="stock-product-152">4</span></p>
-            <input type="number" id="qty-product-152" min="1" max="4" value="1">
-            <button id="btn-product-152" onclick="addToCart('Sport Liner (Blue)', 20, 152)">Add to Cart</button>
-            <button id="cancel-product-152" onclick="cancelFromCart(152)" disabled>Cancel</button>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10002">4</span></p>
+            <input type="number" id="qty-product-10002" min="1" max="4" value="1">
+            <button id="btn-product-10002" onclick="addToCart('Sport Liner (Blue)', 20, 10002);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10002" onclick="cancelFromCart(10002)" disabled>Cancel</button>
         </div>
 
 
-<!-- Product 151 -->
-        <div class="product" style="line-height:0.5;">
+<!-- Product 10003 -->
+        <div class="product" style="line-height:0;">
             <img src="images/pen6.jpg">
-            <h3>Sport Liner</h3>
-            <h3>Highlighter</h3>
-		<p style="color:black;font-size:80%;">(Color Orange)</p>
+            <b><p style="color:black;font-size:100%;">Sport Liner</p></b>
+            <p style="color:black;font-size:100%;">Highlighter</p>
+		<p style="color:orangered;font-size:80%;">(Color Orange)</p>
             <p>₱20.00</p>
-            <p>Stock: <span id="stock-product-151">4</span></p>
-            <input type="number" id="qty-product-151" min="1" max="4" value="1">
-            <button id="btn-product-151" onclick="addToCart('Sport Liner (Orange)', 20, 151)">Add to Cart</button>
-            <button id="cancel-product-151" onclick="cancelFromCart(151)" disabled>Cancel</button>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10003">4</span></p>
+            <input type="number" id="qty-product-10003" min="1" max="4" value="1">
+            <button id="btn-product-10003" onclick="addToCart('Sport Liner (Orange)', 20, 10003);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10003" onclick="cancelFromCart(10003)" disabled>Cancel</button>
         </div>
 
 
-<!-- Product 150 -->
-        <div class="product" style="line-height:0.5;">
+
+<!-- Product 10004 -->
+        <div class="product" style="line-height:0;">
             <img src="images/pen6.jpg">
-            <h3>Sport Liner</h3>
-            <h3>Highlighter</h3>
-		<p style="color:black;font-size:80%;">(Yellow Green)</p>
+            <b><p style="color:black;font-size:100%;">Sport Liner</p></b>
+            <p style="color:black;font-size:100%;">Highlighter</p>
+		<p style="color:yellowgreen;font-size:80%;">(Yellow Green)</p>
             <p>₱20.00</p>
-            <p>Stock: <span id="stock-product-150">4</span></p>
-            <input type="number" id="qty-product-150" min="1" max="4" value="1">
-            <button id="btn-product-150" onclick="addToCart('Sport Liner (YlwGreen)', 20, 150)">Add to Cart</button>
-            <button id="cancel-product-150" onclick="cancelFromCart(150)" disabled>Cancel</button>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10004">4</span></p>
+            <input type="number" id="qty-product-10004" min="1" max="4" value="1">
+            <button id="btn-product-10004" onclick="addToCart('Sport Liner (YlwGreen)', 20, 10004);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10004" onclick="cancelFromCart(10004)" disabled>Cancel</button>
         </div>
 
 
-<!-- Product 149 -->
-        <div class="product" style="line-height:0.5;">
+
+<!-- Product 10005 -->
+        <div class="product" style="line-height:0;">
             <img src="images/pen6.jpg">
-            <h3>Sport Liner</h3>
-            <h3>Highlighter</h3>
-		<p style="color:black;font-size:80%;">(Color Yellow)</p>
+            <b><p style="color:black;font-size:100%;">Sport Liner</p></b>
+            <p style="color:black;font-size:100%;">Highlighter</p>
+		<p style="color:yellow;font-size:80%;">(Color Yellow)</p>
             <p>₱20.00</p>
-            <p>Stock: <span id="stock-product-149">4</span></p>
-            <input type="number" id="qty-product-149" min="1" max="4" value="1">
-            <button id="btn-product-149" onclick="addToCart('Sport Liner (Yellow)', 20, 149)">Add to Cart</button>
-            <button id="cancel-product-149" onclick="cancelFromCart(149)" disabled>Cancel</button>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10005">4</span></p>
+            <input type="number" id="qty-product-10005" min="1" max="4" value="1">
+            <button id="btn-product-10005" onclick="addToCart('Sport Liner (Yellow)', 20, 10005);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10005" onclick="cancelFromCart(10005)" disabled>Cancel</button>
         </div>
 
 
-<!-- Product 148 -->
-        <div class="product" style="line-height:0.5;">
+<!-- Product 10006 -->
+        <div class="product" style="line-height:0;">
             <img src="images/pen6.jpg">
-            <h3>Sport Liner</h3>
-            <h3>Highlighter</h3>
-		<p style="color:black;font-size:80%;">(Color Pink)</p>
+            <b><p style="color:black;font-size:100%;">Sport Liner</p></b>
+            <p style="color:black;font-size:100%;">Highlighter</p>
+		<p style="color:deeppink;font-size:80%;">(Color Pink)</p>
             <p>₱20.00</p>
-            <p>Stock: <span id="stock-product-148">4</span></p>
-            <input type="number" id="qty-product-148" min="1" max="4" value="1">
-            <button id="btn-product-148" onclick="addToCart('Sport Liner (Pink)', 20, 148)">Add to Cart</button>
-            <button id="cancel-product-148" onclick="cancelFromCart(148)" disabled>Cancel</button>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10006">4</span></p>
+            <input type="number" id="qty-product-10006" min="1" max="4" value="1">
+            <button id="btn-product-10006" onclick="addToCart('Sport Liner (Pink)', 20, 10006);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10006" onclick="cancelFromCart(10006)" disabled>Cancel</button>
         </div>
 
 
-
-    <!-- Product 131 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/pinkid.jpg" >
-            <h3>BEKNN</h3>
-            <h3>ID Holder</h3>
-		<p style="color:black;font-size:80%;">(Pink Sling)</p>
-            <p>₱25.00</p>
-            <p>Stock: <span id="stock-product-131">2</span></p>
-            <input type="number" id="qty-product-131" min="1" max="2" value="1">
-            <button id="btn-product-131" onclick="addToCart('BEKNN ID(Pink)', 25, 131)">Add to Cart</button>
-            <button id="cancel-product-131" onclick="cancelFromCart(131)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 130 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/yellowid.jpg" >
-            <h3>BEKNN</h3>
-            <h3>ID Holder</h3>
-		<p style="color:black;font-size:80%;">(Yellow Sling)</p>
-            <p>₱25.00</p>
-            <p>Stock: <span id="stock-product-130">2</span></p>
-            <input type="number" id="qty-product-130" min="1" max="2" value="1">
-            <button id="btn-product-130" onclick="addToCart('BEKNN ID(Yellow)', 25, 130)">Add to Cart</button>
-            <button id="cancel-product-130" onclick="cancelFromCart(130)" disabled>Cancel</button>
-        </div>
-
-
-
-   <!-- Product 129 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/greenid.png" >
-            <h3>BEKNN</h3>
-            <h3>ID Holder</h3>
-		<p style="color:black;font-size:80%;">(Green Sling)</p>
-            <p>₱25.00</p>
-            <p>Stock: <span id="stock-product-129">2</span></p>
-            <input type="number" id="qty-product-129" min="1" max="2" value="1">
-            <button id="btn-product-129" onclick="addToCart('BEKNN ID(Green)', 25, 129)">Add to Cart</button>
-            <button id="cancel-product-129" onclick="cancelFromCart(129)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 128 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/blueid.jpg" >
-            <h3>BEKNN</h3>
-            <h3>ID Holder</h3>
-		<p style="color:black;font-size:80%;">(Blue Sling)</p>
-            <p>₱25.00</p>
-            <p>Stock: <span id="stock-product-128">2</span></p>
-            <input type="number" id="qty-product-128" min="1" max="2" value="1">
-            <button id="btn-product-128" onclick="addToCart('BEKNN ID(Blue)', 25, 128)">Add to Cart</button>
-            <button id="cancel-product-128" onclick="cancelFromCart(128)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 127 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/marker.jpg" >
-            <h3>Hua Ying</h3>
-            <h3>Perm Marker</h3>
-		<p style="color:black;font-size:80%;">(Black)</p>
-            <p>₱12.00</p>
-            <p>Stock: <span id="stock-product-127">2</span></p>
-            <input type="number" id="qty-product-127" min="1" max="2" value="1">
-            <button id="btn-product-127" onclick="addToCart('Hua Ying (Black)', 12, 127)">Add to Cart</button>
-            <button id="cancel-product-127" onclick="cancelFromCart(127)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 126 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/heart.jpg" >
-            <h3>Winbook</h3>
-            <h3>Sticky Notes</h3>
-		<p style="color:black;font-size:80%;">(YellowGreen)</p>
-            <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-126">2</span></p>
-            <input type="number" id="qty-product-126" min="1" max="2" value="1">
-            <button id="btn-product-126" onclick="addToCart('Winbook (YG Hrt)', 5, 126)">Add to Cart</button>
-            <button id="cancel-product-126" onclick="cancelFromCart(126)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 125 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/heart.jpg" >
-            <h3>Winbook</h3>
-            <h3>Sticky Notes</h3>
-		<p style="color:black;font-size:80%;">(Yellow Heart)</p>
-            <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-125">2</span></p>
-            <input type="number" id="qty-product-125" min="1" max="2" value="1">
-            <button id="btn-product-125" onclick="addToCart('Winbook (Yellow Heart)', 5, 125)">Add to Cart</button>
-            <button id="cancel-product-125" onclick="cancelFromCart(125)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 124 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/heart.jpg" >
-            <h3>Winbook</h3>
-            <h3>Sticky Notes</h3>
-		<p style="color:black;font-size:80%;">(Blue Heart)</p>
-            <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-124">2</span></p>
-            <input type="number" id="qty-product-124" min="1" max="2" value="1">
-            <button id="btn-product-124" onclick="addToCart('Winbook (Blue Heart)', 5, 124)">Add to Cart</button>
-            <button id="cancel-product-124" onclick="cancelFromCart(124)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 123 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/heart.jpg" >
-            <h3>Winbook</h3>
-            <h3>Sticky Notes</h3>
-		<p style="color:black;font-size:80%;">(Orange Heart)</p>
-            <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-123">2</span></p>
-            <input type="number" id="qty-product-123" min="1" max="2" value="1">
-            <button id="btn-product-123" onclick="addToCart('Winbook (Orange Heart)', 5, 123)">Add to Cart</button>
-            <button id="cancel-product-123" onclick="cancelFromCart(123)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 122 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/heart.jpg" >
-            <h3>Winbook</h3>
-            <h3>Sticky Notes</h3>
-		<p style="color:black;font-size:80%;">(Pink Heart)</p>
-            <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-122">2</span></p>
-            <input type="number" id="qty-product-122" min="1" max="2" value="1">
-            <button id="btn-product-122" onclick="addToCart('Winbook (Pink Heart)', 5, 122)">Add to Cart</button>
-            <button id="cancel-product-122" onclick="cancelFromCart(122)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 121 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/rectangle.jpg" >
-            <h3>Winbook</h3>
-            <h3>Sticky Notes</h3>
-		<p style="color:black;font-size:80%;">(YellowGreen)</p>
-            <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-121">2</span></p>
-            <input type="number" id="qty-product-121" min="1" max="2" value="1">
-            <button id="btn-product-121" onclick="addToCart('Winbook (YG Rect)', 5, 121)">Add to Cart</button>
-            <button id="cancel-product-121" onclick="cancelFromCart(121)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 120 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/rectangle.jpg" >
-            <h3>Winbook</h3>
-            <h3>Sticky Notes</h3>
-		<p style="color:black;font-size:80%;">(Yellow)</p>
-            <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-120">2</span></p>
-            <input type="number" id="qty-product-120" min="1" max="2" value="1">
-            <button id="btn-product-120" onclick="addToCart('Winbook (Yellow Rect)', 5, 120)">Add to Cart</button>
-            <button id="cancel-product-120" onclick="cancelFromCart(120)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 119 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/rectangle.jpg" >
-            <h3>Winbook</h3>
-            <h3>Sticky Notes</h3>
-		<p style="color:black;font-size:80%;">(Blue)</p>
-            <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-119">2</span></p>
-            <input type="number" id="qty-product-119" min="1" max="2" value="1">
-            <button id="btn-product-119" onclick="addToCart('Winbook (Blue Rect)', 5, 119)">Add to Cart</button>
-            <button id="cancel-product-119" onclick="cancelFromCart(119)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 118 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/rectangle.jpg" >
-            <h3>Winbook</h3>
-            <h3>Sticky Notes</h3>
-		<p style="color:black;font-size:80%;">(Orange)</p>
-            <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-118">2</span></p>
-            <input type="number" id="qty-product-118" min="1" max="2" value="1">
-            <button id="btn-product-118" onclick="addToCart('Winbook (Orange Rect)', 5, 118)">Add to Cart</button>
-            <button id="cancel-product-118" onclick="cancelFromCart(118)" disabled>Cancel</button>
-        </div>
-
-
-
-    <!-- Product 117 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/rectangle.jpg" >
-            <h3>Winbook</h3>
-            <h3>Sticky Notes</h3>
-		<p style="color:black;font-size:80%;">(Pink)</p>
-            <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-117">2</span></p>
-            <input type="number" id="qty-product-117" min="1" max="2" value="1">
-            <button id="btn-product-117" onclick="addToCart('Winbook (Pink Rect)', 5, 117)">Add to Cart</button>
-            <button id="cancel-product-117" onclick="cancelFromCart(117)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 116 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/clay2.jpg" >
-            <h3>Super Light</h3>
-            <h3>Clay (White)</h3>
-            <p>₱10.00</p>
-            <p>Stock: <span id="stock-product-116">2</span></p>
-            <input type="number" id="qty-product-116" min="1" max="2" value="1">
-            <button id="btn-product-116" onclick="addToCart('Super Light Clay (White)', 10, 116)">Add to Cart</button>
-            <button id="cancel-product-116" onclick="cancelFromCart(116)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 115 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/clay2.jpg" >
-            <h3>Super Light</h3>
-            <h3>(MistyRose)</h3>
-            <p>₱10.00</p>
-            <p>Stock: <span id="stock-product-115">2</span></p>
-            <input type="number" id="qty-product-115" min="1" max="2" value="1">
-            <button id="btn-product-115" onclick="addToCart('Super Light Clay (MistyRose)', 10, 115)">Add to Cart</button>
-            <button id="cancel-product-115" onclick="cancelFromCart(115)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 114 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/clay2.jpg" >
-            <h3>Super Light</h3>
-            <h3>Clay (Pink)</h3>
-            <p>₱10.00</p>
-            <p>Stock: <span id="stock-product-114">2</span></p>
-            <input type="number" id="qty-product-114" min="1" max="2" value="1">
-            <button id="btn-product-114" onclick="addToCart('Super Light Clay (Pink)', 10, 114)">Add to Cart</button>
-            <button id="cancel-product-114" onclick="cancelFromCart(114)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 113 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/clay2.jpg" >
-            <h3>Super Light</h3>
-            <h3>Clay (Fuchsia)</h3>
-            <p>₱10.00</p>
-            <p>Stock: <span id="stock-product-113">2</span></p>
-            <input type="number" id="qty-product-113" min="1" max="2" value="1">
-            <button id="btn-product-113" onclick="addToCart('Super Light Clay (Fuchsia)', 10, 113)">Add to Cart</button>
-            <button id="cancel-product-113" onclick="cancelFromCart(113)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 112 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/clay2.jpg" >
-            <h3>Super Light</h3>
-            <h3>Clay (Orange)</h3>
-            <p>₱10.00</p>
-            <p>Stock: <span id="stock-product-112">2</span></p>
-            <input type="number" id="qty-product-112" min="1" max="2" value="1">
-            <button id="btn-product-112" onclick="addToCart('Super Light Clay (Orange)', 10, 112)">Add to Cart</button>
-            <button id="cancel-product-112" onclick="cancelFromCart(112)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 111 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/clay2.jpg" >
-            <h3>Super Light</h3>
-            <h3>Clay (Yellow)</h3>
-            <p>₱10.00</p>
-            <p>Stock: <span id="stock-product-111">2</span></p>
-            <input type="number" id="qty-product-111" min="1" max="2" value="1">
-            <button id="btn-product-111" onclick="addToCart('Super Light Clay (Yellow)', 10, 111)">Add to Cart</button>
-            <button id="cancel-product-111" onclick="cancelFromCart(111)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 110 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/clay2.jpg" >
-            <h3>Super Light</h3>
-            <h3>Clay (Brown)</h3>
-            <p>₱10.00</p>
-            <p>Stock: <span id="stock-product-110">2</span></p>
-            <input type="number" id="qty-product-110" min="1" max="2" value="1">
-            <button id="btn-product-110" onclick="addToCart('Super Light Clay (Brown)', 10, 110)">Add to Cart</button>
-            <button id="cancel-product-110" onclick="cancelFromCart(110)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 109 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/clay2.jpg" >
-            <h3>Super Light</h3>
-            <h3>Clay (Black)</h3>
-            <p>₱10.00</p>
-            <p>Stock: <span id="stock-product-109">2</span></p>
-            <input type="number" id="qty-product-109" min="1" max="2" value="1">
-            <button id="btn-product-109" onclick="addToCart('Super Light Clay (Black)', 10, 109)">Add to Cart</button>
-            <button id="cancel-product-109" onclick="cancelFromCart(109)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 108 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/clay2.jpg" >
-            <h3>Super Light</h3>
-            <h3>Clay (Violet)</h3>
-            <p>₱10.00</p>
-            <p>Stock: <span id="stock-product-108">2</span></p>
-            <input type="number" id="qty-product-108" min="1" max="2" value="1">
-            <button id="btn-product-108" onclick="addToCart('Super Light Clay (Violet)', 10, 108)">Add to Cart</button>
-            <button id="cancel-product-108" onclick="cancelFromCart(108)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 107 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/clay2.jpg" >
-            <h3>Super Light</h3>
-            <h3>Clay (Green)</h3>
-            <p>₱10.00</p>
-            <p>Stock: <span id="stock-product-107">2</span></p>
-            <input type="number" id="qty-product-107" min="1" max="2" value="1">
-            <button id="btn-product-107" onclick="addToCart('Super Light Clay (Green)', 10, 107)">Add to Cart</button>
-            <button id="cancel-product-107" onclick="cancelFromCart(107)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 106 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/clay2.jpg" >
-            <h3>Super Light</h3>
-            <h3>Clay (Blue)</h3>
-            <p>₱10.00</p>
-            <p>Stock: <span id="stock-product-106">2</span></p>
-            <input type="number" id="qty-product-106" min="1" max="2" value="1">
-            <button id="btn-product-106" onclick="addToCart('Super Light Clay (Blue)', 10, 106)">Add to Cart</button>
-            <button id="cancel-product-106" onclick="cancelFromCart(106)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 105 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/clay2.jpg" >
-            <h3>Super Light</h3>
-            <h3>Clay (Red)</h3>
-            <p>₱10.00</p>
-            <p>Stock: <span id="stock-product-105">2</span></p>
-            <input type="number" id="qty-product-105" min="1" max="2" value="1">
-            <button id="btn-product-105" onclick="addToCart('Super Light Clay (Red)', 10, 105)">Add to Cart</button>
-            <button id="cancel-product-105" onclick="cancelFromCart(105)" disabled>Cancel</button>
-        </div>
-
-
-    <!-- Product 104 -->
-        <div class="product" style="line-height:0.5;">
+<!-- Product 10007 -->
+        <div class="product" style="line-height:0;">
             <img src="images/cortape3.png" >
-            <h3>Correction</h3>
-            <h3>Tape (Green)</h3>
+            <b><p style="color:black;font-size:100%;">Correction Tape</p></b>
+	    <p style="color:green;font-size:80%;">(Color Green)</p>
             <p>₱29.00</p>
-            <p>Stock: <span id="stock-product-104">10</span></p>
-            <input type="number" id="qty-product-104" min="1" max="10" value="1">
-            <button id="btn-product-104" onclick="addToCart('Correction Tape (G)', 29, 104)">Add to Cart</button>
-            <button id="cancel-product-104" onclick="cancelFromCart(104)" disabled>Cancel</button>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10007">10</span></p>
+            <input type="number" id="qty-product-10007" min="1" max="10" value="1">
+            <button id="btn-product-10007" onclick="addToCart('Correction Tape (G)', 29, 10007);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10007" onclick="cancelFromCart(10007)" disabled>Cancel</button>
         </div>
 
 
-    <!-- Product 103 -->
-        <div class="product" style="line-height:0.5;">
+    <!-- Product 10008 -->
+        <div class="product" style="line-height:0;">
             <img src="images/cortape2.png" >
-            <h3>Correction</h3>
-            <h3>Tape (Blue)</h3>
+            <b><p style="color:black;font-size:100%;">Correction Tape</p></b>
+	    <p style="color:blue;font-size:80%;">(Color Blue)</p>
             <p>₱29.00</p>
-            <p>Stock: <span id="stock-product-103">10</span></p>
-            <input type="number" id="qty-product-103" min="1" max="10" value="1">
-            <button id="btn-product-103" onclick="addToCart('Correction Tape (B)', 29, 103)">Add to Cart</button>
-            <button id="cancel-product-103" onclick="cancelFromCart(103)" disabled>Cancel</button>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10008">10</span></p>
+            <input type="number" id="qty-product-10008" min="1" max="10" value="1">
+            <button id="btn-product-10008" onclick="addToCart('Correction Tape (B)', 29, 10008);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10008" onclick="cancelFromCart(10008)" disabled>Cancel</button>
         </div>
 
 
-    <!-- Product 102 -->
-        <div class="product" style="line-height:0.5;">
+
+    <!-- Product 10009 -->
+        <div class="product" style="line-height:0;">
             <img src="images/cortape1.png" >
-            <h3>Correction</h3>
-            <h3>Tape (Red)</h3>
+            <b><p style="color:black;font-size:100%;">Correction Tape</p></b>
+	    <p style="color:red;font-size:80%;">(Color Red)</p>
             <p>₱29.00</p>
-            <p>Stock: <span id="stock-product-102">10</span></p>
-            <input type="number" id="qty-product-102" min="1" max="10" value="1">
-            <button id="btn-product-102" onclick="addToCart('Correction Tape (R)', 29, 102)">Add to Cart</button>
-            <button id="cancel-product-102" onclick="cancelFromCart(102)" disabled>Cancel</button>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10009">10</span></p>
+            <input type="number" id="qty-product-10009" min="1" max="10" value="1">
+            <button id="btn-product-10009" onclick="addToCart('Correction Tape (R)', 29, 10009);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10009" onclick="cancelFromCart(10009)" disabled>Cancel</button>
         </div>
 
 
-    <!-- Product 101 -->
-        <div class="product" style="line-height:0.5;">
+
+    <!-- Product 10010 -->
+        <div class="product" style="line-height:0;">
             <img src="images2/footsock2.jpg" >
-            <h3>Foot Socks</h3>
+            <b><p style="color:black;font-size:100%;">Foot Socks</p></b>
+	    <p style="color:black;font-size:80%;">(Random Color)</p>
             <p>₱35.00</p>
-            <p>Stock: <span id="stock-product-101">10</span></p>
-            <input type="number" id="qty-product-101" min="1" max="10" value="1">
-            <button id="btn-product-101" onclick="addToCart('Foot Socks', 35, 101)">Add to Cart</button>
-            <button id="cancel-product-101" onclick="cancelFromCart(101)" disabled>Cancel</button>
-        </div>
-
-<!-- Product 100 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/gunting.jpg">
-            <h3>Paper</h3>
-            <h3>Scissors</h3>
-		<p style="color:black;font-size:80%;">(Blue Handle)</p>
-            <p>₱25.00</p>
-            <p>Stock: <span id="stock-product-100">10</span></p>
-            <input type="number" id="qty-product-100" min="1" max="10" value="1">
-            <button id="btn-product-100" onclick="addToCart('Paper Scissors(B)', 25, 100)">Add to Cart</button>
-            <button id="cancel-product-100" onclick="cancelFromCart(100)" disabled>Cancel</button>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10010">10</span></p>
+            <input type="number" id="qty-product-10010" min="1" max="10" value="1">
+            <button id="btn-product-10010" onclick="addToCart('Foot Socks', 35, 10010);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10010" onclick="cancelFromCart(10010)" disabled>Cancel</button>
         </div>
 
 
-<!-- Product 99 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/gunting.jpg">
-            <h3>Paper</h3>
-            <h3>Scissors</h3>
-		<p style="color:black;font-size:80%;">(Red Handle)</p>
-            <p>₱25.00</p>
-            <p>Stock: <span id="stock-product-99">10</span></p>
-            <input type="number" id="qty-product-99" min="1" max="10" value="1">
-            <button id="btn-product-99" onclick="addToCart('Paper Scissors(R)', 25, 99)">Add to Cart</button>
-            <button id="cancel-product-99" onclick="cancelFromCart(99)" disabled>Cancel</button>
-        </div>
-
-
-<!-- Product 96 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/high.png">
-            <h3>Flex Liner</h3>
-		<p style="color:black;font-size:80%;">(Yellow Highlighter)</p>
-            <p><del>₱30.00</del></p>
-            <p>₱25.00</p>
-            <p>Stock: <span id="stock-product-96">10</span></p>
-            <input type="number" id="qty-product-96" min="1" max="10" value="1">
-            <button id="btn-product-96" onclick="addToCart('Flex Liner(Y)', 25, 96)">Add to Cart</button>
-            <button id="cancel-product-96" onclick="cancelFromCart(96)" disabled>Cancel</button>
-        </div>
-<!-- Product 97 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/high.png">
-            <h3>Flex Liner</h3>
-		<p style="color:black;font-size:80%;">(Yellow Green)</p>
-            <p><del>₱30.00</del></p>
-            <p>₱25.00</p>
-            <p>Stock: <span id="stock-product-97">10</span></p>
-            <input type="number" id="qty-product-97" min="1" max="10" value="1">
-            <button id="btn-product-97" onclick="addToCart('Flex Liner(YG)', 25, 97)">Add to Cart</button>
-            <button id="cancel-product-97" onclick="cancelFromCart(97)" disabled>Cancel</button>
-        </div>
-<!-- Product 98 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/high.png">
-            <h3>Flex Liner</h3>
-		<p style="color:black;font-size:80%;">(Orange Highlighter)</p>
-            <p><del>₱30.00</del></p>
-            <p>₱25.00</p>
-            <p>Stock: <span id="stock-product-98">10</span></p>
-            <input type="number" id="qty-product-98" min="1" max="10" value="1">
-            <button id="btn-product-98" onclick="addToCart('Flex Liner(O)', 25, 98)">Add to Cart</button>
-            <button id="cancel-product-98" onclick="cancelFromCart(98)" disabled>Cancel</button>
-        </div>
-
-
-<!-- Product 71 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/sheet.jpg">
-            <h3>LNHS Answer</h3>
-            <h3>Sheet 1</h3>
-		<p style="color:black;font-size:80%;">Front Page Template </p>
-		<p style="color:black;font-size:80%;">(8 Pieces-Long)</p>
-            <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-71">50</span></p>
-            <input type="number" id="qty-product-71" min="1" max="50" value="1">
-            <button id="btn-product-71" onclick="addToCart('LNHS Answer Sheet 1', 5, 71)">Add to Cart</button>
-            <button id="cancel-product-71" onclick="cancelFromCart(71)" disabled>Cancel</button>
-        </div>
-
-<!-- Product 72 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images/sheet.jpg">
-            <h3>LNHS Answer</h3>
-            <h3>Sheet 2</h3>
-		<p style="color:black;font-size:80%;">Back to Back Template </p>
-		<p style="color:black;font-size:80%;">(8 Pieces-Long)</p>
-            <p>₱7.00</p>
-            <p>Stock: <span id="stock-product-72">50</span></p>
-            <input type="number" id="qty-product-72" min="1" max="50" value="1">
-            <button id="btn-product-72" onclick="addToCart('LNHS Answer Sheet 2', 7, 72)">Add to Cart</button>
-            <button id="cancel-product-72" onclick="cancelFromCart(72)" disabled>Cancel</button>
-        </div>
-
-        <!-- Product 17 -->
-        <div class="product">
+    <!-- Product 10011 -->
+        <div class="product" style="line-height:0;">
             <img src="images/penblack.jpg">
-            <h3>MUJI Pen Black</h3>
+            <b><p style="color:black;font-size:100%;">MUJI Pen</p></b>
+	    <p style="color:black;font-size:80%;">(Color Black)</p>
             <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-17">50</span></p>
-            <input type="number" id="qty-product-17" min="1" max="50" value="1">
-            <button id="btn-product-17" onclick="addToCart('MUJI Pen Black', 5, 17)">Add to Cart</button>
-            <button id="cancel-product-17" onclick="cancelFromCart(17)" disabled>Cancel</button>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10011">50</span></p>
+            <input type="number" id="qty-product-10011" min="1" max="50" value="1">
+            <button id="btn-product-10011" onclick="addToCart('MUJI Pen Black', 5, 10011);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10011" onclick="cancelFromCart(10011)" disabled>Cancel</button>
         </div>
 
-        <!-- Product 18 -->
-        <div class="product">
+
+        <!-- Product 10012 -->
+        <div class="product" style="line-height:0;">
             <img src="images/penblue.jpg">
-            <h3>MUJI Pen Blue</h3>
+            <b><p style="color:black;font-size:100%;">MUJI Pen</p></b>
+	    <p style="color:blue;font-size:80%;">(Color Blue)</p>
             <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-18">50</span></p>
-            <input type="number" id="qty-product-18" min="1" max="50" value="1">
-            <button id="btn-product-18" onclick="addToCart('MUJI Pen Blue', 5, 18)">Add to Cart</button>
-            <button id="cancel-product-18" onclick="cancelFromCart(18)" disabled>Cancel</button>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10012">50</span></p>
+            <input type="number" id="qty-product-10012" min="1" max="50" value="1">
+            <button id="btn-product-10012" onclick="addToCart('MUJI Pen Blue', 5, 10012);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10012" onclick="cancelFromCart(10012)" disabled>Cancel</button>
         </div>
-	<!-- Product 19 -->
-        <div class="product">
-            <img src="images/penred.jpg" >
-            <h3>MUJI Pen Red</h3>
+
+
+
+	<!-- Product 10013 -->
+        <div class="product" style="line-height:0;" >
+            <img src="images/penred.jpg">
+            <b><p style="color:black;font-size:100%;">MUJI Pen</p></b>
+	    <p style="color:red;font-size:80%;">(Color Red)</p>
             <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-19">25</span></p>
-            <input type="number" id="qty-product-19" min="1" max="25" value="1">
-            <button id="btn-product-19" onclick="addToCart('MUJI Pen Red', 5, 19)">Add to Cart</button>
-            <button id="cancel-product-19" onclick="cancelFromCart(19)" disabled>Cancel</button>
-        </div>
-
-<!-- Product 3 -->
-        <div class="product">
-            <img src="images/ballpen.jpg" alt="Product 3">
-            <h3>Ballpen Black</h3>
-            <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-3">5</span></p>
-            <input type="number" id="qty-product-3" min="1" max="5" value="1">
-            <button id="btn-product-3" onclick="addToCart('Ballpen(Bk)', 5, 3)">Add to Cart</button>
-            <button id="cancel-product-3" onclick="cancelFromCart(3)" disabled>Cancel</button>
-        </div>
-
-<!-- Product 4 -->
-        <div class="product">
-            <img src="images/ballpen.jpg">
-            <h3>Ballpen Blue</h3>
-            <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-4">4</span></p>
-            <input type="number" id="qty-product-4" min="1" max="4" value="1">
-            <button id="btn-product-4" onclick="addToCart('Ballpen(Bl)', 5, 4)">Add to Cart</button>
-            <button id="cancel-product-4" onclick="cancelFromCart(4)" disabled>Cancel</button>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10013">25</span></p>
+            <input type="number" id="qty-product-10013" min="1" max="25" value="1">
+            <button id="btn-product-10013" onclick="addToCart('MUJI Pen Red', 5, 10013);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10013" onclick="cancelFromCart(10013)" disabled>Cancel</button>
         </div>
 
 
-<!-- Product 5 -->
-        <div class="product">
-            <img src="images/ballpen.jpg">
-            <h3>Ballpen Red</h3>
-            <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-5">2</span></p>
-            <input type="number" id="qty-product-5" min="1" max="2" value="1">
-            <button id="btn-product-5" onclick="addToCart('Ballpen(Rd)', 5, 5)">Add to Cart</button>
-            <button id="cancel-product-5" onclick="cancelFromCart(5)" disabled>Cancel</button>
-        </div>
-
-
- <!-- Product 6 -->
-        <div class="product">
-            <img src="images/pencil.jpg">
-            <h3>Target Pencil</h3>
-            <p>₱6.00</p>
-            <p>Stock: <span id="stock-product-6">10</span></p>
-            <input type="number" id="qty-product-6" min="1" max="10" value="1">
-            <button id="btn-product-6" onclick="addToCart('Pencil', 6, 6)">Add to Cart</button>
-            <button id="cancel-product-6" onclick="cancelFromCart(6)" disabled>Cancel</button>
-        </div>
-
- <!-------------------------------------------------------------------------------------------------- NEON PRODUCTS OPEN -->
- <!-- Product 20 -->
-        <div class="product">
-            <img src="images/neonpink.png">
-            <h3>Neon Pink (Short)</h3>
-            <p>₱0.00</p>
-            <p>Stock: <span id="stock-product-20">0</span></p>
-            <input type="number" id="qty-product-20" min="1" max="0" value="1">
-            <button id="btn-product-20" onclick="addToCart('Neon Pink (Short)', 10, 20)">Add to Cart</button>
-            <button id="cancel-product-20" onclick="cancelFromCart(20)" disabled>Cancel</button>
-        </div>
-
- <!-- Product 21 -->
-        <div class="product">
-            <img src="images/neonred.png">
-            <h3>Neon Red (Short)</h3>
-            <p>₱0.00</p>
-            <p>Stock: <span id="stock-product-21">0</span></p>
-            <input type="number" id="qty-product-21" min="1" max="0" value="1">
-            <button id="btn-product-21" onclick="addToCart('Neon Red (Short)', 10, 21)">Add to Cart</button>
-            <button id="cancel-product-21" onclick="cancelFromCart(21)" disabled>Cancel</button>
-        </div>
-
- <!-- Product 22 -->
-        <div class="product">
-            <img src="images/neongreen.png">
-            <h3>Neon Green (Short)</h3>
-            <p>₱0.00</p>
-            <p>Stock: <span id="stock-product-22">0</span></p>
-            <input type="number" id="qty-product-22" min="1" max="0" value="1">
-            <button id="btn-product-22" onclick="addToCart('Neon Green (Short)', 10, 22)">Add to Cart</button>
-            <button id="cancel-product-22" onclick="cancelFromCart(22)" disabled>Cancel</button>
-        </div>
-
- <!-- Product 23 -->
-        <div class="product">
-            <img src="images/neonorange.png">
-            <h3>Neon Orange (Short)</h3>
-            <p>₱0.00</p>
-            <p>Stock: <span id="stock-product-23">0</span></p>
-            <input type="number" id="qty-product-23" min="1" max="0" value="1">
-            <button id="btn-product-23" onclick="addToCart('Neon Orange (Short)', 10, 23)">Add to Cart</button>
-            <button id="cancel-product-23" onclick="cancelFromCart(23)" disabled>Cancel</button>
-        </div>
-
- <!-- Product 24 -->
-        <div class="product">
-            <img src="images/neonyellow.png">
-            <h3>Neon Yellow (Short)</h3>
-            <p>₱0.00</p>
-            <p>Stock: <span id="stock-product-24">0</span></p>
-            <input type="number" id="qty-product-24" min="1" max="0" value="1">
-            <button id="btn-product-24" onclick="addToCart('Neon Yellow (Short)', 10, 24)">Add to Cart</button>
-            <button id="cancel-product-24" onclick="cancelFromCart(24)" disabled>Cancel</button>
-        </div>
-
- <!-- Product 25 -->
-        <div class="product">
-            <img src="images/neonviolet.jpg">
-            <h3>Neon Violet (Short)</h3>
-            <p>₱0.00</p>
-            <p>Stock: <span id="stock-product-25">0</span></p>
-            <input type="number" id="qty-product-25" min="1" max="0" value="1">
-            <button id="btn-product-25" onclick="addToCart('Neon Violet (Short)', 10, 25)">Add to Cart</button>
-            <button id="cancel-product-25" onclick="cancelFromCart(25)" disabled>Cancel</button>
-        </div>
-
- <!-- Product 26 -->
-        <div class="product">
-            <img src="images/neonblue.jpg">
-            <h3>Neon Blue (Short)</h3>
-            <p>₱0.00</p>
-            <p>Stock: <span id="stock-product-26">0</span></p>
-            <input type="number" id="qty-product-26" min="1" max="0" value="1">
-            <button id="btn-product-26" onclick="addToCart('Neon Blue (Short)', 10, 26)">Add to Cart</button>
-            <button id="cancel-product-26" onclick="cancelFromCart(26)" disabled>Cancel</button>
-        </div>
-
-
- <!-------------------------------------------------------------------------------------------------- NEON PRODUCTS CLOSE -->
-
- <!-- Product 13 -->
-        <div class="product">
+<!-- Product 10014 -->
+        <div class="product" style="line-height:0;" >
             <img src="images/glossyps.jpg">
-            <h3>Glossy Sticker Paper</h3>
+            <b><p style="color:black;font-size:80%;">Glossy Sticker Paper</p></b>
+	    <p style="color:black;font-size:80%;">A4 Size</p>
+	    <p style="color:black;font-size:80%;">(1 piece only)</p>
             <p>₱12.00</p>
-            <p>Stock: <span id="stock-product-13">5</span></p>
-            <input type="number" id="qty-product-13" min="1" max="5" value="1">
-            <button id="btn-product-13" onclick="addToCart('Glossy Sticker', 12, 13)">Add to Cart</button>
-            <button id="cancel-product-13" onclick="cancelFromCart(13)" disabled>Cancel</button>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10014">5</span></p>
+            <input type="number" id="qty-product-10014" min="1" max="5" value="1">
+            <button id="btn-product-10014" onclick="addToCart('Glossy Sticker Ppr', 12, 10014);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10014" onclick="cancelFromCart(10014)" disabled>Cancel</button>
         </div>
 
 
-
-        <!-- Product 1 -->
-        <div class="product">
+        <!-- Product 10015 -->
+        <div class="product" style="line-height:0;" >
             <img src="images/glossypp.jpg" alt="Product 1">
-            <h3>Glossy Photo Paper (Long)</h3>
+            <b><p style="color:black;font-size:80%;">Glossy Photo Paper</p></b>
+	    <p style="color:black;font-size:80%;">Long Size</p>
+	    <p style="color:black;font-size:80%;">(1 piece only)</p>
             <p>₱10.00</p>
-            <p>Stock: <span id="stock-product-1">10</span></p>
-            <input type="number" id="qty-product-1" min="1" max="10" value="1">
-            <button id="btn-product-1" onclick="addToCart('Glossy Photo(L)', 10, 1)">Add to Cart</button>
-            <button id="cancel-product-1" onclick="cancelFromCart(1)" disabled>Cancel</button>
-        </div>
-        <!-- Product 2 -->
-        <div class="product">
-            <img src="images/vellum.jpg" alt="Product 2">
-            <h3>Vellum Board (Short)</h3>
-            <p>₱7.00</p>
-            <p>Stock: <span id="stock-product-2">10</span></p>
-            <input type="number" id="qty-product-2" min="1" max="10" value="1">
-            <button id="btn-product-2" onclick="addToCart('Vellum Brd(S)', 7, 2)">Add to Cart</button>
-            <button id="cancel-product-2" onclick="cancelFromCart(2)" disabled>Cancel</button>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10015">10</span></p>
+            <input type="number" id="qty-product-10015" min="1" max="10" value="1">
+            <button id="btn-product-10015" onclick="addToCart('Glossy Photo(L)', 10, 10015);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10015" onclick="cancelFromCart(10015)" disabled>Cancel</button>
         </div>
 
- <!-- Product 7 -->
-        <div class="product">
+
+        <!-- Product 10016 -->
+        <div class="product" style="line-height:0;" >
+            <img src="images/vellum.jpg">
+            <b><p style="color:black;font-size:100%;">Vellum Board</p></b>
+	    <p style="color:black;font-size:80%;">Short Size</p>
+	    <p style="color:black;font-size:80%;">(1 piece only)</p>
+            <p>₱7.00</p>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10016">10</span></p>
+            <input type="number" id="qty-product-10016" min="1" max="10" value="1">
+            <button id="btn-product-10016" onclick="addToCart('Vellum Brd(S)', 7, 10016);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10016" onclick="cancelFromCart(10016)" disabled>Cancel</button>
+        </div>
+
+
+<!-- Product 10017 -->
+        <div class="product" style="line-height:0;" >
             <img src="images/stickerpaper.jpg">
-            <h3>Sticker Paper</h3>
+            <b><p style="color:black;font-size:100%;">Sticker Paper</p></b>
+	    <p style="color:black;font-size:80%;">A4 Size</p>
+	    <p style="color:black;font-size:80%;">(1 piece only)</p>
             <p>₱10.00</p>
-            <p>Stock: <span id="stock-product-7">10</span></p>
-            <input type="number" id="qty-product-7" min="1" max="10" value="1">
-            <button id="btn-product-7" onclick="addToCart('Sticker Ppr', 10, 7)">Add to Cart</button>
-            <button id="cancel-product-7" onclick="cancelFromCart(7)" disabled>Cancel</button>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10017">10</span></p>
+            <input type="number" id="qty-product-10017" min="1" max="10" value="1">
+            <button id="btn-product-10017" onclick="addToCart('Sticker Ppr', 10, 10017);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10017" onclick="cancelFromCart(10017)" disabled>Cancel</button>
         </div>
 
- <!-- Product 8 -->
-        <div class="product">
-            <img src="images/blackclip.jpg">
-            <h3>Black Clip (Small)</h3>
-            <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-8">3</span></p>
-            <input type="number" id="qty-product-8" min="1" max="3" value="1">
-            <button id="btn-product-8" onclick="addToCart('Clip (S)', 5, 8)">Add to Cart</button>
-            <button id="cancel-product-8" onclick="cancelFromCart(8)" disabled>Cancel</button>
-        </div>
 
- <!-- Product 9 -->
-        <div class="product">
-            <img src="images/blackclip.jpg">
-            <h3>Black Clip (Medium)</h3>
-            <p>₱7.00</p>
-            <p>Stock: <span id="stock-product-9">3</span></p>
-            <input type="number" id="qty-product-9" min="1" max="3" value="1">
-            <button id="btn-product-9" onclick="addToCart('Clip (M)', 7, 9)">Add to Cart</button>
-            <button id="cancel-product-9" onclick="cancelFromCart(9)" disabled>Cancel</button>
-        </div>
-
- <!-- Product 10 -->
-        <div class="product">
-            <img src="images/blackclip.jpg">
-            <h3>Black Clip (Large)</h3>
-            <p>₱10.00</p>
-            <p>Stock: <span id="stock-product-10">3</span></p>
-            <input type="number" id="qty-product-10" min="1" max="3" value="1">
-            <button id="btn-product-10" onclick="addToCart('Clip (L)', 10, 10)">Add to Cart</button>
-            <button id="cancel-product-10" onclick="cancelFromCart(10)" disabled>Cancel</button>
-        </div>
-
- <!-- Product 11 -->
-        <div class="product">
-            <img src="images/scotch.jpg">
-            <h3>Scotch Tape (Medium)</h3>
-            <p>₱15.00</p>
-            <p>Stock: <span id="stock-product-11">5</span></p>
-            <input type="number" id="qty-product-11" min="1" max="5" value="1">
-            <button id="btn-product-11" onclick="addToCart('Scotch(M)', 15, 11)">Add to Cart</button>
-            <button id="cancel-product-11" onclick="cancelFromCart(11)" disabled>Cancel</button>
-        </div>
-
- <!-- Product 12 -->
-        <div class="product">
-            <img src="images/sharpener.jpg">
-            <h3>Sharpener</h3>
-            <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-12">5</span></p>
-            <input type="number" id="qty-product-12" min="1" max="5" value="1">
-            <button id="btn-product-12" onclick="addToCart('Sharpener', 5, 12)">Add to Cart</button>
-            <button id="cancel-product-12" onclick="cancelFromCart(12)" disabled>Cancel</button>
-        </div>
-
- <!-- Product 14 -->
-        <div class="product">
-            <img src="images/laminatelong.jpg">
-            <h3>Laminating Film (Long)</h3>
-            <p>₱35.00</p>
-            <p>Stock: <span id="stock-product-14">5</span></p>
-            <input type="number" id="qty-product-14" min="1" max="5" value="1">
-            <button id="btn-product-14" onclick="addToCart('Laminating F(L)', 35, 14)">Add to Cart</button>
-            <button id="cancel-product-14" onclick="cancelFromCart(14)" disabled>Cancel</button>
-        </div>
-
- <!-- Product 15 -->
-        <div class="product">
+<!-- Product 10018 -->
+        <div class="product" style="line-height:0;" >
             <img src="images/laminateid.jpg">
-            <h3>Laminating Film (ID-S)</h3>
+            <b><p style="color:black;font-size:100%;">Laminating Film</p></b>
+	    <p style="color:black;font-size:80%;">ID Size</p>
+	    <p style="color:black;font-size:80%;">(1 piece only)</p>
             <p>₱5.00</p>
-            <p>Stock: <span id="stock-product-15">5</span></p>
-            <input type="number" id="qty-product-15" min="1" max="5" value="1">
-            <button id="btn-product-15" onclick="addToCart('Laminating ID(S)', 5, 15)">Add to Cart</button>
-            <button id="cancel-product-15" onclick="cancelFromCart(15)" disabled>Cancel</button>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10018">5</span></p>
+            <input type="number" id="qty-product-10018" min="1" max="5" value="1">
+            <button id="btn-product-10018" onclick="addToCart('Laminating ID(S)', 5, 10018);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10018" onclick="cancelFromCart(10018)" disabled>Cancel</button>
         </div>
 
- <!-- Product 16 -->
-        <div class="product">
+
+<!-- Product 10019 -->
+        <div class="product" style="line-height:0;" >
             <img src="images/laminateid.jpg">
-            <h3>Laminating Film (ID-M)</h3>
+            <b><p style="color:black;font-size:100%;">Laminating Film</p></b>
+	    <p style="color:black;font-size:80%;">A4 Size</p>
+	    <p style="color:black;font-size:80%;">(1 piece only)</p>
             <p>₱8.00</p>
-            <p>Stock: <span id="stock-product-16">5</span></p>
-            <input type="number" id="qty-product-16" min="1" max="5" value="1">
-            <button id="btn-product-16" onclick="addToCart('Laminating ID(M)', 8, 16)">Add to Cart</button>
-            <button id="cancel-product-16" onclick="cancelFromCart(16)" disabled>Cancel</button>
+            <p style="color:gray;font-size:100%;">Stock: <span id="stock-product-10019">5</span></p>
+            <input type="number" id="qty-product-10019" min="1" max="5" value="1">
+            <button id="btn-product-10019" onclick="addToCart('Laminating ID(A4)', 8, 10019);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-10019" onclick="cancelFromCart(10019)" disabled>Cancel</button>
         </div>
+
 
 
 
@@ -1095,7 +491,9 @@
 	<p>Service/Shipping Fee: ₱1.00</p>
         <p id="total-price">Total: ₱0.00</p>
 
-        <button id="checkoutbutton" class="checkout-btn" onclick="checkout()" style="width:50%;">Checkout</button>
+    <button class="checkout-btn" style="width:50%;" onclick="hidePopup101()">Buy more</button>
+
+        <button id="checkoutbutton" class="checkout-btn" style="background:orangered;width:50%;" onclick="showPopup102();hidePopup101();" style="width:50%;">Checkout</button>
     </div>
 </center>
 
@@ -1104,16 +502,28 @@
     <script>
         let cart = [];
         let totalPrice = 0;
-        let stocks = { 1: 10, 2: 10, 3: 5, 4:4, 5:2, 6:10, 7:10, 8:3, 9:3, 10:3,
-			 11:5, 12:5, 13:5, 14:5, 15:5, 16:5, 17:50, 18:50, 19:25, 20:0,
-			20:0, 21:0, 22:0, 23:0, 24:0, 25:0, 26:0,
-			71:50, 72:50,
-			96:10,97:10,98:10,99:10,100:10,
-			101:10,102:10,103:10,104:10,105:2,106:2,107:2,108:2,109:2,110:2,
-			111:2,112:2,113:2,114:2,115:2,116:2,117:2,118:2,119:2,120:2,
-			121:2,122:2,123:2,124:2,125:2,126:2,127:2,128:2,129:2,130:2,
-			131:2,148:4,149:4,150:4,
-			151:4,152:4,153:4,156:10,157:10, }; // Initial stock levels
+        let stocks = { 
+
+10001:10,
+10002:10,
+10003:10,
+10004:10,
+10005:10,
+10006:10,
+10007:10,
+10008:10,
+10009:10,
+10010:10,
+10011:10,
+10012:10,
+10013:10,
+10014:10,
+10015:10,
+10016:10,
+10017:10,
+10018:10,
+10019:10,
+ }; // Initial stock levels
 
         function addToCart(productName, price, productId) {
             const qtyInput = document.getElementById(`qty-product-${productId}`);
@@ -1166,7 +576,7 @@
             cartList.innerHTML = ''; // Clear existing items
             cart.forEach(item => {
                 const li = document.createElement('li');
-                li.textContent = `\n${item.name} - ₱${item.perprice} (x${item.qty}) - ₱${item.price.toFixed(2)}`;
+                li.textContent = `\n${item.name} - ₱${item.perprice} (x${item.qty}) = ₱${item.price.toFixed(2)}`;
                 cartList.appendChild(li);
             });
 		const totalPrice1 = totalPrice+1;//SHIPPING FEE IS 1.
@@ -1291,6 +701,30 @@ document.getElementById('placebutton').disabled = true;
         const formattedDate3 = today.toLocaleDateString(undefined, options3);
 
 // DATE TOMORROW CLOSE 
+
+
+/// SHOWHIDE CART OPEN
+    function showPopup101(){
+        document.getElementById("shopcart").style.display = "block";
+    } 
+
+    function hidePopup101(){
+        document.getElementById("shopcart").style.display = "none";
+    }
+/// SHOWHIDE CART CLOSE
+
+
+
+
+/// SHOWHIDE DETAILS OPEN
+    function showPopup102(){
+        document.getElementById("details").style.display = "block";
+    } 
+
+    function hidePopup102(){
+        document.getElementById("details").style.display = "none";
+    }
+/// SHOWHIDE DETAILS CLOSE
 
 
     </script>
