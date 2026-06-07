@@ -97,6 +97,36 @@
 	div {
 		width:140px;
 	}
+
+    /* Popup Division */
+    #shopcart{
+        display: none;
+        width: 300px;
+        padding: 20px;
+        background: white;
+        border: 2px solid black;
+        box-shadow: 0 0 10px gray;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Popup Division */
+    #details{
+        display: none;
+        width: 300px;
+        padding: 20px;
+        background: white;
+        border: 2px solid black;
+        box-shadow: 0 0 10px gray;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
     </style>
 
 </head>
@@ -127,79 +157,289 @@
 
     <div id="whole" class="container">
 
-        <!-- Product 2 -->
-        <div class="product">
-            <img src="images2/sock2.jpg" alt="Product 2">
-            <h3>Socks</h3>
-            <p>₱0.00</p>
-            <p>Stock: <span id="stock-product-2">0</span></p>
-            <input type="number" id="qty-product-2" min="1" max="5" value="1">
-            <button id="btn-product-2" onclick="addToCart('Socks', 15, 2)" >Add to Cart</button>
-            <button id="cancel-product-2" onclick="cancelFromCart(2)" disabled>Cancel</button>
-        </div>
 
-<!-- Product 3 -->
-        <div class="product">
-            <img src="images2/tshirt2.jpg" alt="Product 3">
-            <h3>Grandsler T-Shirt (W-S)</h3>
-            <p>₱0.00</p>
-            <p>Stock: <span id="stock-product-3">0</span></p>
-            <input type="number" id="qty-product-3" min="1" max="5" value="1">
-            <button id="btn-product-3" onclick="addToCart('Grandsler T-Shirt (W-S)', 35, 3)" >Add to Cart</button>
-            <button id="cancel-product-3" onclick="cancelFromCart(3)" disabled>Cancel</button>
+<!-- Product 20001 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20001.png">
+            <b><p style="color:black;font-size:100%;">TUFF pld</p></b>
+		<p style="color:black;font-size:50%;">Concentrated Laundry Detergent</p>
+		<p style="color:darkviolet;font-size:80%;">Eternity (800g)</p>
+            <p>₱189.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20001">10</span></p>
+            <input type="number" id="qty-product-20001" min="1" max="10" value="1">
+            <button id="btn-product-20001" onclick="addToCart('TUFF pld-Eternity', 189, 20001);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20001" onclick="cancelFromCart(20001)" disabled>Cancel</button>
         </div>
 
 
-    <!-- Product 134 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images2/dish.jpg" >
-            <h3>Scent Clean</h3>
-            <h5>Dishwashing Gel</h5>
-		<p style="color:black;font-size:80%;">(Calamansi 250ml)</p>
-            <p>₱29.00</p>
-            <p>Stock: <span id="stock-product-134">30</span></p>
-            <input type="number" id="qty-product-134" min="1" max="30" value="1">
-            <button id="btn-product-134" onclick="addToCart('Scent Clean (C)', 29, 134)">Add to Cart</button>
-            <button id="cancel-product-134" onclick="cancelFromCart(134)" disabled>Cancel</button>
+<!-- Product 20002 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20002.png">
+            <b><p style="color:black;font-size:100%;">TUFF pld</p></b>
+		<p style="color:black;font-size:50%;">Concentrated Powder</p>
+		<p style="color:black;font-size:50%;">Laundry Detergent</p>
+		<p style="color:red;font-size:65%;">Powermax Whitening (800g)</p>
+            <p>₱189.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20002">10</span></p>
+            <input type="number" id="qty-product-20002" min="1" max="10" value="1">
+            <button id="btn-product-20002" onclick="addToCart('TUFF pld-Powermax', 189, 20002);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20002" onclick="cancelFromCart(20002)" disabled>Cancel</button>
         </div>
 
-    <!-- Product 101 -->
-        <div class="product">
-            <img src="images2/footsock2.jpg" >
-            <h3>Foot Socks</h3>
-            <p>₱35.00</p>
-            <p>Stock: <span id="stock-product-101">10</span></p>
-            <input type="number" id="qty-product-101" min="1" max="10" value="1">
-            <button id="btn-product-101" onclick="addToCart('Foot Socks', 35, 101)">Add to Cart</button>
-            <button id="cancel-product-101" onclick="cancelFromCart(101)" disabled>Cancel</button>
+<!-- Product 20003 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20003.png">
+            <b><p style="color:black;font-size:100%;">TUFF pld</p></b>
+		<p style="color:black;font-size:50%;">Concentrated Laundry Detergent</p>
+		<p style="color:deeppink;font-size:80%;">Active Clean (800g)</p>
+            <p>₱189.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20003">10</span></p>
+            <input type="number" id="qty-product-20003" min="1" max="10" value="1">
+            <button id="btn-product-20003" onclick="addToCart('TUFF pld-Active', 189, 20003);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20003" onclick="cancelFromCart(20003)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 20004 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20004.png">
+            <b><p style="color:black;font-size:100%;">TUFF dwl</p></b>
+		<p style="color:black;font-size:80%;">Dishwashing Liquid</p>
+		<p style="color:green;font-size:80%;">With Germex GC Action</p>
+		<p style="color:green;font-size:80%;">Pouch (200ml)</p>
+            <p>₱85.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20004">10</span></p>
+            <input type="number" id="qty-product-20004" min="1" max="10" value="1">
+            <button id="btn-product-20004" onclick="addToCart('TUFF dwl-Germex-200ml', 85, 20004);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20004" onclick="cancelFromCart(20004)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 20005 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20005.png">
+            <b><p style="color:black;font-size:100%;">TUFF dwl</p></b>
+		<p style="color:black;font-size:80%;">Dishwashing Liquid</p>
+		<p style="color:green;font-size:80%;">With Germex GC Action</p>
+		<p style="color:green;font-size:80%;">Bottle (270ml)</p>
+            <p>₱99.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20005">10</span></p>
+            <input type="number" id="qty-product-20005" min="1" max="10" value="1">
+            <button id="btn-product-20005" onclick="addToCart('TUFF dwl-Germex-270ml', 99, 20005);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20005" onclick="cancelFromCart(20005)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 20006 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20006.png">
+            <b><p style="color:black;font-size:100%;">TUFF dwl</p></b>
+		<p style="color:black;font-size:80%;">Dishwashing Liquid</p>
+		<p style="color:darkviolet;font-size:80%;">With Skin Moisturizer</p>
+		<p style="color:darkviolet;font-size:80%;">Pouch (200ml)</p>
+            <p>₱85.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20006">10</span></p>
+            <input type="number" id="qty-product-20006" min="1" max="10" value="1">
+            <button id="btn-product-20006" onclick="addToCart('TUFF dwl-Skin-200ml', 85, 20006);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20006" onclick="cancelFromCart(20006)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 20007 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20007.png">
+            <b><p style="color:black;font-size:100%;">TUFF dwl</p></b>
+		<p style="color:black;font-size:80%;">Dishwashing Liquid</p>
+		<p style="color:darkviolet;font-size:80%;">With Skin Moisturizer</p>
+		<p style="color:darkviolet;font-size:80%;">Bottle (270ml)</p>
+            <p>₱99.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20007">10</span></p>
+            <input type="number" id="qty-product-20007" min="1" max="10" value="1">
+            <button id="btn-product-20007" onclick="addToCart('TUFF dwl-Skin-270ml', 99, 20007);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20007" onclick="cancelFromCart(20007)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 20008 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20008.png">
+            <b><p style="color:black;font-size:100%;">TUFF Germban</p></b>
+		<p style="color:black;font-size:80%;">Multi-Purpose</p>
+		<p style="color:black;font-size:70%;">Disinfectant & Room Spray</p>
+		<p style="color:tomato;font-size:80%;">Lemon Zest (250ml)</p>
+            <p>₱249.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20008">10</span></p>
+            <input type="number" id="qty-product-20008" min="1" max="10" value="1">
+            <button id="btn-product-20008" onclick="addToCart('TUFF Germban-Lemon', 249, 20008);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20008" onclick="cancelFromCart(20008)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 20009 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20009.png">
+            <b><p style="color:black;font-size:100%;">TUFF Germban</p></b>
+		<p style="color:black;font-size:80%;">Multi-Purpose</p>
+		<p style="color:black;font-size:70%;">Disinfectant & Room Spray</p>
+		<p style="color:darkmagenta;font-size:80%;">Sakura Blooms (250ml)</p>
+            <p>₱249.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20009">10</span></p>
+            <input type="number" id="qty-product-20009" min="1" max="10" value="1">
+            <button id="btn-product-20009" onclick="addToCart('TUFF Germban-Sakura', 249, 20009);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20009" onclick="cancelFromCart(20009)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 20010 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20010.png">
+            <b><p style="color:black;font-size:100%;">TUFF Germban</p></b>
+		<p style="color:black;font-size:80%;">Multi-Purpose</p>
+		<p style="color:black;font-size:70%;">Disinfectant & Room Spray</p>
+		<p style="color:darkviolet;font-size:80%;">Linen Fresh (250ml)</p>
+            <p>₱249.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20010">10</span></p>
+            <input type="number" id="qty-product-20010" min="1" max="10" value="1">
+            <button id="btn-product-20010" onclick="addToCart('TUFF Germban-Linen', 249, 20010);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20010" onclick="cancelFromCart(20010)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 20011 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20011.png">
+            <b><p style="color:black;font-size:100%;">TUFF tbc</p></b>
+		<p style="color:black;font-size:80%;">Toilet Bowl Cleanser</p>
+		<p style="color:blue;font-size:80%;">Classic (500ml)</p>
+            <p>₱155.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20011">10</span></p>
+            <input type="number" id="qty-product-20011" min="1" max="10" value="1">
+            <button id="btn-product-20011" onclick="addToCart('TUFF tbc-Classic', 155, 20011);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20011" onclick="cancelFromCart(20011)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 20012 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20012.png">
+            <b><p style="color:black;font-size:100%;">TUFF tbc</p></b>
+		<p style="color:black;font-size:80%;">Toilet Bowl Cleanser</p>
+		<p style="color:blue;font-size:80%;">Classic (1000ml)</p>
+            <p>₱285.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20012">10</span></p>
+            <input type="number" id="qty-product-20012" min="1" max="10" value="1">
+            <button id="btn-product-20012" onclick="addToCart('TUFF tbc-Classic', 285, 20012);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20012" onclick="cancelFromCart(20012)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 20013 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20013.png">
+            <b><p style="color:black;font-size:100%;">TUFF tbc</p></b>
+		<p style="color:black;font-size:80%;">Toilet Bowl Cleanser</p>
+		<p style="color:green;font-size:80%;">Lemon Fresh (1000ml)</p>
+            <p>₱285.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20013">10</span></p>
+            <input type="number" id="qty-product-20013" min="1" max="10" value="1">
+            <button id="btn-product-20013" onclick="addToCart('TUFF tbc-Lemon', 285, 20013);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20013" onclick="cancelFromCart(20013)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 20014 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20014.png">
+            <b><p style="color:black;font-size:100%;">TUFF Naturals</p></b>
+		<p style="color:black;font-size:80%;">Concentrated</p>
+		<p style="color:black;font-size:60%;">Liquid Laundry Detergent</p>
+		<p style="color:green;font-size:80%;">LLD (1000ml)</p>
+            <p>₱290.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20014">10</span></p>
+            <input type="number" id="qty-product-20014" min="1" max="10" value="1">
+            <button id="btn-product-20014" onclick="addToCart('TUFF Naturals-LLD', 290, 20014);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20014" onclick="cancelFromCart(20014)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 20015 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20015.png">
+            <b><p style="color:black;font-size:100%;">TUFF Naturals</p></b>
+		<p style="color:black;font-size:60%;">Bathroom & Toilet Bowl</p>
+		<p style="color:black;font-size:80%;">Cleanser</p>
+		<p style="color:green;font-size:80%;">BTBC (1000ml)</p>
+            <p>₱299.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20015">10</span></p>
+            <input type="number" id="qty-product-20015" min="1" max="10" value="1">
+            <button id="btn-product-20015" onclick="addToCart('TUFF Naturals-BTBC', 299, 20015);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20015" onclick="cancelFromCart(20015)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 20016 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20016.png">
+            <b><p style="color:black;font-size:100%;">TUFF 2X</p></b>
+		<p style="color:black;font-size:80%;">Liquid Detergent</p>
+		<p style="color:black;font-size:60%;">2x Better Stain Removal</p>
+		<p style="color:green;font-size:80%;">2X-LD (1000ml)</p>
+            <p>₱265.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20016">10</span></p>
+            <input type="number" id="qty-product-20016" min="1" max="10" value="1">
+            <button id="btn-product-20016" onclick="addToCart('TUFF 2X-LD', 265, 20016);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20016" onclick="cancelFromCart(20016)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 20017 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20017.png">
+            <b><p style="color:black;font-size:100%;">TUFF MSC</p></b>
+		<p style="color:black;font-size:80%;">Multi-Surface</p>
+		<p style="color:black;font-size:80%;">Cleanser</p>
+		<p style="color:green;font-size:80%;">MSC (500ml)</p>
+            <p>₱194.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20017">10</span></p>
+            <input type="number" id="qty-product-20017" min="1" max="10" value="1">
+            <button id="btn-product-20017" onclick="addToCart('TUFF MSC', 194, 20017);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20017" onclick="cancelFromCart(20017)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 20018 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20018.png">
+            <b><p style="color:black;font-size:100%;">TARGET</p></b>
+		<p style="color:black;font-size:80%;">Multi-Insect Killer</p>
+		<p style="color:red;font-size:80%;">MIK (300ml)</p>
+            <p>₱224.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20018">10</span></p>
+            <input type="number" id="qty-product-20018" min="1" max="10" value="1">
+            <button id="btn-product-20018" onclick="addToCart('TARGET MIK-300ML', 224, 20018);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20018" onclick="cancelFromCart(20018)" disabled>Cancel</button>
+        </div>
+
+<!-- Product 20019 -->
+        <div class="product" style="line-height:0px;">
+            <img src="images2/20019.png">
+            <b><p style="color:black;font-size:100%;">TARGET</p></b>
+		<p style="color:black;font-size:80%;">Multi-Insect Killer</p>
+		<p style="color:red;font-size:80%;">MIK (600ml)</p>
+            <p>₱369.00</p>
+            <p style="color:gray;font-size:100%;">Stocks: <span id="stock-product-20019">10</span></p>
+            <input type="number" id="qty-product-20019" min="1" max="10" value="1">
+            <button id="btn-product-20019" onclick="addToCart('TARGET MIK-600ML', 369, 20019);showPopup101();">Add to Cart</button>
+            <button style="background:green;" onclick="showPopup101();">Show Cart</button>
+            <button id="cancel-product-20019" onclick="cancelFromCart(20019)" disabled>Cancel</button>
         </div>
 
 
-<!-- Product 146 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images2/bag2.jpg">
-            <h4>Sports Casual</h4>
-            <h4>Sling Bag</h4>
-		<p style="color:black;font-size:80%;">(Blue/Brown)</p>
-            <p>₱399.00</p>
-            <p>Stock: <span id="stock-product-146">1</span></p>
-            <input type="number" id="qty-product-146" min="1" max="1" value="1">
-            <button id="btn-product-146" onclick="addToCart('Sports Bag (Blue)', 399, 146)">Add to Cart</button>
-            <button id="cancel-product-146" onclick="cancelFromCart(146)" disabled>Cancel</button>
-        </div>
 
-<!-- Product 147 -->
-        <div class="product" style="line-height:0.5;">
-            <img src="images2/bag1.jpg">
-            <h4>Sports Casual</h4>
-            <h4>Sling Bag</h4>
-		<p style="color:black;font-size:80%;">(Black/Brown)</p>
-            <p>₱399.00</p>
-            <p>Stock: <span id="stock-product-147">1</span></p>
-            <input type="number" id="qty-product-147" min="1" max="1" value="1">
-            <button id="btn-product-147" onclick="addToCart('Sports Bag (Black)', 399, 147)">Add to Cart</button>
-            <button id="cancel-product-147" onclick="cancelFromCart(147)" disabled>Cancel</button>
-        </div>
+
 
 
 
@@ -254,7 +494,9 @@
 	<p>Service/Shipping Fee: ₱1.00</p>
         <p id="total-price">Total: ₱0.00</p>
 
-        <button id="checkoutbutton" class="checkout-btn" onclick="checkout()" style="width:50%;">Checkout</button>
+    <button class="checkout-btn" style="width:50%;" onclick="hidePopup101()">Buy more</button>
+
+        <button id="checkoutbutton" class="checkout-btn" style="background:orangered;width:50%;" onclick="showPopup102();hidePopup101();" style="width:50%;">Checkout</button>
     </div>
 </center>
 
@@ -263,7 +505,28 @@
     <script>
         let cart = [];
         let totalPrice = 0;
-        let stocks = { 2: 10, 3: 5,134:10,101:10,146:10,147:10, }; // Initial stock levels
+        let stocks = { 
+20001:10,
+20002:10,
+20003:10,
+20004:10,
+20005:10,
+20006:10,
+20007:10,
+20008:10,
+20009:10,
+20010:10,
+20011:10,
+20012:10,
+20013:10,
+20014:10,
+20015:10,
+20016:10,
+20017:10,
+20018:10,
+20019:10,
+
+ }; // Initial stock levels
 
         function addToCart(productName, price, productId) {
             const qtyInput = document.getElementById(`qty-product-${productId}`);
@@ -316,7 +579,7 @@
             cartList.innerHTML = ''; // Clear existing items
             cart.forEach(item => {
                 const li = document.createElement('li');
-                li.textContent = `\n${item.name} - ₱${item.perprice} (x${item.qty}) - ₱${item.price.toFixed(2)}`;
+                li.textContent = `\n${item.name} - ₱${item.perprice} (x${item.qty}) = ₱${item.price.toFixed(2)}`;
                 cartList.appendChild(li);
             });
 		const totalPrice1 = totalPrice+1;//SHIPPING FEE IS 1.
@@ -370,7 +633,7 @@ document.getElementById('placebutton').disabled = true;
                 document.getElementById(`cancel-product-${productId}`).disabled = true;
             }//close
 
-            const fullMessage = `.\n\nFrom: One Click Store\nCustomer: ${name1}\nLocation: ${address1}\nCel#: ${number}\nDate of Order: ${formattedDate}\nEstimated Date of Delivery\nFrom: ${formattedDate2}\nTo: ${formattedDate3}\n----------------------------------- \nOrdered Items:\n${text}\nService/Shipping Fee - ₱1.00\n\n${total}\n\n-----------------------------------\nCompany Address: Cambuac Sur, Sikatuna, Bohol\nSuggest Products Through:\nContact Us: 09978157579\nFB Page: One Click Store\n\nTHANK YOU FOR SHOPPING WITH US!`;
+            const fullMessage = `.\n\nFrom: One Click Store\nCustomer: ${name1}\nLocation: ${address1}\nCel#: ${number}\nDate of Order: ${formattedDate}\nEstimated Date of Delivery\nFrom: ${formattedDate2}\nTo: ${formattedDate3}\n-----------------------------------\nCategory: Home & Fashion Products\n----------------------------------- \nOrdered Items:\n${text}\nService/Shipping Fee - ₱1.00\n\n${total}\n\n-----------------------------------\nCompany Address: Cambuac Sur, Sikatuna, Bohol\nSuggest Products Through:\nContact Us: 09978157579\nFB Page: One Click Store\n\nTHANK YOU FOR SHOPPING WITH US!`;
 				update.style.display="none"; // FOR FREE PRODUCTS
 				//whole.style.display="none";// FOR FREE PRODUCTS
 				shopcart.style.display="none";// FOR FREE PRODUCTS
@@ -441,6 +704,31 @@ document.getElementById('placebutton').disabled = true;
         const formattedDate3 = today.toLocaleDateString(undefined, options3);
 
 // DATE TOMORROW CLOSE 
+
+
+
+/// SHOWHIDE CART OPEN
+    function showPopup101(){
+        document.getElementById("shopcart").style.display = "block";
+    } 
+
+    function hidePopup101(){
+        document.getElementById("shopcart").style.display = "none";
+    }
+/// SHOWHIDE CART CLOSE
+
+
+
+
+/// SHOWHIDE DETAILS OPEN
+    function showPopup102(){
+        document.getElementById("details").style.display = "block";
+    } 
+
+    function hidePopup102(){
+        document.getElementById("details").style.display = "none";
+    }
+/// SHOWHIDE DETAILS CLOSE
 
 
     </script>
